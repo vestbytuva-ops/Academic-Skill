@@ -1,6 +1,8 @@
 # Academic Skill
 
-Denne mappen er en lokal videreutvikling av Academic Skill. Du kan sende hele ZIP-filen til den som laget originalen. Pakk den ut og åpne mappen som inneholder denne filen som prosjekt i Codex. Skill-en ligger i `.agents/skills/academic-skill`. En eksisterende installasjon kan prøves side om side ved å åpne den utpakkede mappen som et eget prosjekt.
+Vil du bruke Academic Skill i alle dine lokale Codex-prosjekter, følg [installasjonsveiledningen](README.md#installer-for-alle-lokale-prosjekter). Der finner du både meldingen til `$skill-installer` og en ZIP-fil med bare skillen.
+
+Vil du prøve skillen i dette prosjektet, kan du bruke **Code → Download ZIP** på GitHub. Pakk ut prosjektarkivet og åpne mappen som inneholder denne filen i Codex. Da finner Codex skillen under `.agents/skills/academic-skill`. Har du allerede klonet prosjektet, kan du hente siste versjon med `git pull --ff-only`.
 
 **Prøv i en ny prosjektsamtale** med for eksempel denne bestillingen:
 
