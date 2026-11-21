@@ -2,11 +2,19 @@
 
 Academic Skill er en skrive- og læringsveileder for elever og studenter som bruker Codex. Gi den oppgaven, et avsnitt du har skrevet, og si hva du vil ha hjelp med. Du kan be om et spørsmål som hjelper deg å skrive videre selv, få forslag til én formulering eller få hele utkastet språkvasket.
 
-## Kom i gang
+## Installer for alle lokale prosjekter
 
-1. Last ned prosjektet med **Code → Download ZIP** på GitHub og pakk ut arkivet. Har du allerede klonet repoet, kan du hente V2 med `git pull --ff-only`.
-2. Åpne mappen som inneholder `README.md` og `START-HER.md` som prosjekt i Codex.
-3. Start en ny samtale og prøv denne bestillingen.
+Åpne Codex på maskinen der du bruker prosjektene dine, og lim inn denne meldingen én gang.
+
+```text
+Bruk $skill-installer til å installere https://github.com/vestbytuva-ops/Academic-Skill/tree/main/.agents/skills/academic-skill for alle mine lokale Codex-prosjekter. Bruk installerens standardmappe.
+```
+
+**Manuell installasjon.** Pakk ut [academic-skill.zip](https://github.com/vestbytuva-ops/Academic-Skill/raw/refs/heads/main/dist/academic-skill.zip) og legg mappen `academic-skill` i `~/.codex/skills/` (`%USERPROFILE%\.codex\skills` på Windows). Har du angitt `CODEX_HOME`, bruker du mappen `skills` under den. Etter utpakking skal `academic-skill/SKILL.md` ligge direkte under `skills/`.
+
+## Prøv i Codex
+
+Åpne en ny samtale i et av prosjektene dine og prøv denne bestillingen.
 
 > Bruk $academic-skill. I metodedelen skrev jeg «Intervjuene viste hva alle studentene mente». Jeg intervjuet to studenter. Gi meg én mer presis formulering, og forklar hva du endret.
 
@@ -40,8 +48,14 @@ For å vurdere skriveveiledningen kan du velge én av [de sju oppgavene](tests/c
 
 Skriveveiledningen kan brukes uten Python eller Office. Den valgfrie [tekstkontrollen](.agents/skills/academic-skill/scripts/check_spans.py) bruker Python 3 til å telle forekomster av uttrykk du selv velger, for eksempel et sitat med sidetall. Et sitat kan fortsatt ha skiftet betydning i sammenhengen selv om ordlyden og antallet stemmer.
 
-Kjør de 15 automatiske testene av tekstkontrollen fra prosjektmappen med
+Kjør testene av tekstkontrollen og nedlastingspakken fra prosjektmappen med
 
 ```sh
 python -B -m unittest discover -s tests -v
+```
+
+Når du har lagret en endring i skillen i Git, bygger du ZIP-filen på nytt før du kjører testene.
+
+```sh
+git archive --format=zip --prefix=academic-skill/ --output=dist/academic-skill.zip HEAD:.agents/skills/academic-skill
 ```
