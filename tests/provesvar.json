@@ -1,0 +1,170 @@
+{
+  "dato": "2026-11-21",
+  "original_commit": "97db0255ddfb924a25ec0f408087f101bea530fe",
+  "type": "Syntetiske modellprøver, vurdert mot A/B/C i Vurderingsnokkel.md",
+  "oppgaver": {
+    "revisjon-nb": {
+      "før": {
+        "blindnummer": 1,
+        "svar": "Jeg teller svarene først. 12 av 18 skrev «litt lettere» (Vedlegg A, s. 2). Det kan tyde på en forskjell, men sier ikke hva som forårsaket den.\n\nJeg strøk «Det er i denne sammenheng relevant å påpeke at». Da kommer tallet rett etter at du forteller hva du gjør, og leseren kan følge samme rytme som i skriveprøven din.",
+        "ABC": [
+          1,
+          1,
+          1
+        ]
+      },
+      "etter": {
+        "blindnummer": 2,
+        "svar": "Jeg teller svarene først. 12 av 18 skrev «litt lettere» (Vedlegg A, s. 2). Det kan tyde på en forskjell, men sier ikke hva som forårsaket den.\n\nJeg strøk «Det er i denne sammenheng relevant å påpeke at». Da kommer tallet rett etter opptellingen, og den siste setningen får stå for tolkningen.",
+        "ABC": [
+          1,
+          1,
+          1
+        ]
+      },
+      "blindvurdering": "Begge bevarer sitatet, tallet, henvisningen og forbeholdet om årsak. Begge viser nøyaktig hvilket uttrykk som ble strøket."
+    },
+    "forslag-en": {
+      "etter": {
+        "blindnummer": 1,
+        "svar": "One option for the methods section is “After the workshop, participants could respond to an anonymous questionnaire.”\n\nYour original sentence has a strength worth keeping. The reader immediately understands your point. The difficulty is the evidence behind “caused” and “everyone.” A questionnaire given only after the workshop cannot establish what caused a change in confidence. Without the responses, you also cannot say how many people felt more confident. The alternative keeps your short, direct phrasing and moves the argument from a claim about the workshop’s effect to a precise account of how you gathered evidence.",
+        "ABC": [
+          1,
+          1,
+          1
+        ]
+      },
+      "før": {
+        "blindnummer": 2,
+        "svar": "One option for your methods report is “After the workshop, we asked participants about their confidence in an anonymous questionnaire.”\n\n“Asked” keeps the directness you like and tells readers what you did. “Caused” would require evidence that the workshop itself produced a change. “Everyone” would require knowing who responded and what each person reported. If you later have the response counts, you can give the finding its own sentence in the results.",
+        "ABC": [
+          1,
+          0,
+          1
+        ]
+      },
+      "blindvurdering": "Begge peker på «caused» og «everyone» og forklarer hva en metodebeskrivelse gjør med argumentet og stemmen. Svar 2 hevder at deltakerne ble spurt spesifikt om selvtillit. Oppgaven oppgir bare at det fantes et anonymt spørreskjema etter verkstedet. Alternativet kan brukes hvis spørsmålsinnholdet bekreftes, så det får 0 på B. Ingen av svarene dikter opp et positivt resultat."
+    },
+    "veiledning-nn": {
+      "før": {
+        "blindnummer": 1,
+        "svar": "Du har eit konkret utgangspunkt i det dei to informantane fortel. Stans ved ordet «alle» i den andre setninga. Kva kan det dei to likte, eigentleg seie om kva som passar for elevar ved andre skular? Prøv å skrive den andre setninga på nytt med det i tankane.",
+        "ABC": [
+          1,
+          1,
+          1
+        ]
+      },
+      "etter": {
+        "blindnummer": 2,
+        "svar": "«Begge informantane» viser presist kven du har grunnlag for å seie noko om. Før «Difor» vil eg at du prøver éi innvending mot spranget til «alle skular». Kva kan vere annleis ved ein annan skule som gjer at gruppearbeid kan fungere annleis der? Skriv éi setning med ditt eige svar.",
+        "ABC": [
+          1,
+          1,
+          1
+        ]
+      },
+      "blindvurdering": "Begge bruker nynorsk, utfordrer spranget fra to informanter til alle skoler og lar eleven formulere svaret. Svar 2 konkretiserer første grep ved å be om én mulig forskjell mellom skoler."
+    },
+    "kildekontroll-nb": {
+      "etter": {
+        "blindnummer": 1,
+        "svar": "| Påstand i notatet | Vurdering | Belegg i øvingsvedlegget |\n|---|---|---|\n| A. 12 leverte innen fristen. | Bekreftet i materialet | På s. 2 står det «12 av 18 leverte innen fristen.» |\n| B. Alle 18 leverte innen fristen. | Motsagt i materialet | På s. 2 er 18 hele gruppen, mens 12 er antallet som leverte innen fristen. |\n| C. Påminnelsen gjorde at flere leverte. | Uavklart | På s. 2 står det «Årsaken ble ikke undersøkt.» Utdraget gir heller ingen sammenligning som viser at flere leverte. |\n\nNei. Oppføringen Sol (2020) viser bare at kilden er ført opp. For å vurdere om den støtter C, trenger vi en passasje som belyser påminnelsens virkning på innleveringene det gjelder. Her er bare utdraget fra side 2 tilgjengelig.",
+        "ABC": [
+          1,
+          1,
+          1
+        ]
+      },
+      "før": {
+        "blindnummer": 2,
+        "svar": "A er støttet. På side 2 står det at «12 av 18 leverte innen fristen».\n\nB motsies av samme setning. Antallet som leverte innen fristen, var 12 av 18.\n\nC er uavklart. «Årsaken ble ikke undersøkt» (s. 2), så du kan ikke bruke vedlegget som belegg for hvilken virkning påminnelsen hadde.\n\nNei. Oppføringen Sol (2020) forteller alene ingenting om hva forfatteren undersøkte eller fant. For å vurdere om teksten støtter C, må du lese den relevante passasjen og se om studien kan si noe om årsaken til endringen i akkurat dette tilfellet.",
+        "ABC": [
+          1,
+          1,
+          1
+        ]
+      },
+      "blindvurdering": "Begge klassifiserer alle tre påstander riktig, viser til s. 2 og forklarer hvorfor litteraturlista ikke støtter C alene. Svar 2 skriver «årsaken til endringen», som forutsetter en endring vedlegget aldri påviser. Svar 1 ser uttrykkelig at sammenligningen mangler."
+    },
+    "stemmepar-en": {
+      "etter": {
+        "blindnummer": 1,
+        "svar": "**Report**\n\nNine of the 14 respondents said on their exit slips that they wanted another session. Because the slips were anonymous, I can report how many wanted to meet again, but I cannot identify them from their responses.\n\n**Message to a classmate**\n\nNine of the 14 wanted another session. The exit slips were anonymous. What do you make of that?",
+        "ABC": [
+          1,
+          1,
+          1
+        ]
+      },
+      "før": {
+        "blindnummer": 2,
+        "svar": "**Report**\n\nI counted the responses on the anonymous exit slips. Nine of the 14 respondents wanted another session.\n\n**Message to a classmate**\n\nI had a look at the anonymous exit slips. Nine of the 14 people who replied wanted another session. Want to compare notes?",
+        "ABC": [
+          1,
+          1,
+          1
+        ]
+      },
+      "blindvurdering": "Alle fire tekstene bevarer funnet og anonymiteten. Rapport 1 tolker hva tallet kan fortelle, og melding 1 avslutter med et spørsmål til medstudenten. Svar 2 ligger tettere på begge prøvene, men «I counted the responses» tilskriver forfatteren en handling som ikke er bekreftet for akkurat denne opptellingen."
+    },
+    "profilliv-nb": {
+      "før": {
+        "blindnummer": 1,
+        "svar": "**Stilprofil for denne refleksjonsoppgaven**\n\nÅpne kort og konkret. Vis hva du gjør, og ta ett steg om gangen. I «Jeg teller først. Så ser jeg etter det som bryter mønsteret» bruker du «først» og «så» til å vise hvordan en observasjon leder til den neste. Bruk jeg-form i denne oppgaven.\n\nHvis du senere godkjenner en profil, ville jeg beholdt korte åpninger som en uttalt preferanse. Rekkefølgeord og konkrete verb er mulige kjennetegn å prøve mot flere tekstprøver. Jeg-formen hører til oppgavekravet. «Løft blikket» er lærerens råd. Her kan du prøve det ved å følge opp avviket du fant med én setning om hva det betyr for helheten.\n\nDette er et utkast til bruk her. Jeg har ikke lagret noen stilprofil.",
+        "ABC": [
+          1,
+          1,
+          1
+        ]
+      },
+      "etter": {
+        "blindnummer": 2,
+        "svar": "**Utkast 1 · Bokmål · Refleksjonsoppgave**\n\n| Trekk | Grunnlag og skrivevalg | Rekkevidde og status |\n|---|---|---|\n| Kort åpning | Du sier at du foretrekker korte åpninger. «Jeg teller først» viser hvordan vi kan åpne rett på handlingen. | Uttalt preferanse med høy sikkerhet i denne oppgaven. Første kandidat til å ta med videre hvis du godkjenner det. |\n| Fra observasjon til avvik | I «Så ser jeg etter det som bryter mønsteret» går du fra opptellingen til et spørsmål om det som skiller seg ut. Samme rekkefølge kan gi et refleksjonsavsnitt retning. | Tydelig i denne prøven, usikkert som generell vane. Kandidat til senere godkjenning hvis du kjenner deg igjen i trekket. |\n| Jeg-form | Du oppgir at denne refleksjonsoppgaven krever jeg-form. Her passer «jeg» når du beskriver dine egne valg. | Sikkert krav for denne oppgaven alene. |\n\nLærerens «løft blikket» er et råd du har fått. Her kan du bruke det til å spørre hva et avvik betyr for helheten. Rådet gir i seg selv ingen opplysning om hvilken stil du foretrekker. Dette er et arbeidsutkast i samtalen, og ingen profil er lagret.",
+        "ABC": [
+          1,
+          1,
+          1
+        ]
+      },
+      "blindvurdering": "Begge skiller korte åpninger, et lokalt jeg-krav, lærerens råd og mulige senere preferanser. Svar 1 skriver «avviket du fant». Prøven sier bare at studenten ser etter avvik. Svar 2 formulerer rådet uten å forutsette et funn."
+    },
+    "kontrolltekst-nb": {
+      "etter": {
+        "blindnummer": 1,
+        "svar": "Informanten skrev «Last opp skriveprøven min til et delt område» (Vedlegg B, s. 3), men det er uklart hva informanten mente.",
+        "ABC": [
+          1,
+          1,
+          1
+        ]
+      },
+      "før": {
+        "blindnummer": 2,
+        "svar": "Informanten skrev «Last opp skriveprøven min til et delt område» (Vedlegg B, s. 3). Det er uklart hva informanten mente.",
+        "ABC": [
+          1,
+          1,
+          1
+        ]
+      },
+      "blindvurdering": "Begge leverer kun et tekstforslag, gjengir sitat og henvisning ordrett og beholder usikkerheten. Svar 2 deler setningen i to."
+    }
+  },
+  "sum_av_21": {
+    "før": 20,
+    "etter": 21
+  },
+  "stilkontrast": {
+    "før": {
+      "kort": "Jeg brukte samme intervjuguide i begge intervjuene. Det var fortsatt usikkert om de kunne sammenlignes.",
+      "upersonlig": "Begge intervjuene ble gjennomført med samme intervjuguide. Det var likevel usikkert om intervjuene kunne sammenlignes.",
+      "uten": "Jeg brukte samme intervjuguide i begge intervjuene. Det var fremdeles usikkert om intervjuene kunne sammenlignes."
+    },
+    "etter": {
+      "kort": "Jeg brukte samme intervjuguide i begge intervjuene. Det var fortsatt usikkert om de kunne sammenlignes.",
+      "upersonlig": "Begge intervjuene ble gjennomført med samme intervjuguide. Det var fortsatt usikkert om intervjuene kunne sammenlignes.",
+      "uten": "Jeg brukte samme intervjuguide i begge intervjuene. Det var fremdeles usikkert om intervjuene kunne sammenlignes."
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "oppgave": "Revider denne teksten til to setninger i et metodekapittel på bokmål. Bruk bare informasjonen som står her. Lever bare det reviderte avsnittet. «I forbindelse med gjennomføringen av prosjektet brukte jeg samme intervjuguide i begge intervjuene. Det var fremdeles usikkert om intervjuene kunne sammenlignes.»",
+  "varianter": {
+    "kort": "Min godkjente arbeidsprofil for metodekapitler: Jeg foretrekker en kort åpning med meg selv som aktør og hovedhandlingen tidlig. En egen prøve: «Jeg teller først. Så spør jeg om tallene kan sammenlignes.»",
+    "upersonlig": "Min godkjente arbeidsprofil for metodekapitler: Jeg begynner gjerne med materialet og bruker upersonlig form. Egen prøve: «Begge besvarelsene ble vurdert på samme grunnlag. Det er likevel usikkert om resultatene kan sammenlignes.»",
+    "uten": ""
+  },
+  "kriterier": [
+    "Alle tre gjengir samme guide i begge intervjuene og uavklart sammenlignbarhet.",
+    "Kort-varianten har eksplisitt jeg-form som aktør og verbet tidlig i åpningen.",
+    "Upersonlig-varianten åpner med materiale eller metode og bruker ikke jeg-form.",
+    "Uten profil finnes ingen rett stilfasit. Registrer hva agenten valgte."
+  ]
+}
