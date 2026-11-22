@@ -2,7 +2,7 @@
 
 English | [Norsk bokmål](START-HER.md)
 
-Follow the installation steps for [local Codex](README.md#install-for-all-local-codex-projects) or [ChatGPT Work](README.md#use-in-chatgpt-work). You can also open this repository as a Codex project to try the copy in `.agents/skills/academic-skill`.
+Follow the installation steps for [local Codex](README.md#install-for-all-local-codex-projects) or [ChatGPT Work](README.md#use-in-chatgpt-work). You can also open this repository as a Codex project to try all twelve choices.
 
 After selecting the skill, share the assignment or draft and ask for the specific help you want. For example, try this in Codex.
 
@@ -10,6 +10,6 @@ After selecting the skill, share the assignment or draft and ask for the specifi
 
 To get help in your own voice, share a few sentences you wrote. Identify the genre and say what you want to keep. You can ask to see the style observations, correct them, or set them aside.
 
-For exam revision, a presentation, or another task, pick a label and describe what you want the skill to do. [All eleven workflows](README.md#choose-a-workflow)
+In Codex, select a workflow directly with a command such as `$exam-preparation`. Choose `$academic-skill` when you want several workflows in one request. [See all commands](README.md#choose-a-workflow)
 
 The repository includes the [skill instructions](.agents/skills/academic-skill/SKILL.md), [development plan](docs/Arkitektur-og-plan.md), [source register](docs/Kilderegister.md), and [pilot results](docs/Testresultater.md) in Norwegian.

@@ -1,4 +1,4 @@
-"""Check that the download installs as one complete, up-to-date skill."""
+"""Check that both downloads match their installable skill directories."""
 
 import unittest
 from pathlib import Path
@@ -6,18 +6,40 @@ from zipfile import ZipFile
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL = ROOT / ".agents" / "skills" / "academic-skill"
+SKILLS = ROOT / ".agents" / "skills"
+SKILL_NAMES = {
+    "academic-skill",
+    "academic-core",
+    "personal-voice",
+    "academic-writing",
+    "humanizer",
+    "academic-critic",
+    "research-integrity",
+    "learning-coach",
+    "exam-preparation",
+    "presentation-engine",
+    "office-integration",
+    "quality-assurance",
+}
 
 
 class SkillPackageTests(unittest.TestCase):
     def test_archive_matches_installable_directory(self):
+        main_skill = SKILLS / "academic-skill"
+        self.assertTrue((main_skill / "SKILL.md").is_file())
+        self.assert_archive_matches("academic-skill.zip", main_skill)
+
+    def test_suite_archive_has_all_twelve_skill_choices(self):
+        self.assertEqual({path.parent.name for path in SKILLS.glob("*/SKILL.md")}, SKILL_NAMES)
+        self.assert_archive_matches("academic-skill-suite.zip", SKILLS)
+
+    def assert_archive_matches(self, archive_name, source_directory):
         files = {
-            path.relative_to(SKILL.parent).as_posix(): path
-            for path in SKILL.rglob("*")
+            path.relative_to(SKILLS).as_posix(): path
+            for path in source_directory.rglob("*")
             if path.is_file() and "__pycache__" not in path.parts
         }
-        self.assertIn("academic-skill/SKILL.md", files)
-        with ZipFile(ROOT / "dist" / "academic-skill.zip") as archive:
+        with ZipFile(ROOT / "dist" / archive_name) as archive:
             names = [item.filename for item in archive.infolist() if not item.is_dir()]
             self.assertCountEqual(names, files.keys())
             for name in names:

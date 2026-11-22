@@ -13,36 +13,40 @@ Academic Skill helps students understand assignments, study for exams, evaluate 
 Open Codex on the computer where you work and send this request once.
 
 ```text
-Install the skill from https://github.com/vestbytuva-ops/Academic-Skill/ for all my local Codex projects.
+Install all 12 skills from https://github.com/vestbytuva-ops/Academic-Skill/ into Codex's default skills folder. Update any existing copies from this repo in place.
 ```
 
-You can also invoke `$skill-installer` and give it the [skill folder URL][skill-folder]. To install manually, extract [academic-skill.zip][skill-zip] and place the `academic-skill` folder in `~/.codex/skills/` (`%USERPROFILE%\.codex\skills` on Windows). If you set `CODEX_HOME`, use its `skills` folder. The installed file should be at `skills/academic-skill/SKILL.md`.
+For manual installation, download [academic-skill-suite.zip][suite-zip] and extract its 12 folders directly into `~/.codex/skills/` (`%USERPROFILE%\.codex\skills` on Windows). If you set `CODEX_HOME`, use its `skills` folder. For example, the exam skill should be at `skills/exam-preparation/SKILL.md`.
 
-After installation, open a new Codex conversation and select `$academic-skill`. To use the skill in this repository alone, open the repository folder as a Codex project.
+After installation, open a new Codex conversation and type `$` to choose a skill. For a single skill, you can give `$skill-installer` its folder link from the table below. Opening this repository as a Codex project also makes all 12 choices available in that project.
 
 ## Use in ChatGPT Work
 
-Download [academic-skill.zip][skill-zip]. In a workspace that supports skill uploads, go to **Plugins → Skills → Create → Upload from your computer** and select the ZIP. After installation, open a new Work chat, type `@`, and select **Academic Skill**. [OpenAI's skill upload guide][chatgpt-skills]
+Download the main skill as [academic-skill.zip][skill-zip]. In a workspace that supports skill uploads, go to **Plugins → Skills → Create → Upload from your computer** and select the ZIP. After installation, open a new Work chat, type `@`, and select **Academic Skill** to use any combination of the workflows below. [OpenAI's skill upload guide][chatgpt-skills]
 
 ## Choose a workflow
 
-The website lists eleven areas you can request individually. This repository installs one skill called `academic-skill`. Select it, then name an area and describe what you want it to do.
+Choose **`$academic-skill`** to combine several areas in a single request. The main skill can use the workflow outputs together, for example by checking the evidence before drafting slides and reviewing the result against the assignment.
 
-> Use $academic-skill. Focus on exam-preparation. Quiz me on these notes in English, one question at a time. Wait for my answer before giving feedback.
+> Use $academic-skill. Check the claims in my draft against these sources, then turn the supported findings into a five-slide presentation in English.
 
-| Website label | What to ask for |
+For one area, select its own command and describe the task.
+
+> Use $exam-preparation. Quiz me on these notes in English, one question at a time. Wait for my answer before giving feedback.
+
+| Codex command | What to ask for |
 | --- | --- |
-| `academic-core` | Break down the assignment and identify what to clarify before you start. |
-| `personal-voice` | Identify wording, rhythm, and tone in your own writing sample and use them as a guide. |
-| `academic-writing` | Connect the research question, argument, evidence, and conclusion. |
-| `humanizer` | Improve the flow of your text while preserving its meaning and your voice. |
-| `academic-critic` | Evaluate a draft against the rubric or your teacher's feedback and suggest a revision. |
-| `research-integrity` | Check which claims the supplied sources and methods support. |
-| `learning-coach` | Explain a concept, give one exercise, and wait for your attempt. |
-| `exam-preparation` | Quiz you from your notes or draft flashcards for a topic. |
-| `presentation-engine` | Plan slides and speaking points for the audience and time limit. |
-| `office-integration` | Work with excerpts or files from Word, Excel, or PowerPoint using the tools available in your session. |
-| `quality-assurance` | Review a draft against the assignment and identify quotations, figures, or claims to verify. |
+| [`$academic-core`](.agents/skills/academic-core/) | Break down the assignment and identify what to clarify before you start. |
+| [`$personal-voice`](.agents/skills/personal-voice/) | Identify wording, rhythm, and tone in your own writing sample and use them as a guide. |
+| [`$academic-writing`](.agents/skills/academic-writing/) | Connect the research question, argument, evidence, and conclusion. |
+| [`$humanizer`](.agents/skills/humanizer/) | Improve the flow of your text while preserving its meaning and your voice. |
+| [`$academic-critic`](.agents/skills/academic-critic/) | Evaluate a draft against the rubric or your teacher's feedback and suggest a revision. |
+| [`$research-integrity`](.agents/skills/research-integrity/) | Check which claims the supplied sources and methods support. |
+| [`$learning-coach`](.agents/skills/learning-coach/) | Explain a concept, give one exercise, and wait for your attempt. |
+| [`$exam-preparation`](.agents/skills/exam-preparation/) | Quiz you from your notes or draft flashcards for a topic. |
+| [`$presentation-engine`](.agents/skills/presentation-engine/) | Plan slides and speaking points for the audience and time limit. |
+| [`$office-integration`](.agents/skills/office-integration/) | Work with excerpts or files from Word, Excel, or PowerPoint using the tools available in your session. |
+| [`$quality-assurance`](.agents/skills/quality-assurance/) | Review a draft against the assignment and identify quotations, figures, or claims to verify. |
 
 ## Choose how to work
 
@@ -59,7 +63,7 @@ For style feedback, share a short sample of your own writing and say which featu
 | File or folder | Contents |
 | --- | --- |
 | [START-HERE.md](START-HERE.md) | A first example and tips for working with your own writing style. |
-| [Skill instructions](.agents/skills/academic-skill/SKILL.md) | The Norwegian instructions that guide the skill. |
+| [Skill folders](.agents/skills/) | The main skill and eleven standalone skills. |
 | [References](.agents/skills/academic-skill/references/) | Norwegian guidance on writing, personal voice, teaching, and research. |
 | [Documentation](docs/) | The [development plan](docs/Arkitektur-og-plan.md), [source register](docs/Kilderegister.md), and [V2 pilot results](docs/Testresultater.md) in Norwegian. |
 | [Tests and writing samples](tests/) | Seven example tasks, their scoring criteria, and automated checks. |
@@ -70,13 +74,14 @@ Try one of the [seven example tasks](tests/cases.json) in a fresh conversation a
 
 The guidance workflows work without Python or Office. The optional [text checker](.agents/skills/academic-skill/scripts/check_spans.py) uses Python 3 to compare how many times selected expressions occur before and after an edit. Review their meaning in context as well.
 
-After committing a change to the skill folder, rebuild the download. Run both commands from the repository root.
+After committing changes to the skill folders, rebuild the downloads and run the tests from the repository root.
 
 ```sh
 git archive --format=zip --prefix=academic-skill/ --output=dist/academic-skill.zip HEAD:.agents/skills/academic-skill
+git archive --format=zip --output=dist/academic-skill-suite.zip HEAD:.agents/skills
 python -B -m unittest discover -s tests -v
 ```
 
-[skill-folder]: https://github.com/vestbytuva-ops/Academic-Skill/tree/main/.agents/skills/academic-skill
 [skill-zip]: https://github.com/vestbytuva-ops/Academic-Skill/raw/refs/heads/main/dist/academic-skill.zip
+[suite-zip]: https://github.com/vestbytuva-ops/Academic-Skill/raw/refs/heads/main/dist/academic-skill-suite.zip
 [chatgpt-skills]: https://help.openai.com/en/articles/20001066-skills-in-chatgpt
