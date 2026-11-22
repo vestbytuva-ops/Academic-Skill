@@ -72,7 +72,7 @@ For style feedback, share a short sample of your own writing and say which featu
 
 Try one of the [seven example tasks](tests/cases.json) in a fresh conversation and compare the answer with the [scoring criteria](tests/Vurderingsnokkel.md). The examples use fictional writing samples.
 
-The guidance workflows work without Python or Office. The optional [text checker](.agents/skills/academic-skill/scripts/check_spans.py) uses Python 3 to compare how many times selected expressions occur before and after an edit. Review their meaning in context as well.
+The guidance workflows work without Python or Office. The optional [text checker](.agents/skills/academic-skill/scripts/sjekk_uttrykk.py) uses Python 3 to compare how many times selected expressions occur before and after an edit. It reports `BESTÅTT` for equal counts and `FEIL` for a difference or invalid input. Review the expressions in context as well.
 
 After committing changes to the skill folders, rebuild the downloads and run the tests from the repository root.
 

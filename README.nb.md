@@ -72,7 +72,7 @@ For ett område velger du den egne kommandoen og beskriver oppgaven.
 
 Prøv én av [de sju oppgavene](tests/cases.json) i en ny samtale og sammenlign svaret med [vurderingsnøkkelen](tests/Vurderingsnokkel.md). Oppgavene bygger på oppdiktede skriveprøver.
 
-Skriveveiledningen kan brukes uten Python eller Office. Den valgfrie [tekstkontrollen](.agents/skills/academic-skill/scripts/check_spans.py) bruker Python 3 til å telle forekomster av uttrykk du velger, for eksempel et sitat med sidetall. Vurder også betydningen uttrykkene har i sammenhengen.
+Skriveveiledningen kan brukes uten Python eller Office. Den valgfrie [tekstkontrollen](.agents/skills/academic-skill/scripts/sjekk_uttrykk.py) bruker Python 3 til å telle forekomster av uttrykk du velger, for eksempel et sitat med sidetall. Den skriver `BESTÅTT` når antallet er likt og `FEIL` ved avvik eller ugyldig grunnlag. Vurder også betydningen uttrykkene har i sammenhengen.
 
 Når du har lagret en endring i skillmappene i Git, bygger du ZIP-filene på nytt og kjører testene fra prosjektmappen.
 

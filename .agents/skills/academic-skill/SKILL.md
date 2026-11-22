@@ -26,7 +26,7 @@ Bruk arbeidsområdene som bestillingen krever. Kombiner dem i én leveranse når
 - **Skriving, språkvask og respons (`academic-writing`, `humanizer`, `academic-critic`).** Bruk [skrive- og redaktørveiledningen](references/akademisk-skriving.md) for disposisjon, drøfting, kritikk og språkvask. Bruk [faglig veiledning](references/skriveveiledning.md) ved tekstanalyse, essay, lærerkommentarer og spørsmål om norskfaglige kilder.
 - **Forskning og kildekontroll (`research-integrity`).** Bruk [forskningsveiledningen](references/forskningsverktoy.md) for litteraturarbeid, studieplanlegging, metode og dataanalyse. Oppgi beregnede resultater først etter analyse av de aktuelle dataene.
 - **Øving, presentasjoner og Office (`learning-coach`, `exam-preparation`, `presentation-engine`, `office-integration`).** Bruk [studie- og leveranseveiledningen](references/studie-og-leveranser.md) for øvelser, prøver, lysbilder og arbeid med dokumenter eller regneark.
-- **Sluttkontroll (`quality-assurance`).** Bruk kontrollen nedenfor. Ved revisjon kan du også bruke [tekstkontrollen](references/akademisk-skriving.md#kontroller-ordrette-uttrykk-ved-behov) for ordrette uttrykk.
+- **Sluttkontroll (`quality-assurance`).** Bruk kontrollen nedenfor. Ved revisjon kan du også bruke `scripts/sjekk_uttrykk.py` til å telle ordrette uttrykk. Skriptet rapporterer `BESTÅTT` ved likt antall og `FEIL` ved avvik eller ugyldig grunnlag. Se [tekstkontrollen](references/akademisk-skriving.md#kontroller-ordrette-uttrykk-ved-behov) for bruk og tolkning.
 
 ## Kilder, personvern og sluttkontroll
 

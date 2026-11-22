@@ -27,6 +27,7 @@ class SkillPackageTests(unittest.TestCase):
     def test_archive_matches_installable_directory(self):
         main_skill = SKILLS / "academic-skill"
         self.assertTrue((main_skill / "SKILL.md").is_file())
+        self.assertTrue((main_skill / "scripts" / "sjekk_uttrykk.py").is_file())
         self.assert_archive_matches("academic-skill.zip", main_skill)
 
     def test_suite_archive_has_all_twelve_skill_choices(self):
