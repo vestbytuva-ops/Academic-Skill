@@ -1,0 +1,3 @@
+interface:
+  display_name: "Quality Assurance"
+  short_description: "Check a deliverable against requirements and evidence"

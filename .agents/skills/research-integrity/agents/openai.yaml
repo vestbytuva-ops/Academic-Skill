@@ -1,0 +1,3 @@
+interface:
+  display_name: "Research Integrity"
+  short_description: "Check claims against sources, methods, and data"
