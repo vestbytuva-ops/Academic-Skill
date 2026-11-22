@@ -1,61 +1,82 @@
 # Academic Skill
 
-Academic Skill er en skrive- og læringsveileder for elever og studenter som bruker Codex. Gi den oppgaven, et avsnitt du har skrevet, og si hva du vil ha hjelp med. Du kan be om et spørsmål som hjelper deg å skrive videre selv, få forslag til én formulering eller få hele utkastet språkvasket.
+English | [Norsk bokmål](README.nb.md)
 
-## Installer for alle lokale prosjekter
+**NOTE!** Academic Skill is a Norwegian skill that also works in English. Ask for the language your assignment requires.
 
-Åpne Codex på maskinen der du bruker prosjektene dine, og lim inn denne meldingen én gang.
+Academic Skill helps students understand assignments, study for exams, evaluate sources and methods, revise drafts, and plan presentations. Share the assignment, the material you want to work with, and what you need help with.
+
+<a id="installer-for-alle-lokale-prosjekter"></a>
+
+## Install for all local Codex projects
+
+Open Codex on the computer where you work and send this request once.
 
 ```text
-Bruk $skill-installer til å installere https://github.com/vestbytuva-ops/Academic-Skill/tree/main/.agents/skills/academic-skill for alle mine lokale Codex-prosjekter. Bruk installerens standardmappe.
+Install the skill from https://github.com/vestbytuva-ops/Academic-Skill/ for all my local Codex projects.
 ```
 
-**Manuell installasjon.** Pakk ut [academic-skill.zip](https://github.com/vestbytuva-ops/Academic-Skill/raw/refs/heads/main/dist/academic-skill.zip) og legg mappen `academic-skill` i `~/.codex/skills/` (`%USERPROFILE%\.codex\skills` på Windows). Har du angitt `CODEX_HOME`, bruker du mappen `skills` under den. Etter utpakking skal `academic-skill/SKILL.md` ligge direkte under `skills/`.
+You can also invoke `$skill-installer` and give it the [skill folder URL][skill-folder]. To install manually, extract [academic-skill.zip][skill-zip] and place the `academic-skill` folder in `~/.codex/skills/` (`%USERPROFILE%\.codex\skills` on Windows). If you set `CODEX_HOME`, use its `skills` folder. The installed file should be at `skills/academic-skill/SKILL.md`.
 
-## Prøv i Codex
+After installation, open a new Codex conversation and select `$academic-skill`. To use the skill in this repository alone, open the repository folder as a Codex project.
 
-Åpne en ny samtale i et av prosjektene dine og prøv denne bestillingen.
+## Use in ChatGPT Work
 
-> Bruk $academic-skill. I metodedelen skrev jeg «Intervjuene viste hva alle studentene mente». Jeg intervjuet to studenter. Gi meg én mer presis formulering, og forklar hva du endret.
+Download [academic-skill.zip][skill-zip]. In a workspace that supports skill uploads, go to **Plugins → Skills → Create → Upload from your computer** and select the ZIP. After installation, open a new Work chat, type `@`, and select **Academic Skill**. [OpenAI's skill upload guide][chatgpt-skills]
 
-Her kan veilederen foreslå «Intervjuene viste hva de to studentene mente». Ordet «to» avgrenser påstanden til dem som faktisk deltok. Vil du finne formuleringen selv, kan du avslutte bestillingen med «Still meg ett spørsmål, så prøver jeg igjen».
+## Choose a workflow
 
-## Velg hvordan du vil jobbe
+The website lists eleven areas you can request individually. This repository installs one skill called `academic-skill`. Select it, then name an area and describe what you want it to do.
 
-| Når du vil … | Be om | Hva du får |
-| --- | --- | --- |
-| skrive videre selv | **Veiledning** | Ett grep å prøve i ditt eget avsnitt, gjerne knyttet til en kommentar fra læreren. |
-| vurdere en formulering | **Forslag** | Et konkret alternativ og en forklaring på hvordan det påvirker teksten. Du velger hva du vil bruke. |
-| få et utkast eller bearbeide en tekst | **Utkast, revisjon eller språkvask** | En tekst i ønsket sjanger og målform. Ved revisjon kan du se hva som er endret. |
+> Use $academic-skill. Focus on exam-preparation. Quiz me on these notes in English, one question at a time. Wait for my answer before giving feedback.
 
-**Din skrivestemme.** Del noen setninger du selv har skrevet, og fortell hvilken sjanger de tilhører. Du kan be om å få se hvilke trekk veilederen har lagt merke til, rette en observasjon eller be den legge trekket til side. Stilprofilen gjelder oppgaven du jobber med.
-
-**Kilder og forskning.** Som utgangspunkt bruker veilederen materialet du deler. Ber du om kildekontroll, viser den hvor en påstand har støtte, hvor materialet motsier den, eller hva som fortsatt er uavklart. Du kan også be om eksterne kilder, hjelp til å velge metode eller en tolkning av data du har delt.
-
-## Finn fram i prosjektet
-
-| Fil eller mappe | Hva du finner der |
+| Website label | What to ask for |
 | --- | --- |
-| [START-HER.md](START-HER.md) | En kort bruksguide og tips til å prøve din egen skrivestemme. |
-| [Ferdigheten](.agents/skills/academic-skill/SKILL.md) | Instruksjonene Codex leser og bruker til å velge arbeidsform. |
-| [Fagveiledningene](.agents/skills/academic-skill/references/) | Personlig stil, akademisk skriving, norskfaglig veiledning og forskningsmetode. |
-| [Dokumentasjon](docs/) | [Utviklingsplan](docs/Arkitektur-og-plan.md), [kilderegister](docs/Kilderegister.md) og [resultater fra V2-piloten](docs/Testresultater.md). |
-| [Tester og skriveprøver](tests/) | Sju skriveoppgaver med tilhørende svar og vurderingskriterier, samt automatiske tester av tekstkontrollen. |
+| `academic-core` | Break down the assignment and identify what to clarify before you start. |
+| `personal-voice` | Identify wording, rhythm, and tone in your own writing sample and use them as a guide. |
+| `academic-writing` | Connect the research question, argument, evidence, and conclusion. |
+| `humanizer` | Improve the flow of your text while preserving its meaning and your voice. |
+| `academic-critic` | Evaluate a draft against the rubric or your teacher's feedback and suggest a revision. |
+| `research-integrity` | Check which claims the supplied sources and methods support. |
+| `learning-coach` | Explain a concept, give one exercise, and wait for your attempt. |
+| `exam-preparation` | Quiz you from your notes or draft flashcards for a topic. |
+| `presentation-engine` | Plan slides and speaking points for the audience and time limit. |
+| `office-integration` | Work with excerpts or files from Word, Excel, or PowerPoint using the tools available in your session. |
+| `quality-assurance` | Review a draft against the assignment and identify quotations, figures, or claims to verify. |
 
-## Prøv V2 selv
+## Choose how to work
 
-For å vurdere skriveveiledningen kan du velge én av [de sju oppgavene](tests/cases.json), prøve den i en ny samtale og sammenligne svaret med [vurderingsnøkkelen](tests/Vurderingsnokkel.md). Oppgavene bygger på oppdiktede skriveprøver.
+| When you want to … | Ask for | What you get |
+| --- | --- | --- |
+| practice or keep writing yourself | **Coaching** | One concrete step to try, based on your draft or feedback. |
+| evaluate a wording choice | **Suggestions** | An alternative and an explanation of what it changes. |
+| draft, revise, or copyedit | **A draft, revision, or copyedit** | Text in the requested language and genre. You can ask to see the changes. |
 
-Skriveveiledningen kan brukes uten Python eller Office. Den valgfrie [tekstkontrollen](.agents/skills/academic-skill/scripts/check_spans.py) bruker Python 3 til å telle forekomster av uttrykk du selv velger, for eksempel et sitat med sidetall. Et sitat kan fortsatt ha skiftet betydning i sammenhengen selv om ordlyden og antallet stemmer.
+For style feedback, share a short sample of your own writing and say which features to preserve. The style profile applies to the current task. For source checks, share the claims and evidence. You can also ask for external sources, help choosing a method, or analysis of data you supply.
 
-Kjør testene av tekstkontrollen og nedlastingspakken fra prosjektmappen med
+## Project files
 
-```sh
-python -B -m unittest discover -s tests -v
-```
+| File or folder | Contents |
+| --- | --- |
+| [START-HERE.md](START-HERE.md) | A first example and tips for working with your own writing style. |
+| [Skill instructions](.agents/skills/academic-skill/SKILL.md) | The Norwegian instructions that guide the skill. |
+| [References](.agents/skills/academic-skill/references/) | Norwegian guidance on writing, personal voice, teaching, and research. |
+| [Documentation](docs/) | The [development plan](docs/Arkitektur-og-plan.md), [source register](docs/Kilderegister.md), and [V2 pilot results](docs/Testresultater.md) in Norwegian. |
+| [Tests and writing samples](tests/) | Seven example tasks, their scoring criteria, and automated checks. |
 
-Når du har lagret en endring i skillen i Git, bygger du ZIP-filen på nytt før du kjører testene.
+## Evaluate and test
+
+Try one of the [seven example tasks](tests/cases.json) in a fresh conversation and compare the answer with the [scoring criteria](tests/Vurderingsnokkel.md). The examples use fictional writing samples.
+
+The guidance workflows work without Python or Office. The optional [text checker](.agents/skills/academic-skill/scripts/check_spans.py) uses Python 3 to compare how many times selected expressions occur before and after an edit. Review their meaning in context as well.
+
+After committing a change to the skill folder, rebuild the download. Run both commands from the repository root.
 
 ```sh
 git archive --format=zip --prefix=academic-skill/ --output=dist/academic-skill.zip HEAD:.agents/skills/academic-skill
+python -B -m unittest discover -s tests -v
 ```
+
+[skill-folder]: https://github.com/vestbytuva-ops/Academic-Skill/tree/main/.agents/skills/academic-skill
+[skill-zip]: https://github.com/vestbytuva-ops/Academic-Skill/raw/refs/heads/main/dist/academic-skill.zip
+[chatgpt-skills]: https://help.openai.com/en/articles/20001066-skills-in-chatgpt
