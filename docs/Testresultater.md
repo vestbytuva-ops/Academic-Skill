@@ -1,10 +1,12 @@
 # Testresultater fra den lokale piloten
 
+Denne rapporten beskriver piloten fra 2026. Se [endringsloggen](../CHANGELOG.md) for målingene av Claude-pakken.
+
 **21. november 2026.** Originalversjonen oppfylte 20 av 21 kriterier i sju syntetiske skriveoppgaver. Piloten oppfylte 21 av 21. Forskjellen gjaldt én engelsk metodeformulering. Utvalget er for lite til å si at piloten generelt skriver bedre. Resultater, kildegrunnlag og kontroll av leveransen kan undersøkes hver for seg.
 
 ## Fase 1 · Utgangspunkt og sammenligning
 
-De tre originalfilene ble hentet fra samme [Git-revisjon](https://github.com/vestbytuva-ops/Academic-Skill/tree/97db0255ddfb924a25ec0f408087f101bea530fe). Filstørrelse og Git-objekt for hver lokal original ble kontrollert mot det fullstendige filtreet. Forskningsveiledningen og Codex' visningsmetadata har fortsatt identiske Git-objekter etter endringen. Originalen hadde ingen automatisk testpakke.
+De tre originalfilene ble hentet fra samme Git-revisjon. Filstørrelse og Git-objekt for hver lokal original ble kontrollert mot det fullstendige filtreet. Forskningsveiledningen og visningsmetadataene hadde identiske Git-objekter i originalen og piloten. Originalen hadde ingen automatisk testpakke. [Originalrevisjon](https://github.com/vestbytuva-ops/Academic-Skill/tree/97db0255ddfb924a25ec0f408087f101bea530fe)
 
 Én agentkjøring brukte originalen og én brukte piloten. De mottok de samme sju bestillingene med egne, fiktive skriveprøver. Hver kjøring behandlet bestillingene som separate oppgaver i samme økt. Begge hadde tilgang til de respektive lokale instruksjonene, uten Office, nettsøk eller andre kilder. En tredje modellkjøring fikk svarpar med variert rekkefølge per oppgave og uten versjonsnavn. Den vurderte tre avtalte kriterier per oppgave. Dette er en modellvurdert stikkprøve. Ingen lærer eller fagperson har gitt poengene.
 
