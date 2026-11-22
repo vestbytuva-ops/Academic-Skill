@@ -31,8 +31,14 @@ Velg de ett eller to punktene som betyr mest for vurderingskriteriene. Når bruk
 
 ## Kontroller ordrette uttrykk ved behov
 
-Sammenlign påstand, sitat og tilknyttet kilde i sin sammenheng. For to eksisterende, autoriserte UTF-8-tekstfiler og en JSON-liste med uttrykk fra originalen kan en lokal vert med Python bruke `scripts/check_spans.py original.txt revisjon.txt uttrykk.json` med sin Python-tolk. Listen kan for eksempel inneholde `["12 av 18", "«litt lettere» (Vedlegg A, s. 2)"]`. Bruk revidert tekst alene som inngang, uten endringslogg. Hold private filer utenfor skill-mappen. Utfør kontrollen i samtalen når filer eller Python mangler.
+Sammenlign påstand, sitat og tilknyttet kilde i sin sammenheng. Bruk kontrollen på to eksisterende, autoriserte UTF-8-tekstfiler og en JSON-liste med uttrykk hentet ordrett fra originalen. Kjør kommandoen med Python fra skillmappen og bytt ut eksempelstiene med stiene til filene.
 
-Koden 0 betyr likt antall av alle valgte uttrykk, 1 betyr avvik, og 2 betyr ugyldig grunnlag. Uttrykk kan være flyttet eller knyttet til feil påstand selv om antallet stemmer. Les derfor alltid etter betydningsendringer, feil plassering og nye påstander før levering.
+```sh
+python scripts/sjekk_uttrykk.py original.txt revisjon.txt uttrykk.json
+```
+
+Listen kan for eksempel inneholde `["12 av 18", "«litt lettere» (Vedlegg A, s. 2)"]`. Bruk revidert tekst alene som inngang, uten endringslogg. Hold private filer utenfor skillmappen. Utfør kontrollen i samtalen når filer eller Python mangler.
+
+`BESTÅTT` og kode 0 betyr likt antall av alle valgte uttrykk. `FEIL` med kode 1 betyr avvik og rapporterer uttrykkets indeks og antall, for eksempel `FEIL indeks=0 antall_original=2 antall_revisjon=1`. `FEIL` med kode 2 betyr ugyldig grunnlag. Uttrykk kan være flyttet eller knyttet til feil påstand selv om antallet stemmer. Les derfor alltid etter betydningsendringer, feil plassering og nye påstander før levering.
 
 Kontrollen skiller «9 mg» fra «19 mg» og «2,9 mg». Ta med eventuelle fortegn, eksponenter og enheter når du velger uttrykk, og vurder også disse i sammenheng.
