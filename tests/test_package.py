@@ -9,7 +9,7 @@ from zipfile import ZipFile
 import jsonschema
 import yaml
 
-from tools import build
+from tools import build, verify_codex
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = ROOT / "skills"
@@ -34,6 +34,7 @@ class AcademicPackages(unittest.TestCase):
         self.assertEqual(set(build.CATALOG), NAMES)
         self.assertEqual({p.parent.name for p in SKILLS.rglob("SKILL.md")}, NAMES)
         descriptions = set()
+        labels = set()
         for name in sorted(NAMES):
             with self.subTest(skill=name):
                 base = SKILLS / name
@@ -50,9 +51,44 @@ class AcademicPackages(unittest.TestCase):
                 descriptions.add(meta["description"])
                 ui = yaml.safe_load((base / "agents/openai.yaml").read_text(encoding="utf-8"))
                 self.assertIs(ui["policy"]["allow_implicit_invocation"], True)
+                label = ui["interface"]["display_name"]
+                self.assertEqual(label, build.CATALOG[name]["display_name"])
+                self.assertTrue(label.startswith("Academic "), label)
+                labels.add(label)
                 self.assertTrue(25 <= len(ui["interface"]["short_description"]) <= 64)
                 self.assertIn("$" + name, ui["interface"]["default_prompt"])
         self.assertEqual(len(descriptions), 12)
+        self.assertEqual(len(labels), len(NAMES))
+
+    def test_standalone_umbrella_routes_all_specialists_to_their_packaged_guidance(self):
+        common = {"references/arbeidsgrunnlag.md", "references/english.md", "references/norsk-skole.md"}
+        with ZipFile(ROOT / "dist/academic-skill.zip") as package:
+            entry = package.read("academic-skill/SKILL.md").decode()
+            routes = re.findall(r"^\| `([a-z-]+)`[^\n]*", entry, re.MULTILINE)
+            self.assertCountEqual(routes, NAMES - {MAIN.name})
+            for name in routes:
+                with self.subTest(skill=name):
+                    row = next(line for line in entry.splitlines() if line.startswith(f"| `{name}`"))
+                    self.assertIn(build.CATALOG[name]["display_name"], row)
+                    specialist = (SKILLS / name / "SKILL.md").read_text(encoding="utf-8")
+                    guidance = {href for href in LINK.findall(specialist) if href.startswith("references/")} - common
+                    self.assertTrue(guidance)
+                    self.assertEqual(set(LINK.findall(row)), guidance)
+                    for href in guidance:
+                        self.assertEqual(package.read(f"academic-skill/{href}"), (SKILLS / name / href).read_bytes())
+
+    def test_live_verifier_rejects_old_label_and_wrong_scope(self):
+        name = "exam-preparation"
+        catalog = {name: build.CATALOG[name]}
+        expected = {"name": name, "scope": "user", "enabled": True,
+                    "interface": {"displayName": catalog[name]["display_name"]}}
+        old = {**expected, "interface": {"displayName": "Exam Preparation"}}
+        other_scope = {**expected, "scope": "repo"}
+        verify_codex.verify_labels([expected, other_scope], catalog, "user")
+        with self.assertRaisesRegex(RuntimeError, "expected 'Academic Exam Preparation'"):
+            verify_codex.verify_labels([old, other_scope], catalog, "user")
+        with self.assertRaisesRegex(RuntimeError, "missing or disabled"):
+            verify_codex.verify_labels([{**expected, "enabled": False}, other_scope], catalog, "user")
 
     def test_each_markdown_resource_resolves_inside_its_own_skill(self):
         for name in sorted(NAMES):

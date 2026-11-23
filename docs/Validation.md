@@ -1,5 +1,13 @@
 # Validation of the twelve-skill collection
 
+## Version 3.1 (23 November 2026)
+
+The 3.0 catalog had eight display names containing `Academic`. In 3.1 all twelve contain the search term. The eleven specialist commands keep their original IDs. On Windows, the Codex app server returned all twelve as enabled, with the expected display names and scope, first in an isolated project and then from a user installation of the plugin ZIP in an unrelated project. The graphical suggestion list was not observed.
+
+The Windows Python suite passed 26 tests. The package checks cover all eleven routes available from an umbrella-only install and reject stale display names and incorrect discovery scope. The generated files and all thirteen distribution archives passed the reproducible build check.
+
+Two additional umbrella-only trials used supplied material. In Norwegian, the reviewer counted the preprint and final article as one study, retained their different figures and page references, and left the result from a separate abstract unresolved. In English, it preserved a proposed 20% change as a target and asked for the baseline and the meaning of the percentage. These cases and their expected outcomes are in the [workflow suite](../tests/workflows.json). The earlier platform observations below apply to version 3.0.
+
 ## Diagnosis
 
 Revision `64c2442` shipped a single valid skill in `.claude/skills/academic-skill/`. Its UTF-8 frontmatter parsed and its name matched the directory. Its tests explicitly required one ZIP, no skill metadata under `agents/` and no independent skills. The previously published eleven topic names were absent as installed packages. The subsequent merge `e7942bd` removed the Claude source directory and retained the old ZIP. The restored sources here retain the last complete academic content and the text checker.

@@ -1,5 +1,10 @@
 # Endringslogg
 
+## 23. november 2026 · 3.1.0
+
+- Alle tolv visningsnavn begynner med «Academic». De publiserte kommandoene og filstiene er beholdt. Hovedskillen peker til hver av de elleve arbeidsmåtene og kombinerer dem når oppgaven krever det.
+- Ved sammenligning av studier knyttes funn til versjonen som faktisk ble lest. Manglende svar vises i rapporten. Språkvask og kritikk kontrollerer målte resultater mot belegget og skiller prosjektmål fra oppnådde resultater. [Kilder og gjenbruksvalg](docs/Kilderegister.md)
+
 ## November 2026 · 3.0.0 · Samling for flere agenter
 
 - Gjeninnførte alle elleve spesialistene som selvstendige skills. Hovedskillen kan fortsatt brukes alene og kombinerer arbeidsmåter.

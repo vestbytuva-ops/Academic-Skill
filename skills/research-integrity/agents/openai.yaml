@@ -1,5 +1,5 @@
 interface:
-  display_name: "Research Integrity"
+  display_name: "Academic Research Integrity"
   short_description: "Check each claim against the available evidence"
   default_prompt: "Use $research-integrity. Check each claim against the supplied source and flag what remains uncertain."
 policy:

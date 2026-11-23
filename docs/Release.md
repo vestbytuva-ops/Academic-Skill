@@ -1,6 +1,6 @@
 # Release and directory submission
 
-## Files for release 3.0.0
+## Files for release 3.1.0
 
 | File | Audience | What the upload contains |
 | --- | --- | --- |
@@ -30,8 +30,8 @@ The upload includes the English listing, example prompts and a square 512-pixel 
 ## Reviewer walkthrough
 
 1. Install the plugin in an eligible test workspace. In a new chat, check that the umbrella and the eleven specialists are available. Try one exact selection, one natural request and one unrelated request. Record the host, version, account type and selected skill.
-2. Pick Research Integrity. Supply: “Page 3 says six of ten preferred A. I claim every participant preferred A.” The answer should identify the contradiction and cite page 3 of the supplied excerpt.
-3. Pick Exam Preparation. Supply: “Notat: Utvalget er deltakerne vi faktisk undersøker. Still ett spørsmål og vent.” Expect one Norwegian question, without the answer.
+2. Pick Academic Research Integrity. Supply: “Page 3 says six of ten preferred A. I claim every participant preferred A.” The answer should identify the contradiction and cite page 3 of the supplied excerpt.
+3. Pick Academic Exam Preparation. Supply: “Notat: Utvalget er deltakerne vi faktisk undersøker. Still ett spørsmål og vent.” Expect one Norwegian question, without the answer.
 4. Give the umbrella the observation “9 of 14 felt more confident; no comparison group” and request a four-minute talk. Expect a four-minute plan that limits the conclusion to the participants.
 5. Ask for a sales email or a C formatting example in a fresh chat without selecting a skill. Observe whether any academic skills activate. Repeat the other [explicit, implicit and out-of-scope trials](../tests/workflows.json).
 

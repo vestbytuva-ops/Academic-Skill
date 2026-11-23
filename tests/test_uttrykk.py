@@ -31,8 +31,8 @@ class UttrykkskontrollTester(unittest.TestCase):
 
     def expect(self, status, lines, *paths):
         result = subprocess.run(
-            [sys.executable, "-B", str(CHECKER), *map(str, paths)],
-            capture_output=True, text=True, timeout=10,
+            [sys.executable, "-B", "-X", "utf8", str(CHECKER), *map(str, paths)],
+            capture_output=True, encoding="utf-8", timeout=10,
         )
         self.assertEqual(result.returncode, status)
         self.assertEqual(result.stdout.splitlines(), lines)

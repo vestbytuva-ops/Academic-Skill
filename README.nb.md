@@ -6,13 +6,15 @@
 
 ## Installer i Codex
 
-Kjør kommandoen i prosjektmappen med Node.js og npm installert. Den bruker hovedgrenen. Før den nye versjonen er slått sammen, bruk oppskriften for arbeidsgrenen i [engelsk README](README.md#install-in-codex).
+Kjør kommandoen i prosjektmappen med Node.js og npm installert. Den bruker hovedgrenen. Du kan også [teste en lokal utsjekking](README.md#install-in-codex).
 
 ```sh
 npx skills add https://github.com/vestbytuva-ops/Academic-Skill --skill "*" -a codex --copy -y
 ```
 
 Legg til `-g` hvis de tolv valgene skal være tilgjengelige i alle **lokale** prosjekter. Åpne en ny Codex-økt, skriv `$` og velg fra listen. Du kan også åpne `/skills`. Bytt ut `"*"` med navnet på én skill hvis du bare vil installere den.
+
+Alle tolv visningsnavn begynner med **Academic**. I menyer som søker i visningsnavn kan du skrive `$academic`, eller avgrense søket til for eksempel `Academic Research Integrity`. I klienter som søker i kommandonavn, bruk ID-en i tabellen, for eksempel `$research-integrity`. Hovedskillen kan bruke alle elleve arbeidsmåtene alene. Installer hele samlingen for å få dem som separate valg i menyen.
 
 | Velg | Hva den hjelper deg med |
 | --- | --- |

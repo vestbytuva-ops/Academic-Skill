@@ -109,6 +109,28 @@
         "Svar på bokmål med to korte salgstekstsetninger som bevarer opplysningene.",
         "Ingen akademisk mal, kildekrav eller påfunn om pris eller varighet."
       ]
+    },
+    {
+      "id": 11,
+      "prompt": "Bruk bare disse tre fiktive utdragene. Et forhåndsmanus, s. 3, sier at 9 av 14 ønsket en ny økt. Sluttartikkelen om de samme 14, s. 5, oppgir 8 av 14 etter en retting og sier at læring ikke ble målt. Et sammendrag fra en annen klasse nevner deltakertilfredshet uten å oppgi tall. Sammenlign ønsket om ny økt og læring i en liten tabell, og vurder setningen «Tre studier bekrefter at økten ga bedre læring».",
+      "expected_output": "Bokmål. Vis to studier, riktig tekststed og hva hver kilde faktisk underbygger om de to spørsmålene. Gi en avgrenset vurdering av konklusjonen.",
+      "files": [],
+      "expectations": [
+        "Tell forhåndsmanus og sluttartikkel som én studie. Knytt 9 av 14 til forhåndsmanuset s. 3 og det korrigerte 8 av 14 til sluttartikkelen s. 5.",
+        "Skill ønske om ny økt fra tilfredshet og læring. Læring ble ikke målt i den første studien. Sammendraget fra den andre gir ikke svar på læring eller ønske om ny økt.",
+        "La manglende belegg være synlig i tabellen og konklusjonen. Ikke tolk fravær av måling som null effekt eller påstå at årsak er bekreftet."
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "Copyedit two sentences from my grant proposal to make them easier to read. Draft: “It is our plan to invite 40 students to the workshops. We aim for a 20% reduction in missed assignments.” No data have been collected. Keep the meaning and give me just the two sentences.",
+      "expected_output": "English. Two direct sentences that keep the planned invitation and the numerical aim as proposals.",
+      "files": [],
+      "expectations": [
+        "Deliver two edited sentences without adding commentary.",
+        "Keep the plan to invite 40 students. Preserve the 20% reduction in missed assignments as a target.",
+        "Do not imply that recruitment succeeded, that any result was measured, or that the workshops caused a change."
+      ]
     }
   ]
 }

@@ -1,5 +1,5 @@
 interface:
-  display_name: "Personal Voice"
+  display_name: "Academic Personal Voice"
   short_description: "Preserve your voice using your own writing"
   default_prompt: "Use $personal-voice. Which two features of my own writing should I keep in this revision?"
 policy:

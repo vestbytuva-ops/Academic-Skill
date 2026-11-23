@@ -1,5 +1,5 @@
 interface:
-  display_name: "Exam Preparation"
+  display_name: "Academic Exam Preparation"
   short_description: "Practice exams, flashcards and one-question quizzes"
   default_prompt: "Use $exam-preparation. Quiz me on my notes, one question at a time."
 policy:
