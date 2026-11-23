@@ -2,55 +2,36 @@
 
 [English](README.md) · [Installasjon for hver agent](docs/Compatibility.md) · [Testresultater](docs/Validation.md)
 
-**MERK! Dette er en norsk skillsamling som også kan brukes på engelsk.** Del oppgaven, vurderingskriteriene, notatene eller et kildeutdrag. Be om veiledning hvis du vil prøve selv, forslag hvis du vil vurdere en endring, eller en ferdig revisjon når det er det du trenger. Svar og leveranser følger språket i oppgaven, og sitater beholder originalspråket.
+Academic Skill er én ferdighet for skole- og studiearbeid på norsk og engelsk. Velg `academic-skill` og skriv hva du trenger. Den kan kombinere arbeidsmåtene i samme oppgave, for eksempel sjekke om en kilde støtter konklusjonen din og hjelpe deg med å presentere resultatet muntlig.
 
 ## Installer i Codex
 
-Kjør kommandoen i prosjektmappen med Node.js og npm installert. Den bruker hovedgrenen. Du kan også [teste en lokal utsjekking](README.md#install-in-codex).
+Fra denne lokale utgaven kan du kjøre `npx skills add . --skill academic-skill -a codex --copy -y` i repoets rot. For å installere i et annet prosjekt kan du erstatte punktumet med den absolutte stien til denne mappen. Med Node.js og npm kan du også installere versjonen som ligger på GitHubs standardgren:
 
 ```sh
-npx skills add https://github.com/vestbytuva-ops/Academic-Skill --skill "*" -a codex --copy -y
+npx skills add https://github.com/vestbytuva-ops/Academic-Skill --skill academic-skill -a codex --copy -y
 ```
 
-Legg til `-g` hvis de tolv valgene skal være tilgjengelige i alle **lokale** prosjekter. Åpne en ny Codex-økt, skriv `$` og velg fra listen. Du kan også åpne `/skills`. Bytt ut `"*"` med navnet på én skill hvis du bare vil installere den.
+Legg til `-g` hvis du vil bruke den i alle prosjektene dine. Åpne en ny Codex-chat og velg **Academic Skill** med `$academic-skill`. Har du en lokal versjon, kan du bytte ut nettadressen med stien til prosjektmappen. [Andre plattformer og oppgradering fra versjon 3](docs/Compatibility.md)
 
-Alle tolv visningsnavn begynner med **Academic**. I menyer som søker i visningsnavn kan du skrive `$academic`, eller avgrense søket til for eksempel `Academic Research Integrity`. I klienter som søker i kommandonavn, bruk ID-en i tabellen, for eksempel `$research-integrity`. Hovedskillen kan bruke alle elleve arbeidsmåtene alene. Installer hele samlingen for å få dem som separate valg i menyen.
+## Hva kan du be om?
 
-| Velg | Hva den hjelper deg med |
-| --- | --- |
-| `academic-skill` | Kombiner flere deler av en oppgave, fra kriterier til innlevering eller muntlig presentasjon. |
-| `academic-core` | Tolk oppgaven, avgrens problemstillingen og gjør kravene konkrete. |
-| `personal-voice` | Finn trekk i dine egne skriveprøver. Behold, rett eller fjern dem for oppgaven. |
-| `academic-writing` | Bygg opp en fagtekst og knytt belegg til argumentene dine. |
-| `humanizer` | Språkvask tekst og behold mening, sitater og forbehold. |
-| `academic-critic` | Få begrunnet tilbakemelding på bestemte steder i et utkast. |
-| `research-integrity` | Kontroller påstander og henvisninger mot kilden, og vurder metoden. |
-| `learning-coach` | Lær et begrep gjennom en forklaring og en oppgave du løser selv. |
-| `exam-preparation` | Lag øvingskort, planlegg lesingen eller tren muntlig med ett spørsmål om gangen. |
-| `presentation-engine` | Lag disposisjon, talepunkter og tidsplan for presentasjonen. |
-| `office-integration` | Arbeid med Word, Excel og PowerPoint. Du kan også lime inn et utdrag. |
-| `quality-assurance` | Sjekk krav, tall, sitater og kildehenvisninger før innlevering. |
+| Oppgave | Hva du kan få hjelp med | Veiledning |
+| --- | --- | --- |
+| Forstå oppgaven | Tolk verbene i oppgaveteksten og gjør vurderingskriterier om til konkrete handlinger. | [Oppgaveforståelse](skills/academic-skill/references/oppgaveforstaelse.md) · [Norsk skole](skills/academic-skill/references/norsk-skole.md) |
+| Beholde egen stemme | Finn trekk i egne skriveprøver og velg hva du vil ta vare på. | [Personlig skrivestemme](skills/academic-skill/references/personlig-stemme.md) |
+| Skrive fagtekst | Lag en disposisjon, begrunn et argument og vurder en innvending. | [Akademisk skriving](skills/academic-skill/references/skriving.md) · [Engelsk fagspråk](skills/academic-skill/references/english.md) |
+| Språkvaske | Gjør et avsnitt tydeligere og behold meningen, sitatene og forbeholdene. | [Språkvask](skills/academic-skill/references/sprakvask.md) |
+| Få tilbakemelding | Finn tekststedene der utkastet oppfyller et kriterium eller trenger mer arbeid. | [Tekstkritikk](skills/academic-skill/references/kritikk.md) |
+| Kontrollere kilder | Sjekk påstander mot kildene og forklar hva som står uavklart. | [Kildekontroll](skills/academic-skill/references/kildekontroll.md) |
+| Lære et begrep | Få et eksempel og en oppgave du kan prøve selv. | [Læringsveiledning](skills/academic-skill/references/laering-og-eksamen.md) |
+| Øve til eksamen | Tren muntlig med ett spørsmål om gangen eller lag øvingskort fra notatene. | [Eksamensøving](skills/academic-skill/references/laering-og-eksamen.md) |
+| Forberede en presentasjon | Fordel taletiden, velg lysbilder og knytt talepunktene til belegget. | [Presentasjoner](skills/academic-skill/references/presentasjoner.md) |
+| Arbeide med Office | Behandle et celleutdrag, et Word-dokument eller en presentasjon med tilgjengelige verktøy. | [Office-filer](skills/academic-skill/references/office-filer.md) |
+| Kontrollere sluttproduktet | Sjekk at tall, sitater og henvisninger stemmer og at oppgaven er besvart. | [Sluttkontroll](skills/academic-skill/references/sluttkontroll.md) |
 
 > Vi har fire minutter. Hjelp meg å sjekke hva undersøkelsen viser og lage en disposisjon med talepunkter.
 
-> Sjekk påstanden mot side 3 i kilden jeg legger ved. Vis hvilke ord som går lenger enn belegget.
+## Bygg filer til Claude
 
-> Eg øver til munnleg. Bruk notata mine, still eitt spørsmål og vent på svaret.
-
-## I andre agenter
-
-- **ChatGPT Work**. I et arbeidsområde med støtte kan en administrator laste opp [pluginen med alle tolv](dist/academic-skill-plugin.zip). Installer den, skriv `@` og velg ønsket skill i listen.
-- **Claude-arbeidsområde**. Last ned [Claude-pakken med alle tolv ferdighetene](https://github.com/vestbytuva-ops/Academic-Skill/raw/refs/heads/main/dist/academic-skill-claude-plugin.zip). Åpne **Plugins → Upload a plugin**, velg ZIP-filen som den er, og trykk **Upload**.
-- **Claude Code**. Skriv `/plugin install academic-skill --marketplace vestbytuva-ops/Academic-Skill`. Velg eksempelvis `/academic-skill:exam-preparation`. Installerer du frittstående med `-a claude-code`, bruker du `/exam-preparation`.
-- **Claude.ai**. Åpne **Tilpass → Skills → + Create skill → Upload a skill**. Last opp og aktiver [hovedskillen](dist/academic-skill.zip) for å bruke alle arbeidsmåtene. Vil du ha egne oppføringer, last opp de [enkelte ZIP-filene](dist/individual).
-- **Cursor**. Bytt til `-a cursor` i installasjonskommandoen. Velg for eksempel `/exam-preparation`.
-- **Gemini CLI**. Bruk `-a gemini-cli`. Åpne et klarert prosjekt, skriv `/skills list` og be om skillen med navn.
-- **VS Code med GitHub Copilot**. Bruk `-a github-copilot`. I VS Code-chatten kan du skrive `/exam-preparation`. Andre støttede Copilot-klienter velger ut fra oppgaven.
-
-## Oppdater, fjern eller feilsøk
-
-Kjør `npx skills list -a codex` for prosjektet. Legg til `-g` for brukermappen. Normal sti er `.agents/skills/<navn>/SKILL.md` eller `~/.agents/skills/<navn>/SKILL.md`, også på Windows under brukermappen. Åpne en ny økt hvis menyen viser gamle opplysninger. Velg én installasjonsmåte hvis du ser duplikater.
-
-Bruk `npx skills update` ved installasjon fra GitHub. For én enkelt skill kan du bruke `npx skills remove exam-preparation -a codex -y`. For alle tolv, kopier den navngitte kommandoen i [installasjonsguiden](docs/Compatibility.md). ZIP-filer oppdateres ved å installere den nye pakken på samme sted. I et administrert arbeidsområde avgjør administratoren hvilke skills som er tilgjengelige.
-
-Se [bygging og tester](README.md#build-and-validate), [evaloppgaver](tests/workflows.json), [historiske evalresultater](CHANGELOG.md) og [publiseringsveiledning](docs/Release.md).
+Kjør `python tools/build.py` fra prosjektmappen. Velg `dist/academic-skill.zip` i **Upload a skill** eller `dist/academic-skill-claude-plugin.zip` i **Upload a plugin**. Begge inneholder én ferdighet med alle arbeidsmåtene. Flytt de ferdige filene til en mappe ved siden av repoet før du pakker prosjektmappen i Windows. [Bygging og testing](README.md#build-and-validate) · [Utgivelse](docs/Release.md)

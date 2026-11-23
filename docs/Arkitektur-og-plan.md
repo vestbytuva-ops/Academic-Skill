@@ -1,31 +1,27 @@
 # Arkitektur og utviklingsplan
 
-## Hovedskill og elleve spesialister
+## Én ferdighet med flere arbeidsmåter
 
-Kilden ligger i `skills/`, med én mappe for hvert av de tolv navnene. Installeren kopierer den til banen verten leser. Hovedfilen velger språk, arbeidsform og referanser. Hver referanse dekker ett arbeidsområde, slik at en enkel bestilling kan løses med lite bakgrunnsstoff. En sammensatt bestilling kan for eksempel gå fra oppgavekrav til kildekontroll og videre til en presentasjon.
+[SKILL.md](../skills/academic-skill/SKILL.md) styrer språk, arbeidsform og hvilke referanser som leses. Oppgaven kan kreve én arbeidsmåte eller flere i rekkefølge. Et fireminutters foredrag om en undersøkelse kan for eksempel kreve kildekontroll før lysbildene planlegges. [Oversikt over arbeidsmåtene](../README.nb.md)
 
 | Trinn | Hva som skjer |
 | --- | --- |
-| Oppgave | Avklar leveranse og avgrens belegg. Velg veiledning, forslag eller produksjon. |
-| Arbeid | Les referansene oppgaven krever. Bruk stilgrunnlag fra relevant sjanger og språk når brukeren har delt det. |
-| Leveranse | Sammenhold tekst, tabell eller presentasjon med kildene og oppgaven. Vurder virkningen av faglige endringer. |
+| Oppgave | Avklar leveranse, vurderingskriterier og belegg. Velg veiledning, forslag eller produksjon. |
+| Arbeid | Les de relevante filene i `references/`. Bruk skriveprøver og preferanser brukeren har oppgitt for oppgaven. |
+| Leveranse | Sammenhold utkastet med kildene. Ved en filbestilling, kontroller dokumentet med verktøy som er tilgjengelige og autoriserte. |
 
-Stilobservasjoner kan godkjennes, korrigeres, fjernes eller deaktiveres i samtalen. Arbeidsprofilen gjelder den aktuelle oppgaven. Ved motstrid mellom en preferanse og et sjangerkrav, vis konflikten og la brukeren velge der oppgaven åpner for det.
+Stilobservasjoner kan godkjennes, korrigeres, fjernes eller deaktiveres i samtalen. Arbeidsprofilen gjelder den aktuelle oppgaven. Ved motstrid mellom en preferanse og et sjangerkrav, gjør konflikten synlig og la brukeren velge der oppgaven åpner for det.
 
-## Felles kilder og pakking
+## Kilder og pakking
 
-Rediger fagreferanser og uttrykkskontrollen i `skills/academic-skill/`. Frittstående spesialister peker på relevante filer i sin egen mappe. Byggeskriptet henter disse fra hovedskillens kilder og lager versjonerte ZIP-filer uten symlenker. Endre visningsnavn og eksempler i `tools/catalog.json`. Kjør `python tools/build.py` og `python tools/build.py --check` etter endringer. Ressursene fungerer også når en bruker installerer bare én spesialist.
+Fagtekstene vedlikeholdes under [references](../skills/academic-skill/references). Læringsveiledning og eksamensøving deler én referanse. Norsk skole og engelsk akademisk skriving har egne språk- og sjangerråd. Den valgfrie [uttrykkskontrollen](../skills/academic-skill/scripts/sjekk_uttrykk.py) sammenligner brukerens godkjente tekstgrunnlag ved sluttkontroll.
 
-Rotmanifestet er kilden til plugin-identiteten og klientadapterne. Codex og Claude Code har separate markedsplassformater. ChatGPT Work importerer pluginpakken. Claude.ai importerer ett skillarkiv per oppføring. [Installasjon og kompatibilitet](Compatibility.md)
-
-## Kjøring og verktøy
-
-Den valgfrie tekstkontrollen bruker Python-standardbiblioteket og autoriserte tekstfiler. Ved manglende kodekjøring sammenlignes uttrykkene manuelt. Ved bestilt Office-leveranse, bruk verktøyene verten har tilgang til, kontroller at filen kan åpnes, og sjekk lesbarheten når den kan vurderes. Med et utdrag kan brukeren få et konkret forslag å overføre til filen.
+[Katalogen](../tools/catalog.json) beskriver brukerens ene menyvalg. [Rotmanifestet](../plugin.json) gir identitet og metadata til klientadapterne. Byggeskriptet genererer disse og pakker skillens filer i to arkiver, ett for skillimport og ett for Claudes pluginimport. Ferdige arkiver distribueres utenfor Git-kildetreet. [Bygging og distribusjon](Release.md)
 
 ## Videre prøver
 
-- Gjenta evalene på lengre tekster og på begge språk i målverten. Bruk samme kilder og bestillinger i sammenligningen.
-- Test filproduksjon med en uavhengig leser. Sammenlign DOCX, XLSX og PPTX med kildeinnholdet og se etter avskjæring og lesbarhetsfeil.
-- Prøv at retting, fjerning og deaktivering i samtalen virker for ulike oppgaver og skrivestemmer.
+- Kjør de samme [testoppgavene](../tests/workflows.json) før og etter endringer. Registrer hvilken referanse oppgaven krever, og vurder selve svaret mot kriteriene.
+- Prøv lengre tekster på begge språk i målverten. Ved dokumentproduksjon, åpne DOCX, XLSX eller PPTX i en uavhengig leser og sammenlign med grunnlaget.
+- Prøv retting, fjerning og deaktivering av stilvalg i en samtale. Undersøk om stemme, tall og sitater blir bevart.
 
-[Kilderegister](Kilderegister.md) · [Historiske testresultater](Testresultater.md) · [Endringslogg og nye evalresultater](../CHANGELOG.md)
+[Kilderegister](Kilderegister.md) · [Tidligere evalresultater](Testresultater.md) · [Teststatus](Validation.md) · [Endringslogg](../CHANGELOG.md)

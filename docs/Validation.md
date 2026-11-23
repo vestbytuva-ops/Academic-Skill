@@ -1,62 +1,35 @@
-# Validation of the twelve-skill collection
+# Validation of Academic Skill 4.0.0
 
-## Version 3.1 (23 November 2026)
+## Reproduce the package checks
 
-The 3.0 catalog had eight display names containing `Academic`. In 3.1 all twelve contain the search term. The eleven specialist commands keep their original IDs. On Windows, the Codex app server returned all twelve as enabled, with the expected display names and scope, first in an isolated project and then from a user installation of the plugin ZIP in an unrelated project. The graphical suggestion list was not observed.
+From the repository root, install the test dependencies with `python -m pip install -r requirements-dev.txt`, then run:
 
-The Windows Python suite passed 26 tests. The package checks cover all eleven routes available from an umbrella-only install and reject stale display names and incorrect discovery scope. The generated files and all thirteen distribution archives passed the reproducible build check.
+```sh
+python tools/build.py
+python -m unittest discover -s tests
+python tools/build.py --check
+```
 
-Two additional umbrella-only trials used supplied material. In Norwegian, the reviewer counted the preprint and final article as one study, retained their different figures and page references, and left the result from a separate abstract unresolved. In English, it preserved a proposed 20% change as a target and asked for the baseline and the meaning of the percentage. These cases and their expected outcomes are in the [workflow suite](../tests/workflows.json). The earlier platform observations below apply to version 3.0.
+The builder and the Norwegian text checker use the Python standard library. The test suite also uses PyYAML for frontmatter and jsonschema for the published root manifest schema. The package tests build a clean fixture so they also work after the release ZIPs have been moved to a sibling directory. Run the build again before comparing on-disk release files with `--check`.
 
-## Diagnosis
+On Windows, all 25 tests passed (eight package and routing tests and 17 text-checker tests). The build and final archive comparison passed. In two local prompt trials, a four-minute talk used the 9/14 finding without attributing it to the exercise, and an English proposal retained 40 invitations as a plan and 20% as a target. These were agent trials with visible criteria.
 
-Revision `64c2442` shipped a single valid skill in `.claude/skills/academic-skill/`. Its UTF-8 frontmatter parsed and its name matched the directory. Its tests explicitly required one ZIP, no skill metadata under `agents/` and no independent skills. The previously published eleven topic names were absent as installed packages. The subsequent merge `e7942bd` removed the Claude source directory and retained the old ZIP. The restored sources here retain the last complete academic content and the text checker.
-
-TasteDesign was inspected at `f6b7657` as a packaging reference. Its checkout placed the skill under `skills/` and offered marketplace adapters. This collection uses its own academic instructions and the portable root manifest supported by the current OpenAI specification.
-
-## Executed checks
-
-| Check | Observation |
+| Check | What it establishes |
 | --- | --- |
-| Agent Skills reference validator | Passed for all 12 directories. Each name matches its directory and each description fits the Claude.ai upload limit used here. |
-| Manifest | Validated the root manifest against the vendored official Agent Plugins 1.0.0 JSON Schema. Additional checks cover OpenAI display fields, marketplace paths and both 512 × 512 PNG icon references. |
-| Release files | All 13 ZIPs matched their source files byte for byte after a fresh build. Generated metadata and standalone copies matched their canonical sources. A missing-reference regression produces an error with the missing path. |
-| Python suite | 24 tests passed: 17 text-checker tests and seven distribution and documentation tests. They cover Norwegian letters, decimal commas, protected spans and exit codes. Run from the repository root with `python -m unittest discover -s tests`. |
-| Installer 1.9.0, Linux | In three clean project folders, the full install exposed 12 entries, the single research specialist exposed one, and the umbrella alone exposed one. A user install wrote the twelve directories to `~/.agents/skills/`. |
-| Codex CLI 0.172.0-alpha.2 | `skills/list` returned all 12 enabled with scope `repo`, and 12 enabled with scope `user`. In an empty project it still returned the 12 user entries. No discovery errors. Local `codex plugin marketplace add`, `codex plugin add` and `codex plugin list` reported Academic Skill 3.0.0 installed and enabled. |
-| Claude Code 2.1.330 | The official CLI validated the local marketplace and enumerated all 12 namespaced commands. Separate optional directory validation reports a missing license. |
-| Gemini CLI 0.70.0 | Native `gemini skills list --all` enumerated 12 enabled skills in the trusted test project. The initial untrusted project omitted workspace skills. |
-| Cursor and GitHub Copilot | The real installer wrote project files for the corresponding agent flags. No editor interaction or model run was observed in those clients. |
+| Single entry and routing | The catalog, directory, manifest identities and Codex label identify `academic-skill`. The description fits the 200-character upload limit. Every linked local resource exists in the installed skill. |
+| Source and release boundaries | The source tree outside the build directory contains zero ZIP or skill archives. In Git the test also checks the index, including tracked files under ignored paths. |
+| Upload contents | Both uploads contain exactly the expected source bytes. The skill archive has `academic-skill/SKILL.md`. The plugin has `.claude-plugin/plugin.json` at the root and `skills/academic-skill/SKILL.md`. Entries are checked for nested archives by filename and payload. |
+| Reproducibility | A second build in a clean directory produces the same bytes. A missing reference, stale archive or unexpected package fails validation. |
+| Text checker | The 17 original CLI tests exercise quotations, references, Norwegian and English text, decimal commas, repeated measurements and exit codes. |
 
-The Codex CLI's first attempt to start a full chat turn in the managed Linux environment failed when its filesystem helper could not open a network-namespace socket. The discovery results above come from the actual app server. They do not establish that a graphical picker rendered or that an authenticated Codex model answered. Claude.ai upload and a separate ChatGPT Work account were also outside the runtime tests.
+## Installation trials on Windows
 
-After installation, run `python tools/verify_codex.py /path/to/project` for the project scope, or append `--scope user` for the personal installation. This uses the local app-server and prints only the result for the known academic skill names.
+The pinned skills installer (1.9.0) installed one skill from the local source in a disposable project and one in an isolated user installation. The reference files and text checker were present in both. To repeat with Node.js, npm and Git, run `python tools/smoke_install.py`.
 
-## Academic behavior
+The native Codex app server found exactly one enabled Academic Skill with the expected display name in a project using `.agents/skills/` and in an unrelated project using an isolated `CODEX_HOME/skills/`. Both returned zero discovery errors. Run `python tools/verify_codex.py PATH` to inspect project scope or add `--scope user` for user scope.
 
-Independent agent trials used the instructions and supplied academic material. The table records the observed behaviors. These trials exercise the instructions separately from vendor-specific menus or cloud-account entitlements. [Reusable prompts and expectations](../tests/workflows.json) · [Original ten umbrella evals](../skills/academic-skill/evals/evals.json)
+## Academic behavior and remaining host checks
 
-| Skill | What the trial demonstrated |
-| --- | --- |
-| academic-skill | Combined an evidence-limited conclusion with a spoken opening. |
-| academic-core | Broke a comparative assignment into criteria covering both sources and gave the student a first step. |
-| personal-voice | Separated teacher wording from the student's samples and withdrew a preference on request. |
-| academic-writing | Built an English paragraph with the 6/10 result and a counterargument about omitted technical terms. |
-| humanizer | Preserved nynorsk, figures, the direct quote and uncertainty during copyediting. |
-| academic-critic | Quoted the words about waiting and proposed an edit addressing the criterion. |
-| research-integrity | Identified a supported, a contradicted and an unresolved English claim against the supplied source on page 3. |
-| learning-coach | Explained a concept, showed a worked example and left the exercise for the learner. |
-| exam-preparation | Asked a single relevant question and withheld the answer. |
-| presentation-engine | Allocated four minutes and limited the interpretation of the 9/14 result. |
-| office-integration | Kept an empty cell distinct from zero and calculated 2.5 for the two observations. The input was a pasted range. |
-| quality-assurance | Flagged 2,9 → 29 and the lost hedge. Left the contents of the missing table unresolved. |
+The [workflow cases](../tests/workflows.json) retain the original 12 explicit requests, eight selection prompts and the missing-source case. The [12 evaluations](../skills/academic-skill/evals/evals.json) retain their prompts and assessment criteria. The expected academic selections identify the single skill and the references it should consult. The unrelated requests keep their exclusion criteria. Automated tests verify the fixtures and their routes. To assess answer quality, run a prompt in a fresh chat with its supplied material and grade the actual response against its expectations.
 
-In a separate selection trial with descriptions and no preselected skill, the reviewer chose academic-critic, research-integrity and exam-preparation for three targeted prompts. It chose no academic skill for a C question, a commercial email and small talk. These six observations do not estimate a platform-wide trigger rate. The earlier controlled with/without umbrella evaluations and their shortcomings are recorded in the [changelog](../CHANGELOG.md).
-
-## Repeat on a target host
-
-1. Install using the [platform instructions](Compatibility.md). Record version, scope and whether the workspace or project is trusted. Compare the 12 names against the [catalog](../tools/catalog.json).
-2. In a fresh chat, explicitly select a specialist. Record the exact choice and test its row from the prompt suite. Repeat with just that specialist installed.
-3. Begin a separate chat without selecting a skill. Run each selection test and record the actual choice, including false positives. Try both Norwegian and English and the nynorsk case.
-4. Omit the cited source or an attachment. Check that the agent identifies the missing material, limits its claim, and does not invent findings. With Python unavailable, check the manual comparison is disclosed.
-5. Repeat on a second account where permitted. Record actual Office files opened or exported separately from pasted-excerpt trials. GitHub Actions runs the packaging and installer smoke tests on Linux, macOS and Windows; the live checks on the PR show each runner's result.
+A signed-in Claude workspace upload and any organization-specific review must be verified in the target account. Previous cross-client behavior and platform versions are recorded in the [3.1 validation record](https://github.com/vestbytuva-ops/Academic-Skill/blob/8c664eff4bfe1839683e50ffe03edf0f403d7d1b/docs/Validation.md).

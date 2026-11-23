@@ -2,76 +2,47 @@
 
 [Les på norsk](README.nb.md) · [Installation and compatibility](docs/Compatibility.md) · [Validation results](docs/Validation.md)
 
-**NOTE! This is a Norwegian skill collection that also works in English.** Use it to unpack a rubric, revise an argument, check a claim against a source you supply, or prepare for an oral exam. The assistant follows the language of the task and keeps quotations in their original language. English assignments use English academic conventions.
-
-Install the collection for twelve selectable skills in supported clients. Choose **academic-skill** for a task with several stages, such as checking a survey result and turning it into a timed presentation. Each specialist also works when installed on its own.
+Academic Skill supports academic work in Norwegian and English. Select `academic-skill` once and describe the task. It can turn a rubric into a plan, revise a draft in your voice, check what a source supports and turn the findings into a timed presentation. It follows the requested language and keeps quotations in their original language.
 
 ## Install in Codex
 
-Run this in your project folder with Node.js and npm available. It works in Bash, PowerShell and Command Prompt. The public repository command targets the default branch. When testing a pull request before it is merged, use the checkout instructions below.
+To install this checkout, run `npx skills add . --skill academic-skill -a codex --copy -y` from its root or pass its absolute path from another project. To install the version on GitHub's default branch, use Node.js and npm:
 
 ```sh
-npx skills add https://github.com/vestbytuva-ops/Academic-Skill --skill "*" -a codex --copy -y
+npx skills add https://github.com/vestbytuva-ops/Academic-Skill --skill academic-skill -a codex --copy -y
 ```
 
-Add `-g` for all your local projects. Open a new Codex session, type `$`, and select a skill, or open `/skills`. For a single specialist, replace `"*"` with `research-integrity`. For the umbrella alone use `academic-skill`. A bare repository URL in a conversation can be passed to an installation tool if that client has one. The install needs to happen in the environment where you use the skills.
+Add `-g` for a user installation across projects. Open a new Codex chat and select **Academic Skill** with `$academic-skill`. To install a local version before it reaches the default branch, replace the URL with the path to your checkout. For Claude and other clients, see the [platform guide](docs/Compatibility.md).
 
-All twelve display names start with **Academic**. In a picker that searches display names, type `$academic` or narrow the search, for example to `Academic Research Integrity`. Clients that index command IDs use the names in the table below, such as `$research-integrity`. The umbrella includes all eleven workflows even when installed by itself. Installing all twelve also gives you eleven separate shortcuts.
+## What you can ask for
 
-To test a checked-out branch before release, run the installer from a clean project and pass the path to that checkout.
-
-```sh
-npx skills add ../Academic-Skill --skill "*" -a codex --copy -y
-```
-
-## Choose a workflow
-
-| Skill | Use it when you want to… |
-| --- | --- |
-| `academic-skill` | Combine a brief, draft, evidence check and presentation or study session. |
-| `academic-core` | Translate the assignment and its rubric into things you can actually deliver. |
-| `personal-voice` | Identify choices in your own writing samples and keep or drop them for this task. |
-| `academic-writing` | Build an argument, outline a paper, or revise the connection between evidence and thesis. |
-| `humanizer` | Copyedit a passage while preserving its meaning, quotations and degree of certainty. |
-| `academic-critic` | Find the strongest and weakest parts of a draft against specific criteria. |
-| `research-integrity` | Check each claim and citation against the source and assess methodological limits. |
-| `learning-coach` | Understand a concept through an example and a short exercise. |
-| `exam-preparation` | Practise an oral exam, make flashcards, or take a quiz one question at a time. |
-| `presentation-engine` | Turn findings into slides, speaker notes and a plan that fits the time available. |
-| `office-integration` | Work with academic Word, Excel or PowerPoint material and check changes against the file. |
-| `quality-assurance` | Catch changed numbers, quotations, references and missed requirements before submission. |
-
-> Six of ten participants preferred the glossary. Check whether my conclusion about all students follows, then plan a four-minute talk.
-
-> Revise my paragraph in British English. Keep the quoted sentence, the figures and my uncertainty about the cause.
-
-> Quiz me on these notes. Ask one question and wait for my answer.
-
-## Choose your platform
-
-| Platform | Install | Select a specialist |
+| Task | What the skill can do | Guidance |
 | --- | --- | --- |
-| Codex CLI / IDE | The command above installs separate entries. The repository also provides a [Codex marketplace](docs/Compatibility.md). | `$research-integrity` or task matching |
-| ChatGPT Work | In an eligible workspace an admin uploads the [plugin ZIP](dist/academic-skill-plugin.zip) and enables it for members. | Type `@`, select the installed skill in the picker, then send your material. |
-| Claude workspace | Download the [Claude plugin ZIP](https://github.com/vestbytuva-ops/Academic-Skill/raw/refs/heads/main/dist/academic-skill-claude-plugin.zip). In **Plugins → Upload a plugin**, select the ZIP as downloaded. It includes all twelve skills. | Ask to use an included skill by name. |
-| Claude Code | `/plugin install academic-skill --marketplace vestbytuva-ops/Academic-Skill` | `/academic-skill:research-integrity` as a plugin, or `/research-integrity` as a standalone skill |
-| Claude.ai | **Customize → Skills → + Create skill → Upload a skill**. Enable the [umbrella ZIP](dist/academic-skill.zip), or upload [individual ZIPs](dist/individual) to obtain separate entries. | Ask naturally or name an enabled skill. |
-| Cursor | Use the install command with `-a cursor`. | `/research-integrity` or task matching |
-| Gemini CLI | Use `-a gemini-cli` and open a trusted project. | Run `/skills list`, then ask to use the skill by name. |
-| VS Code / GitHub Copilot | Use `-a github-copilot`. | `/research-integrity` in VS Code chat. In other supported Copilot clients describe the task or name the skill. |
+| Understand an assignment | Turn action verbs and marking criteria into concrete steps. | [Assignment and rubric](skills/academic-skill/references/oppgaveforstaelse.md) · [Norwegian schools](skills/academic-skill/references/norsk-skole.md) |
+| Preserve your voice | Identify the choices in your own samples that you want to keep. | [Personal voice](skills/academic-skill/references/personlig-stemme.md) |
+| Write an argument | Plan an essay or develop an argument and its counterargument. | [Academic writing](skills/academic-skill/references/skriving.md) · [English conventions](skills/academic-skill/references/english.md) |
+| Copyedit | Improve clarity and flow while preserving meaning and uncertainty. | [Copyediting](skills/academic-skill/references/sprakvask.md) |
+| Get feedback | Locate the strongest parts and priority revisions against the rubric. | [Critique](skills/academic-skill/references/kritikk.md) |
+| Check sources | Compare each claim with a specific passage and distinguish unresolved claims. | [Research integrity](skills/academic-skill/references/kildekontroll.md) |
+| Learn a concept | Work through an example and try a task yourself. | [Learning](skills/academic-skill/references/laering-og-eksamen.md) |
+| Prepare for an exam | Practise oral questions, flashcards or retrieval from your notes. | [Exam practice](skills/academic-skill/references/laering-og-eksamen.md) |
+| Plan a presentation | Arrange evidence into slides, speaking notes and a time budget. | [Presentations](skills/academic-skill/references/presentasjoner.md) |
+| Work with Office files | Check a spreadsheet range, organise a report or produce a file when tools allow. | [Office](skills/academic-skill/references/office-filer.md) |
+| Check a final draft | Catch changes in quotations, numbers, scope and assignment requirements. | [Final checks](skills/academic-skill/references/sluttkontroll.md) |
 
-Update the installed collection with `npx skills update` (add `-g` for a global install). For a checkout-based install, pull updates in the checkout and repeat the add command. Remove only this collection with the named removal command in the guide. The guide covers ZIP downloads, other platforms, reinstalls, public distribution status and troubleshooting. [Platform guide](docs/Compatibility.md)
+> Six of ten students preferred the glossary. Check whether my conclusion about all students follows, then plan a four-minute talk.
 
 ## Build and validate
 
-From the repository root with Python 3.10+ and Node.js 22+:
+From the repository root, with Python 3.10 or newer:
 
 ```sh
 python -m pip install -r requirements-dev.txt
 python tools/build.py
-python tools/build.py --check
 python -m unittest discover -s tests
-python tools/smoke_install.py
+python tools/build.py --check
 ```
 
-The shared texts and optional Python checker are maintained under `skills/academic-skill/`. The builder copies only the resources each specialist needs. Runtime use of the Markdown skills requires no Python packages. File creation and access to external sources depend on the host. [Architecture](docs/Arkitektur-og-plan.md) · [Changelog](CHANGELOG.md) · [Publication and review](docs/Release.md)
+The builder uses Python's standard library. The test suite also checks YAML metadata and the plugin JSON schema. With Node.js/npm available, run `python tools/smoke_install.py` to exercise the installer.
+
+For Claude's **Upload a skill**, select `academic-skill.zip`. For **Upload a plugin**, select `academic-skill-claude-plugin.zip`. Both are generated in `dist/`. The source tree is distributed without release ZIPs. [Packaging and release instructions](docs/Release.md)

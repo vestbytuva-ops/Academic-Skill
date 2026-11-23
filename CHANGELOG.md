@@ -1,8 +1,14 @@
 # Endringslogg
 
+## 23. november 2026 · 4.0.0
+
+- Én installasjon av `academic-skill` gir tilgang til elleve integrerte arbeidsmåter. Tidligere spesialistkommandoer er innlemmet i [rutingtabellen](skills/academic-skill/SKILL.md). Unike eksempler og arbeidsregler fra deres inngangsfiler er flyttet til fagreferansene. Fjerningen av de elleve separate oppføringene er en brytende endring fra 3.1.0.
+- Bygget lager en enkelt-skill-ZIP og en Claude-plugin-ZIP. Arkivene flyttes ut av prosjektmappen ved deling. Git lagrer kildene, slik at en ny kilde-ZIP fra GitHub er fri for pakkede arkiver. Codex kan installere fra mappestrukturen. [Utgivelse](docs/Release.md)
+- De opprinnelige skrive-, kilde-, lærings- og presentasjonsoppgavene brukes videre til å teste ruting inne i samme skill. [Testoppsett](docs/Validation.md)
+
 ## 23. november 2026 · 3.1.0
 
-- La til en [opplastingspakke for Claude](dist/academic-skill-claude-plugin.zip) med de tolv ferdighetene, Claude-manifestet og ingen innebygde ZIP-filer.
+- La til en opplastingspakke for Claude med de tolv ferdighetene, Claude-manifestet og ingen innebygde ZIP-filer.
 
 - Alle tolv visningsnavn begynner med «Academic». De publiserte kommandoene og filstiene er beholdt. Hovedskillen peker til hver av de elleve arbeidsmåtene og kombinerer dem når oppgaven krever det.
 - Ved sammenligning av studier knyttes funn til versjonen som faktisk ble lest. Manglende svar vises i rapporten. Språkvask og kritikk kontrollerer målte resultater mot belegget og skiller prosjektmål fra oppnådde resultater. [Kilder og gjenbruksvalg](docs/Kilderegister.md)
