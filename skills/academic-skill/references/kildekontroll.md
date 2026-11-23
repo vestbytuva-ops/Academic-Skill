@@ -7,6 +7,8 @@
 3. Merk hver påstand **bekreftet i materialet**, **motsagt i materialet** eller **uavklart**. Gi en kort begrunnelse og oppgi hva du hadde tilgang til. Bruk tilsvarende merkelapper på leveransens språk.
 4. Vis begge kilder når belegget spriker. Foreslå en avgrenset formulering når materialet gir grunnlag for det, eller angi hvilken opplysning som må undersøkes.
 
+Et litteraturtips eller en tittel er utilstrekkelig som bekreftelse. Ved utilgjengelig kilde, oppgi utdrag eller sidenummer som trengs for å avklare saken.
+
 **Fiktivt eksempel.** Et utdrag oppgir at 9 av 14 respondenter valgte A. Det bekrefter antallet, motsier at samtlige respondenter valgte A og lar årsaken stå uavklart. Ingen økning er påvist uten et sammenligningsgrunnlag.
 
 ## Finn og sammenlign litteratur

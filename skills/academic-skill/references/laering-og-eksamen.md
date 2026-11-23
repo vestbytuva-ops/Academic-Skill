@@ -8,4 +8,8 @@ Ta utgangspunkt i hva brukeren vil lære, hva de allerede har prøvd og hvilket 
 - **Øvingskort.** Bruk ett spørsmål eller begrep på forsiden og et kort svar med nødvendige forbehold på baksiden.
 - **Øvingsprøve.** Legg eventuell bestilt fasit i en egen del. Bruk svarene til å foreslå konkrete øvingsmål der brukeren trenger mer trening.
 
+Hvis eleven blander belegg og påstand, bruk to korte setninger fra samme eksempel. La eleven selv peke ut hva som kan undersøkes. Vent før du løser øvelsen.
+
+Ved øvingsplan, fordel tiden mellom aktiv gjenhenting, tilbakemelding og ny øving på feil. Bygg spørsmål fra begrepsforståelse til anvendelse eller drøfting.
+
 Ved planlegging av undervisning, formuler ett læringsmål. Lag en øvelse og et spørsmål som viser om eleven kan bruke grepet på egen hånd.
