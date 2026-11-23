@@ -1,0 +1,18 @@
+{
+  "name": "academic-skill",
+  "version": "3.0.0",
+  "description": "Norwegian and English academic skills for assignments, research, writing, learning, presentations and final checks.",
+  "author": {
+    "name": "vestbytuva-ops",
+    "url": "https://github.com/vestbytuva-ops"
+  },
+  "homepage": "https://academic-skill.netlify.app",
+  "repository": "https://github.com/vestbytuva-ops/Academic-Skill",
+  "keywords": [
+    "education",
+    "academic-writing",
+    "research",
+    "Norwegian",
+    "English"
+  ]
+}
