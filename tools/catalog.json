@@ -12,7 +12,7 @@
     "prompt_en": "Turn my assignment and rubric into a practical writing plan."
   },
   "personal-voice": {
-    "display_name": "Personal Voice",
+    "display_name": "Academic Personal Voice",
     "short_description": "Preserve your voice using your own writing",
     "prompt_nb": "Finn to trekk i mine egne skriveprøver som jeg kan beholde i revisjonen.",
     "prompt_en": "Which two features of my own writing should I keep in this revision?"
@@ -36,19 +36,19 @@
     "prompt_en": "Review my draft against the rubric and locate the most important revision."
   },
   "research-integrity": {
-    "display_name": "Research Integrity",
+    "display_name": "Academic Research Integrity",
     "short_description": "Check each claim against the available evidence",
     "prompt_nb": "Sjekk hver påstand mot dette utdraget. Oppgi hva kilden faktisk støtter.",
     "prompt_en": "Check each claim against the supplied source and flag what remains uncertain."
   },
   "learning-coach": {
-    "display_name": "Learning Coach",
+    "display_name": "Academic Learning Coach",
     "short_description": "Learn a concept through a worked example and practice",
     "prompt_nb": "Forklar forskjellen på påstand og belegg. La meg så prøve selv.",
     "prompt_en": "Teach me the difference between a claim and evidence, then let me try."
   },
   "exam-preparation": {
-    "display_name": "Exam Preparation",
+    "display_name": "Academic Exam Preparation",
     "short_description": "Practice exams, flashcards and one-question quizzes",
     "prompt_nb": "Quiz meg til muntlig eksamen med ett spørsmål om gangen fra notatene.",
     "prompt_en": "Quiz me on my notes, one question at a time."

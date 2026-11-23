@@ -9,8 +9,27 @@ import threading
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def verify_labels(rows, catalog, scope):
+    enabled = {}
+    for row in rows:
+        if row["scope"] == scope and row["enabled"] and row["name"] in catalog:
+            label = (row.get("interface") or {}).get("displayName") or "(no display name)"
+            enabled.setdefault(row["name"], set()).add(label)
+
+    issues = []
+    for name, entry in catalog.items():
+        expected = entry["display_name"]
+        labels = enabled.get(name, set())
+        if not labels:
+            issues.append(f"{name}: missing or disabled")
+        elif expected not in labels:
+            issues.append(f"{name}: expected {expected!r}, found {sorted(labels)}")
+    if issues:
+        raise RuntimeError(f"Incomplete Codex skill registration in {scope}: " + "; ".join(issues))
+
+
 def check(project, scope):
-    expected = set(json.loads((ROOT / "tools/catalog.json").read_text(encoding="utf-8")))
+    catalog = json.loads((ROOT / "tools/catalog.json").read_text(encoding="utf-8"))
     replies = queue.Queue()
     with subprocess.Popen(["codex", "app-server"], cwd=project, text=True, encoding="utf-8",
                           stdin=subprocess.PIPE, stdout=subprocess.PIPE) as server:
@@ -43,11 +62,8 @@ def check(project, scope):
             request("initialized", {})
             response = request("skills/list", {"cwds": [str(project)], "forceReload": True}, 2)
             rows = response["data"][0]["skills"]
-            found = {row["name"] for row in rows if row["scope"] == scope and row["enabled"]}
-            missing = expected - found
-            if missing:
-                raise RuntimeError(f"Missing enabled skills in {scope}: {sorted(missing)}")
-            print(f"Codex discovered {len(expected)} enabled academic skills with scope {scope}.")
+            verify_labels(rows, catalog, scope)
+            print(f"Codex discovered {len(catalog)} enabled academic skills with matching display names in {scope}.")
         finally:
             server.terminate()
 

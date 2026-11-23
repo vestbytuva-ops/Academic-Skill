@@ -8,6 +8,8 @@ Avgrens spørsmålet, velg et mulig svar og avgjør hva som må underbygges. Gi 
 - I **metodebegrunnelsen**, vis hvordan datagrunnlag og design avgrenser slutningen. Et spørreskjema eller en intervjuguide gir grunnlag for å beskrive metoden. Resultatdelen trenger faktiske svar.
 - I et **vitenskapelig manus**, la leseren følge spørsmålet gjennom metode, resultater og diskusjon. I en **prosjektsøknad**, knytt målene til utlysningens kriterier, gjennomføring og ressursbehov.
 
+For en prosjektsøknad, skill mellom allerede dokumenterte resultater og det prosjektet skal undersøke. Knytt hvert mål til metoden eller ressursen som gjør det gjennomførbart. Når et senere delmål avhenger av et usikkert resultat, be om en reserveplan hvis søknaden mangler en.
+
 Ved bestilling av en hel tekst, bruk oppgavens tillatte arbeidsform og materialet som finnes. Skriv et sammenhengende utkast når grunnlaget holder. Når belegg mangler, gi delen du kan skrive og marker hvor brukeren må fylle inn faglig innhold. Når oppgaven avgrenser KI-hjelp til disposisjon eller veiledning, gi et konkret første steg innenfor det handlingsrommet.
 
 **Fiktivt eksempel.** «Alle studentene foretrakk gruppearbeid» kan avgrenses til «Begge studentene jeg intervjuet, foretrakk gruppearbeid.» Forklar hvilken gruppe utsagnet dekker når endringen har betydning for argumentet.

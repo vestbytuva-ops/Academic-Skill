@@ -15,6 +15,10 @@ Avgrens hva litteraturen skal belyse. Ved bestilt søk, velg fagdatabase eller d
 
 Sammenlign utvalg, design, målemetode og funn. Undersøk om forskjeller i deltakere, målinger eller opplegg kan forklare sprik.
 
+Ved større sammenligninger, velg noen få delspørsmål som avgjør svaret. Lag ved behov en liten tabell med én rad per studie og én kolonne per delspørsmål. Fyll inn funnet og tekststedet som støtter det. Skill mellom et målt nullresultat, et utfall som ikke ble undersøkt og en opplysning som mangler i utdraget. La kunnskapshullene følge med i konklusjonen når de påvirker svaret.
+
+Sjekk om flere treff beskriver samme studie. Et forhåndsmanus og en publisert artikkel om de samme deltakerne teller som én studie. Hvis et resultat er endret, oppgi hva hver versjon faktisk sier og hvor. Til et sitat eller et tall bruker du sidetallet fra utgaven du leste. Angi hva som må kontrolleres dersom bare den ene versjonen er tilgjengelig.
+
 ## Planlegg studie eller analyse
 
 - Bygg på studentens idé. Formuler en testbar hypotese, en alternativ forklaring og en observasjon som kan skille dem. Knytt målingene til hypotesen. Vurder tilfeldig fordeling, gjentatte målinger og sammenligningsgrunnlag når de påvirker designet.

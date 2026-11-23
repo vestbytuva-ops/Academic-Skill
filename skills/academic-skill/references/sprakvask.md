@@ -13,3 +13,7 @@ Les først hva originalen faktisk hevder. Behold aktør, tid, omfang, negasjoner
 | It is important to note that the workshop may have helped some participants. | The workshop may have helped some participants. |
 
 Behold «kan tyde på» og «may» fordi de avgrenser hvor sikker påstanden er.
+
+Ved en sammenligning som «ga bedre resultater», se etter hva som ble målt, hvilken gruppe eller metode resultatet ble sammenlignet med, og hvor dette står i materialet. Skriv inn detaljene når kilden faktisk oppgir dem og brukeren har bedt om faglig revisjon. Ved ren språkvask, pek separat på det som mangler. Et forsiktig verb kan fortsatt gi inntrykk av at en udokumentert sammenligning er gjort.
+
+**Fiktivt eksempel.** Utkastet sier «Svartiden ble kortere». I den oppgitte tabellen står bare «median svartid etter endringen: 4 sekunder». Ved faglig revisjon kan setningen bli «Etter endringen var median svartid 4 sekunder.» For å si at tiden gikk ned, trengs et sammenlignbart mål fra før endringen.

@@ -75,6 +75,14 @@
   ],
   "selection": [
     {
+      "prompt": "Et forhåndsmanus og sluttartikkelen beskriver samme klasse, men oppgir ulike svarfordelinger. Kan du sjekke om jeg har belegg for å omtale dem som to uavhengige studier?",
+      "expect": "research-integrity"
+    },
+    {
+      "prompt": "Please copyedit my grant proposal in English. The pilot plans to recruit 40 students and has no results yet. Keep the target and the future tense.",
+      "expect": "humanizer"
+    },
+    {
       "prompt": "Kriteriet er å drøfte. Hvor i utkastet mitt mangler en innvending?",
       "expect": "academic-critic"
     },

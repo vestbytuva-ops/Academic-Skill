@@ -55,6 +55,8 @@ For ZIP uploads, disable or delete the previous copy via the host's Skills or Pl
 
 ## If the skill is missing
 
+The 3.0.0 catalogue had eight labels containing “Academic”. The four labels for personal voice, research integrity, learning and exams now share that prefix. Update or reinstall the collection in the scope you use. In clients that filter by command ID, try `personal-voice`, `research-integrity`, `learning-coach` or `exam-preparation`. A short suggestion list can also require a narrower query. Opening the umbrella makes these workflows available inside the conversation. Only installing the individual entries or collection registers separate menu items.
+
 1. Check which application, machine, working directory and account you are using. Install in that environment. Check project and global entries separately with `npx skills list -a codex` and `npx skills list -a codex -g`.
 2. Look for `<skill-id>/SKILL.md` in the relevant root. An extra enclosing ZIP directory, incorrect filename or installing only the umbrella prevents independent entries. Check the actual spelling, UTF-8 and YAML if you edited a skill.
 3. Open a new session. In Gemini, trust your own project first. In Work, check workspace enablement and use the `@` picker. A matching GitHub link in autocomplete indicates a link suggestion.

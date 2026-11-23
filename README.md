@@ -16,11 +16,12 @@ npx skills add https://github.com/vestbytuva-ops/Academic-Skill --skill "*" -a c
 
 Add `-g` for all your local projects. Open a new Codex session, type `$`, and select a skill, or open `/skills`. For a single specialist, replace `"*"` with `research-integrity`. For the umbrella alone use `academic-skill`. A bare repository URL in a conversation can be passed to an installation tool if that client has one. The install needs to happen in the environment where you use the skills.
 
-To try the candidate from a clean project before release, run these commands from that project. This clones the candidate and installs its twelve skills into the current project.
+All twelve display names start with **Academic**. In a picker that searches display names, type `$academic` or narrow the search, for example to `Academic Research Integrity`. Clients that index command IDs use the names in the table below, such as `$research-integrity`. The umbrella includes all eleven workflows even when installed by itself. Installing all twelve also gives you eleven separate shortcuts.
+
+To test a checked-out branch before release, run the installer from a clean project and pass the path to that checkout.
 
 ```sh
-git clone --branch feat/academic-skill-collection --single-branch https://github.com/vestbytuva-ops/Academic-Skill Academic-Skill-source
-npx skills add ./Academic-Skill-source --skill "*" -a codex --copy -y
+npx skills add ../Academic-Skill --skill "*" -a codex --copy -y
 ```
 
 ## Choose a workflow
