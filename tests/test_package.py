@@ -1,10 +1,11 @@
 """Check the published format and the installed contents, independently of the builder."""
+import io
 import json
 import re
 import struct
 import unittest
 from pathlib import Path, PurePosixPath
-from zipfile import ZipFile
+from zipfile import ZipFile, is_zipfile
 
 import jsonschema
 import yaml
@@ -168,6 +169,19 @@ class AcademicPackages(unittest.TestCase):
                 plugin.update({"skills/" + path: src for path, src in files.items()})
         self.check_zip(ROOT / "dist/academic-skill-plugin.zip", plugin)
         self.assertEqual(len(list((ROOT / "dist").rglob("*.zip"))), 14)
+
+    def test_claude_workspace_upload(self):
+        manifest = ".claude-plugin/plugin.json"
+        archive = ROOT / "dist/academic-skill-claude-plugin.zip"
+        files = {"skills/" + rel: path for rel, path in inventory(SKILLS).items()}
+        self.check_zip(archive, {manifest: ROOT / manifest, **files})
+        with ZipFile(archive) as package:
+            self.assertEqual(json.loads(package.read(manifest))["name"], "academic-skill")
+            self.assertCountEqual([p for p in package.namelist() if p.endswith("/SKILL.md")],
+                                  [f"skills/{name}/SKILL.md" for name in NAMES])
+            for path in package.namelist():
+                self.assertFalse(path.lower().endswith(".zip"), path)
+                self.assertFalse(is_zipfile(io.BytesIO(package.read(path))), path)
 
     def test_build_reproducibility_and_missing_sources(self):
         self.assertEqual(build.build(check=True), [])
