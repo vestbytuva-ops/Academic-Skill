@@ -1,5 +1,7 @@
 # Academic Skill
 We are proud to announce this skill and have the opportunity to publish **Academic-Skill** publicly. Multiple tests have shown consistent results; for instance, both our humanizer and copywriting-style skills delivered great outcomes. We also tested the outputs of this skill using the AI detector GPTZero.
+
+
 <img width="217" height="89" alt="image" src="https://github.com/user-attachments/assets/1b2c05f2-169c-423c-a1fc-713498d2abf2" />
 
 
