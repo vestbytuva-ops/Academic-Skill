@@ -1,8 +1,8 @@
 # Arkitektur og utviklingsplan
 
-## Én inngang
+## Hovedskill og elleve spesialister
 
-Claude finner `academic-skill` under `.claude/skills/`. Hovedfilen velger språk, arbeidsform og referanser. Hver referanse dekker ett arbeidsområde, slik at en enkel bestilling kan løses med lite bakgrunnsstoff. En sammensatt bestilling kan for eksempel gå fra oppgavekrav til kildekontroll og videre til en presentasjon.
+Kilden ligger i `skills/`, med én mappe for hvert av de tolv navnene. Installeren kopierer den til banen verten leser. Hovedfilen velger språk, arbeidsform og referanser. Hver referanse dekker ett arbeidsområde, slik at en enkel bestilling kan løses med lite bakgrunnsstoff. En sammensatt bestilling kan for eksempel gå fra oppgavekrav til kildekontroll og videre til en presentasjon.
 
 | Trinn | Hva som skjer |
 | --- | --- |
@@ -11,6 +11,12 @@ Claude finner `academic-skill` under `.claude/skills/`. Hovedfilen velger språk
 | Leveranse | Sammenhold tekst, tabell eller presentasjon med kildene og oppgaven. Vurder virkningen av faglige endringer. |
 
 Stilobservasjoner kan godkjennes, korrigeres, fjernes eller deaktiveres i samtalen. Arbeidsprofilen gjelder den aktuelle oppgaven. Ved motstrid mellom en preferanse og et sjangerkrav, vis konflikten og la brukeren velge der oppgaven åpner for det.
+
+## Felles kilder og pakking
+
+Rediger fagreferanser og uttrykkskontrollen i `skills/academic-skill/`. Frittstående spesialister peker på relevante filer i sin egen mappe. Byggeskriptet henter disse fra hovedskillens kilder og lager versjonerte ZIP-filer uten symlenker. Endre visningsnavn og eksempler i `tools/catalog.json`. Kjør `python tools/build.py` og `python tools/build.py --check` etter endringer. Ressursene fungerer også når en bruker installerer bare én spesialist.
+
+Rotmanifestet er kilden til plugin-identiteten og klientadapterne. Codex og Claude Code har separate markedsplassformater. ChatGPT Work importerer pluginpakken. Claude.ai importerer ett skillarkiv per oppføring. [Installasjon og kompatibilitet](Compatibility.md)
 
 ## Kjøring og verktøy
 

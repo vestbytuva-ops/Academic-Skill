@@ -1,0 +1,6 @@
+interface:
+  display_name: "Academic Office Files"
+  short_description: "Work with academic Word, Excel and PowerPoint files"
+  default_prompt: "Use $office-integration. Check whether my results paragraph matches the supplied Excel range."
+policy:
+  allow_implicit_invocation: true

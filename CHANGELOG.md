@@ -1,13 +1,22 @@
 # Endringslogg
 
+## November 2026 · 3.0.0 · Samling for flere agenter
+
+- Gjeninnførte alle elleve spesialistene som selvstendige skills. Hovedskillen kan fortsatt brukes alene og kombinerer arbeidsmåter.
+- Flyttet kilden fra den tidligere Claude-mappen til `skills/`. Beholdt evaloppgavene, fagreferansene og den norske uttrykkskontrollen. Samlet språk, personvern, arbeidsform og kildebruk i ett felles arbeidsgrunnlag. La til konkrete eksempler for VG1, VG2 og VG3.
+- Det stabile navnet `humanizer` vises som **Academic Copyediting**. Veiledningen handler om språkvask med mening, sitater og forbehold i behold.
+- La til det portable OpenAI-manifestet, klientmetadata og markedsplassfiler for Codex og Claude Code. Byggingen gir en plugin med alle tolv, en hovedpakke og elleve enkeltpakker. Hver enkeltpakke har ressursene den trenger.
+- Erstattet testkravet om én Claude-skill med kontroll av alle navn, YAML, relative filstier, offisielt skjema, pakkefiler og installasjoner. Beholdt alle de 17 eksisterende testene for uttrykkskontrollen.
+- La til installasjon og feilsøking på begge språk, evaloppgaver for alle tolv og krav til kataloginnsending. Den gamle Claude-utgaven og de tidligere resultatene er dokumentert nedenfor. [Testresultater for samlingen](docs/Validation.md) · [Plattformer](docs/Compatibility.md)
+
 ## 22. november 2026 · Academic Skill for Claude
 
 Omarbeidet fra revisjon `3992ac0`.
 
 ### 1. Engelsk og norsk
 
-- La til [engelsk akademisk skriving](.claude/skills/academic-skill/references/english.md) med sjangerbegreper, APA, MLA, Chicago og Harvard, samt eksempler på falske venner, artikler, preposisjoner og ordrette formuleringer.
-- Flyttet læreplan, norske skolesjangre og oppslag i NDLA, Udir og Ordbøkene til [norsk skole](.claude/skills/academic-skill/references/norsk-skole.md). Hovedfilen gir språkreglene. Leseruten for norsk skole krever en norskspråklig bestilling om norsk grunnskole, videregående eller læreplan.
+- La til [engelsk akademisk skriving](skills/academic-skill/references/english.md) med sjangerbegreper, APA, MLA, Chicago og Harvard, samt eksempler på falske venner, artikler, preposisjoner og ordrette formuleringer.
+- Flyttet læreplan, norske skolesjangre og oppslag i NDLA, Udir og Ordbøkene til [norsk skole](skills/academic-skill/references/norsk-skole.md). Hovedfilen gir språkreglene. Leseruten for norsk skole krever en norskspråklig bestilling om norsk grunnskole, videregående eller læreplan.
 - La inn eksempler på begge språk i README. Sitater beholdes på originalspråket, også når oppgaven og kildene er på ulike språk.
 
 ### 2. Claude-pakking
@@ -18,7 +27,7 @@ Omarbeidet fra revisjon `3992ac0`.
 
 ### 3. Arbeidsmåter og utløsning
 
-[Hovedfilen](.claude/skills/academic-skill/SKILL.md) velger språk, veiledning, forslag eller produksjon og åpner relevante referanser. Beskrivelsen bruker konkrete triggere på begge språk og avgrenser generell koding, småprat og forretningstekst. Den ligger under 200 tegn for å passe den dokumenterte grensen ved opplasting til Claude.ai. [Krav til metadata](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)
+[Hovedfilen](skills/academic-skill/SKILL.md) velger språk, veiledning, forslag eller produksjon og åpner relevante referanser. Beskrivelsen bruker konkrete triggere på begge språk og avgrenser generell koding, småprat og forretningstekst. Den ligger under 200 tegn for å passe den dokumenterte grensen ved opplasting til Claude.ai. [Krav til metadata](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)
 
 | Tidligere innhold | Hvor arbeidsmåten ligger nå |
 | --- | --- |
@@ -44,7 +53,7 @@ Flyttet `sjekk_uttrykk.py` byte for byte og tilpasset teststien. De eksisterende
 
 ### 6. Validering
 
-[Evalsettet](.claude/skills/academic-skill/evals/evals.json) har seks akademiske bestillinger på norsk, én av dem på nynorsk, tre med forventet svar på engelsk og én salgstekst utenfor fagområdet. I første gjennomgang fikk separate agenter de samme ti bestillingene med og uten skillen. De fikk verken fasit eller eksterne kilder. Med skillen valgte agentene å bruke den i ni faglige tilfeller og lot være ved salgsteksten.
+[Evalsettet](skills/academic-skill/evals/evals.json) har seks akademiske bestillinger på norsk, én av dem på nynorsk, tre med forventet svar på engelsk og én salgstekst utenfor fagområdet. I første gjennomgang fikk separate agenter de samme ti bestillingene med og uten skillen. De fikk verken fasit eller eksterne kilder. Med skillen valgte agentene å bruke den i ni faglige tilfeller og lot være ved salgsteksten.
 
 | Eval | Observert i første gjennomgang |
 | --- | --- |

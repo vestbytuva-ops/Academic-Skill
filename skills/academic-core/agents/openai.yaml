@@ -1,0 +1,6 @@
+interface:
+  display_name: "Academic Core"
+  short_description: "Turn an assignment and rubric into a plan"
+  default_prompt: "Use $academic-core. Turn my assignment and rubric into a practical writing plan."
+policy:
+  allow_implicit_invocation: true

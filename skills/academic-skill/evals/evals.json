@@ -1,0 +1,114 @@
+{
+  "skill_name": "academic-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Jeg går første året på bachelor og har 600 ord til en oppgave om tiltak for å få flere til å sykle til campus. Vurderingskriteriene er å avgrense problemstillingen, bruke to kilder og drøfte ett motargument. Jeg har en rapport om sykkelparkering og en studie om reisevaner. Jeg skal skrive selv. Bryt kriteriene ned til hva jeg må vise i teksten, og gi meg ett sted å begynne.",
+      "expected_output": "Norsk bokmål. Gjør alle tre kriteriene synlige i en plan som passer en tekst på 600 ord. Gi ett første steg brukeren kan gjennomføre.",
+      "files": [],
+      "expectations": [
+        "Svar på bokmål og gjør alle tre kriteriene om til konkrete handlinger.",
+        "Bruk de to kildene som mulige typer belegg uten å påstå hva de fant.",
+        "Avslutt med ett avgrenset første steg og la studenten skrive besvarelsen."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Eg går på vidaregåande og vil ha språkvask på nynorsk. Mi eiga skriveprøve er «Eg startar med det eg kan sjå. Så spør eg kva det tyder.» Avsnittet er «Eg tel svara først. Det er i denne samanhengen relevant å påpeike at 12 av 18 skreiv «litt lettare» (vedlegg A, s. 2). Det kan tyde på ein skilnad. Årsaka vart ikkje undersøkt.» Gje meg avsnittet og forklar éi viktig endring.",
+      "expected_output": "Norsk nynorsk. Revider med korte, direkte setninger. Behold første person, antall, sitat, henvisning og usikkerheten.",
+      "files": [],
+      "expectations": [
+        "Lever revidert avsnitt og forklaring på nynorsk.",
+        "Behold første person, 12 av 18, «litt lettare» og (vedlegg A, s. 2).",
+        "Avsnittet uttrykker fortsatt en mulig forskjell og en årsak som ikke ble undersøkt."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Kan du sjekke henvisningen min mot kilden jeg limer inn? Bruk bare dette fiktive øvingsutdraget fra Ødegård (2024), side 4: «Ni av fjorten respondenter svarte at de ville delta på en ny økt. Virkningen av påminnelsen ble ikke undersøkt.» I notatet står A «Ni ønsket en ny økt», B «Alle fjorten ønsket en ny økt», og C «Påminnelsen gjorde at flere ønsket en ny økt (Ødegård, 2024, s. 4)». Jeg trenger status og begrunnelse for hver.",
+      "expected_output": "Norsk bokmål. Merk A som bekreftet i materialet, B som motsagt og C som uavklart. Vis til side 4, og forklar hvordan riktig henvisning kan mangle belegg for årsak og økning.",
+      "files": [],
+      "expectations": [
+        "A er bekreftet, B er motsagt og C er uavklart, med en kort begrunnelse per påstand.",
+        "Vis til Ødegård (2024), side 4 og avgrens det du kontrollerte til utdraget.",
+        "Forklar hvorfor sidehenvisningen i C ikke gir belegg for økning eller årsak."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Quiz meg på metodenotatene mine før prøven. Jeg vil ha ett spørsmål om gangen og prøve selv. Notater: Korrelasjon beskriver samvariasjon. En tredjevariabel kan påvirke begge størrelsene. Tilfeldig fordeling kan gjøre gruppene mer sammenlignbare. Start med et lite scenario der jeg må bruke en av ideene.",
+      "expected_output": "Norsk bokmål. Still ett faglig spørsmål fra materialet i et anvendt scenario. Vent på brukerens svar.",
+      "files": [],
+      "expectations": [
+        "Svar på bokmål med nøyaktig ett faglig spørsmål.",
+        "Spørsmålet krever anvendelse av et begrep fra notatene.",
+        "Vent med fasit, forklaring, hint og flere spørsmål."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Jeg skal presentere en liten studentundersøkelse for førsteårsstudenter. Jeg har fire minutter og vil ha tre lysbilder. Av 20 inviterte svarte 11, og 7 av de 11 ønsket flere øvingsoppgaver. Kan du lage en disposisjon med tid, det som står på hvert lysbilde og det jeg bør si? Bruk bare tallene jeg har gitt.",
+      "expected_output": "Norsk bokmål. Lag tre lysbilder med klart skille mellom visning og tale. Fordel alle fire minuttene og behold det riktige utvalget.",
+      "files": [],
+      "expectations": [
+        "Gi tre lysbilder, med synlig skille mellom tekst på lysbildet og talepunkter.",
+        "Tidene summerer til 4 minutter med innledning og avslutning.",
+        "Bruk 7 av 11 respondenter og 11 av 20 inviterte uten å generalisere til alle."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Kan du skrive hele oppgaven for meg? Det er et obligatorisk refleksjonsnotat på 800 ord om hvordan jeg valgte metode. Jeg valgte to korte intervjuer fordi jeg hadde én uke, og oppgaven ber om en styrke og en begrensning. Læreren sier at KI bare kan brukes til disposisjon og spørsmål til egen refleksjon. Jeg vet ikke hvor jeg skal begynne.",
+      "expected_output": "Norsk bokmål. Gi en kort, oppgavetilpasset disposisjon og et første refleksjonsspørsmål innenfor oppgavens regler.",
+      "files": [],
+      "expectations": [
+        "Gi en brukbar disposisjon for 800 ord og et startpunkt, på bokmål.",
+        "Knytt metodevalget til to intervjuer, én uke, en styrke og en begrensning.",
+        "Respekter at KI-hjelpen er avgrenset til disposisjon og refleksjonsspørsmål."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Here is a pasted Excel excerpt from my methods assignment, not the workbook. Sheet Pilot, columns B (before) and C (after), scores in points. Row 2: B2=8, C2=10. Row 3: B3=11, C3 blank. Row 4: B4=10, C4=9. Show the mean change for complete pairs, say what you did with the blank, and give me a one-sentence results statement.",
+      "expected_output": "English. Compute after minus before for complete pairs. Report the mean of +2 and −1 as +0.5 points. Describe the evidence as a pasted excerpt.",
+      "files": [],
+      "expectations": [
+        "Respond in English and show the row-level changes +2 and −1 with the correct cell references.",
+        "Exclude the incomplete pair in row 3 and report a mean change of +0.5 points across two pairs.",
+        "Provide a one-sentence results statement without implying that the workbook or a causal effect was verified."
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "I'm Norwegian, writing an English university report. Please copyedit this paragraph and briefly explain the changes without strengthening any claims. “The actual question in this report is whether study groups affect attendance. We did a research on fourteen volunteers. I will eventually discuss about the results. The interviews suggest an association, but do not establish cause.” By actual I mean relevant, and by eventually I mean only if relevant, like eventuelt.",
+      "expected_output": "English. Fix false friends, article choice and the preposition. Keep fourteen volunteers, the conditional wording, the association and the limit on causality.",
+      "files": [],
+      "expectations": [
+        "Respond in English and correct actual, eventually, a research and discuss about according to the stated meanings.",
+        "Preserve the conditional discussion, fourteen volunteers, association and limits on causal inference.",
+        "Explain at least one change without invoking a Norwegian school convention."
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Please respond in English. Dette er utkastet mitt: Ni av fjorten ønsket å treffes igjen. En deltaker skrev «eg fekk meir tid». Write one short results paragraph with APA 7 in-text citation for that direct quote. My only source details are Sørlie (2024), page 6, and the excerpt I just pasted. Tell me which details you'd need to complete the reference list entry.",
+      "expected_output": "English, with the direct quote in the original Nynorsk. Write a concise results paragraph using the supplied APA author, year and page. Ask only for bibliographic details that depend on the source type.",
+      "files": [],
+      "expectations": [
+        "Use English throughout the response and preserve «eg fekk meir tid» verbatim inside the quote.",
+        "Keep nine of fourteen and use Sørlie, 2024, p. 6 for the direct quote.",
+        "Identify missing bibliographic fields without inventing the source title, publisher or type."
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Rett avsnittet mitt til en salgse-post for sykkelbutikken. Her er utkastet: «Vi har service på sykler til kampanjepris denne uka. Book tid via nettsiden.» Skriv to korte setninger til kundene og behold opplysningene.",
+      "expected_output": "Norsk bokmål. Gi vanlig språkhjelp til en salgse-post. Oppgaven skal ikke aktivere akademisk veiledning.",
+      "files": [],
+      "expectations": [
+        "Svar på bokmål med to korte salgstekstsetninger som bevarer opplysningene.",
+        "Ingen akademisk mal, kildekrav eller påfunn om pris eller varighet."
+      ]
+    }
+  ]
+}

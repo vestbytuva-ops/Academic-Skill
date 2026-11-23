@@ -11,7 +11,7 @@ from pathlib import Path
 
 CHECKER = (
     Path(__file__).resolve().parents[1]
-    / ".claude" / "skills" / "academic-skill" / "scripts" / "sjekk_uttrykk.py"
+    / "skills" / "academic-skill" / "scripts" / "sjekk_uttrykk.py"
 )
 
 
