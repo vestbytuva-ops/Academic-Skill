@@ -1,6 +1,0 @@
-interface:
-  display_name: "Academic Copyediting"
-  short_description: "Copyedit for clarity, flow and an accurate meaning"
-  default_prompt: "Use $humanizer. Copyedit my paragraph and keep its numbers, quotations and qualifications."
-policy:
-  allow_implicit_invocation: true

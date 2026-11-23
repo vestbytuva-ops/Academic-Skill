@@ -1,6 +1,0 @@
-interface:
-  display_name: "Academic Critic"
-  short_description: "Give specific feedback against marking criteria"
-  default_prompt: "Use $academic-critic. Review my draft against the rubric and locate the most important revision."
-policy:
-  allow_implicit_invocation: true

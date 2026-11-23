@@ -1,6 +1,0 @@
-interface:
-  display_name: "Academic Writing"
-  short_description: "Build an argument from your draft and evidence"
-  default_prompt: "Use $academic-writing. Connect this paragraph’s evidence to my thesis."
-policy:
-  allow_implicit_invocation: true

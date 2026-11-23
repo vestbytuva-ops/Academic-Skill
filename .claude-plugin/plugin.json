@@ -1,7 +1,7 @@
 {
   "name": "academic-skill",
-  "version": "3.1.0",
-  "description": "Norwegian and English academic skills for assignments, research, writing, learning, presentations and final checks.",
+  "version": "4.0.0",
+  "description": "One academic skill for Norwegian and English assignments, writing, source checks, exam practice, presentations and Office files.",
   "author": {
     "name": "vestbytuva-ops",
     "url": "https://github.com/vestbytuva-ops"

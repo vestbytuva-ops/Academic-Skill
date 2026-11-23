@@ -1,6 +1,0 @@
-interface:
-  display_name: "Academic Presentations"
-  short_description: "Plan evidence, slides and speaking time"
-  default_prompt: "Use $presentation-engine. Turn my findings into a four-minute talk with speaker notes."
-policy:
-  allow_implicit_invocation: true
