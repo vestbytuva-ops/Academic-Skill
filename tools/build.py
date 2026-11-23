@@ -79,7 +79,7 @@ def generated_files():
 
 
 def distributions(generated):
-    plugin = {p: read_bytes(ROOT / p) for p in ("plugin.json", "assets/icon.png")}
+    skill_entries = {}
     for name in CATALOG:
         base = SKILLS / name
         entries = {}
@@ -87,10 +87,16 @@ def distributions(generated):
             content = generated[path] if path in generated else read_bytes(path)
             key = path.relative_to(SKILLS).as_posix()
             entries[key] = content
-            plugin["skills/" + key] = content
+            skill_entries["skills/" + key] = content
         target = DIST / ("academic-skill.zip" if base == MAIN else "individual/" + name + ".zip")
         yield target, archive(entries)
-    yield DIST / "academic-skill-plugin.zip", archive(plugin)
+    openai_files = {p: read_bytes(ROOT / p) for p in ("plugin.json", "assets/icon.png")}
+    yield DIST / "academic-skill-plugin.zip", archive({**openai_files, **skill_entries})
+    claude_manifest = ".claude-plugin/plugin.json"
+    yield DIST / "academic-skill-claude-plugin.zip", archive({
+        claude_manifest: generated[ROOT / claude_manifest],
+        **skill_entries,
+    })
 
 
 def build(check=False):
@@ -127,4 +133,4 @@ if __name__ == "__main__":
     issues = build(parser.parse_args().check)
     if issues:
         sys.exit("\n".join(issues))
-    print("12 skills and 13 distributions are consistent.")
+    print(f"{len(CATALOG)} skills and {len(list(DIST.rglob('*.zip')))} distributions are consistent.")

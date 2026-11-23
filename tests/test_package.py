@@ -167,7 +167,7 @@ class AcademicPackages(unittest.TestCase):
                 self.check_zip(single, files)
                 plugin.update({"skills/" + path: src for path, src in files.items()})
         self.check_zip(ROOT / "dist/academic-skill-plugin.zip", plugin)
-        self.assertEqual(len(list((ROOT / "dist").rglob("*.zip"))), 13)
+        self.assertEqual(len(list((ROOT / "dist").rglob("*.zip"))), 14)
 
     def test_build_reproducibility_and_missing_sources(self):
         self.assertEqual(build.build(check=True), [])
