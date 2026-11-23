@@ -4,111 +4,174 @@
       "skill": "academic-skill",
       "language": "nb",
       "prompt": "12 av 18 oppga mindre stress. Vi har ingen kontrollgruppe. Lag en konklusjon og en muntlig åpning.",
-      "check": "Kombiner kildekontroll og presentasjon. Avgrens til utvalget og la årsaken stå åpen."
+      "check": "Kombiner kildekontroll og presentasjon. Avgrens til utvalget og la årsaken stå åpen.",
+      "references": [
+        "references/kildekontroll.md",
+        "references/presentasjoner.md"
+      ]
     },
     {
-      "skill": "academic-core",
+      "skill": "academic-skill",
       "language": "nb",
       "prompt": "VG3: Sammenlign to kilder og drøft en mulig årsak til uenighet. Hva må jeg gjøre for å møte kriteriet?",
-      "check": "Del kriteriet i handlinger, foreslå plass til belegg fra begge og gi ett første steg."
+      "check": "Del kriteriet i handlinger, foreslå plass til belegg fra begge og gi ett første steg.",
+      "references": [
+        "references/oppgaveforstaelse.md",
+        "references/norsk-skole.md"
+      ]
     },
     {
-      "skill": "personal-voice",
+      "skill": "academic-skill",
       "language": "nb",
       "prompt": "Min tekst: «Jeg telte svarene. Så leste jeg dem om igjen.» Lærer: «Avslutningsvis kan det konkluderes ...» Skriv to setninger i min stil. Trekk så tilbake stilpreferansen.",
-      "check": "Skill lærerens formulering fra elevens. Behold bare observerbare stiltrekk. Legg bort preferansen på forespørsel."
+      "check": "Skill lærerens formulering fra elevens. Behold bare observerbare stiltrekk. Legg bort preferansen på forespørsel.",
+      "references": [
+        "references/personlig-stemme.md"
+      ]
     },
     {
-      "skill": "academic-writing",
+      "skill": "academic-skill",
       "language": "en",
       "prompt": "Six of ten preferred the new glossary, but it omitted specialist terms. Write one body paragraph for my essay using both points.",
-      "check": "Produce an argument and counterargument grounded in six of ten. Do not generalize the result."
+      "check": "Produce an argument and counterargument grounded in six of ten. Do not generalize the result.",
+      "references": [
+        "references/skriving.md",
+        "references/english.md"
+      ]
     },
     {
-      "skill": "humanizer",
+      "skill": "academic-skill",
       "language": "nn",
       "prompt": "Språkvask på nynorsk: «Det er i denne samanhengen relevant å peike på at 12 av 18 skreiv «litt lettare». Dette kan tyde på ein skilnad.»",
-      "check": "Gjer uttrykket meir direkte. Behald målform, tal, sitat og at funnet er usikkert."
+      "check": "Gjer uttrykket meir direkte. Behald målform, tal, sitat og at funnet er usikkert.",
+      "references": [
+        "references/sprakvask.md"
+      ]
     },
     {
-      "skill": "academic-critic",
+      "skill": "academic-skill",
       "language": "nb",
       "prompt": "Kriterium: forklar virkningen av et språklig valg. Utkast: «Fortelleren sier ‘jeg ventet’. Det er et verb.» Hvor oppfyller jeg kriteriet, og hva bør jeg endre?",
-      "check": "Pek på formuleringen og foreslå hvordan virkningen kan forklares."
+      "check": "Pek på formuleringen og foreslå hvordan virkningen kan forklares.",
+      "references": [
+        "references/kritikk.md"
+      ]
     },
     {
-      "skill": "research-integrity",
+      "skill": "academic-skill",
       "language": "en",
       "prompt": "Page 3: “Six of ten participants preferred A.” My claims: six of ten preferred A, every participant preferred A, and A caused higher scores. Check each claim.",
-      "check": "Confirm the first with page 3, contradict the second and leave the causal claim unresolved."
+      "check": "Confirm the first with page 3, contradict the second and leave the causal claim unresolved.",
+      "references": [
+        "references/kildekontroll.md"
+      ]
     },
     {
-      "skill": "learning-coach",
+      "skill": "academic-skill",
       "language": "nb",
       "prompt": "Jeg blander påstand og belegg. Forklar med et eksempel og la meg øve selv.",
-      "check": "Forklar begge begrepene, skill eksempel fra øvingsoppgave og vent på elevens svar."
+      "check": "Forklar begge begrepene, skill eksempel fra øvingsoppgave og vent på elevens svar.",
+      "references": [
+        "references/laering-og-eksamen.md"
+      ]
     },
     {
-      "skill": "exam-preparation",
+      "skill": "academic-skill",
       "language": "nb",
       "prompt": "Muntlig øving. Notat: Et utvalg er deltakerne vi faktisk undersøker. Quiz meg med ett spørsmål om gangen.",
-      "check": "Still ett relevant spørsmål uten å avsløre svaret."
+      "check": "Still ett relevant spørsmål uten å avsløre svaret.",
+      "references": [
+        "references/laering-og-eksamen.md"
+      ]
     },
     {
-      "skill": "presentation-engine",
+      "skill": "academic-skill",
       "language": "nb",
       "prompt": "Jeg har fire minutter. 9 av 14 ble tryggere etter øvelsen, men vi har ingen kontrollgruppe. Gi en disposisjon med talepunkter.",
-      "check": "Tidsdelene blir fire minutter. Avgrens funnet til de 14 og unngå årsakspåstand."
+      "check": "Tidsdelene blir fire minutter. Avgrens funnet til de 14 og unngå årsakspåstand.",
+      "references": [
+        "references/presentasjoner.md"
+      ]
     },
     {
-      "skill": "office-integration",
+      "skill": "academic-skill",
       "language": "en",
       "prompt": "Excel excerpt: C2=2, C3 is empty, C4=3. My report says the average of three responses was 1.67. Check the calculation.",
-      "check": "Distinguish a blank from zero. The two observed responses average 2.5. Do not claim to have edited a workbook."
+      "check": "Distinguish a blank from zero. The two observed responses average 2.5. Do not claim to have edited a workbook.",
+      "references": [
+        "references/office-filer.md"
+      ]
     },
     {
-      "skill": "quality-assurance",
+      "skill": "academic-skill",
       "language": "nb",
       "prompt": "Original: «2,9 mg kan redusere plagene (tabell A)». Revisjon: «29 mg reduserer plagene (tabell A)». Tabell A følger ikke med. Gjør sluttkontroll.",
-      "check": "Flagge desimalendring og styrket sikkerhet. Henvisningen står i teksten og tabellens innhold er uavklart."
+      "check": "Flagge desimalendring og styrket sikkerhet. Henvisningen står i teksten og tabellens innhold er uavklart.",
+      "references": [
+        "references/sluttkontroll.md",
+        "references/kildekontroll.md"
+      ]
     }
   ],
   "selection": [
     {
       "prompt": "Et forhåndsmanus og sluttartikkelen beskriver samme klasse, men oppgir ulike svarfordelinger. Kan du sjekke om jeg har belegg for å omtale dem som to uavhengige studier?",
-      "expect": "research-integrity"
+      "expect": "academic-skill",
+      "references": [
+        "references/kildekontroll.md"
+      ]
     },
     {
       "prompt": "Please copyedit my grant proposal in English. The pilot plans to recruit 40 students and has no results yet. Keep the target and the future tense.",
-      "expect": "humanizer"
+      "expect": "academic-skill",
+      "references": [
+        "references/sprakvask.md",
+        "references/english.md"
+      ]
     },
     {
       "prompt": "Kriteriet er å drøfte. Hvor i utkastet mitt mangler en innvending?",
-      "expect": "academic-critic"
+      "expect": "academic-skill",
+      "references": [
+        "references/kritikk.md"
+      ]
     },
     {
       "prompt": "Sammenhold hver påstand med side 3 i utdraget mitt.",
-      "expect": "research-integrity"
+      "expect": "academic-skill",
+      "references": [
+        "references/kildekontroll.md"
+      ]
     },
     {
       "prompt": "Quiz meg fra disse notatene. Vent på hvert svar.",
-      "expect": "exam-preparation"
+      "expect": "academic-skill",
+      "references": [
+        "references/laering-og-eksamen.md"
+      ]
     },
     {
       "prompt": "How do I format a float with printf in C?",
-      "expect": null
+      "expect": null,
+      "references": []
     },
     {
       "prompt": "Skriv en salgse-post til leverandøren min.",
-      "expect": null
+      "expect": null,
+      "references": []
     },
     {
       "prompt": "Hei, hvordan går det?",
-      "expect": null
+      "expect": null,
+      "references": []
     }
   ],
   "missing": {
     "prompt": "Check this citation against the article. The article is missing.",
-    "expect": "Ask for the text or a page. Mark the claim unresolved. No invented verification."
+    "expect": "Ask for the text or a page. Mark the claim unresolved. No invented verification.",
+    "skill": "academic-skill",
+    "references": [
+      "references/kildekontroll.md"
+    ]
   }
 }
