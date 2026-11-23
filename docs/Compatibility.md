@@ -39,7 +39,11 @@ codex plugin list --marketplace academic-tools --json
 
 For Claude Code, enter `/plugin install academic-skill --marketplace vestbytuva-ops/Academic-Skill` on version 2.1.275 or later. The two-step form is `/plugin marketplace add vestbytuva-ops/Academic-Skill` followed by `/plugin install academic-skill@academic-tools`. Use the plugin manager to update or uninstall it.
 
-For ChatGPT Work, upload [academic-skill-plugin.zip](../dist/academic-skill-plugin.zip). It has a root `plugin.json` and twelve directories under `skills/`. Claude.ai takes [academic-skill.zip](../dist/academic-skill.zip) or a [specialist ZIP](../dist/individual). Each one contains a single top-level skill directory. The umbrella can perform every workflow without any other upload.
+For ChatGPT Work, upload [academic-skill-plugin.zip](../dist/academic-skill-plugin.zip). It has a root `plugin.json` and twelve directories under `skills/`.
+
+In Claude's **Plugins → Upload a plugin**, choose [academic-skill-claude-plugin.zip](../dist/academic-skill-claude-plugin.zip). It contains one Claude manifest and the twelve skill directories. If the screen says “Zip cannot contain nested zip files”, remove the selected file and choose this ZIP directly. GitHub's **Code → Download ZIP** contains the entire project, including the ZIPs in `dist/`. [Anthropic's upload requirements](https://platform.claude.com/docs/en/manage-claude/plugins-api#upload-requirements)
+
+For the individual **Upload a skill** workflow, use [academic-skill.zip](../dist/academic-skill.zip) or a [specialist ZIP](../dist/individual). Each contains a single top-level skill directory. The umbrella can perform every workflow on its own.
 
 ## Update or remove
 

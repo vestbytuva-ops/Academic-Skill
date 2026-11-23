@@ -40,6 +40,7 @@ Alle tolv visningsnavn begynner med **Academic**. I menyer som søker i visnings
 ## I andre agenter
 
 - **ChatGPT Work**. I et arbeidsområde med støtte kan en administrator laste opp [pluginen med alle tolv](dist/academic-skill-plugin.zip). Installer den, skriv `@` og velg ønsket skill i listen.
+- **Claude-arbeidsområde**. Last ned [Claude-pakken med alle tolv ferdighetene](https://github.com/vestbytuva-ops/Academic-Skill/raw/refs/heads/main/dist/academic-skill-claude-plugin.zip). Åpne **Plugins → Upload a plugin**, velg ZIP-filen som den er, og trykk **Upload**.
 - **Claude Code**. Skriv `/plugin install academic-skill --marketplace vestbytuva-ops/Academic-Skill`. Velg eksempelvis `/academic-skill:exam-preparation`. Installerer du frittstående med `-a claude-code`, bruker du `/exam-preparation`.
 - **Claude.ai**. Åpne **Tilpass → Skills → + Create skill → Upload a skill**. Last opp og aktiver [hovedskillen](dist/academic-skill.zip) for å bruke alle arbeidsmåtene. Vil du ha egne oppføringer, last opp de [enkelte ZIP-filene](dist/individual).
 - **Cursor**. Bytt til `-a cursor` i installasjonskommandoen. Velg for eksempel `/exam-preparation`.

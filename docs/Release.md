@@ -4,6 +4,7 @@
 
 | File | Audience | What the upload contains |
 | --- | --- | --- |
+| [academic-skill-claude-plugin.zip](../dist/academic-skill-claude-plugin.zip) | Claude workspaces with **Upload a plugin** | Claude manifest at `.claude-plugin/plugin.json` and all twelve skills under `skills/` |
 | [academic-skill-plugin.zip](../dist/academic-skill-plugin.zip) | ChatGPT Work workspace administrators and OpenAI plugin reviewers | Root manifest, brand icon and twelve skills |
 | [academic-skill.zip](../dist/academic-skill.zip) | Claude.ai and standalone clients | One umbrella skill with all workflows, reference texts, evaluations and the Norwegian text checker |
 | [Individual ZIPs](../dist/individual) | People who want a specific specialist | One skill per ZIP, including its resources |

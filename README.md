@@ -53,6 +53,7 @@ npx skills add ../Academic-Skill --skill "*" -a codex --copy -y
 | --- | --- | --- |
 | Codex CLI / IDE | The command above installs separate entries. The repository also provides a [Codex marketplace](docs/Compatibility.md). | `$research-integrity` or task matching |
 | ChatGPT Work | In an eligible workspace an admin uploads the [plugin ZIP](dist/academic-skill-plugin.zip) and enables it for members. | Type `@`, select the installed skill in the picker, then send your material. |
+| Claude workspace | Download the [Claude plugin ZIP](https://github.com/vestbytuva-ops/Academic-Skill/raw/refs/heads/main/dist/academic-skill-claude-plugin.zip). In **Plugins → Upload a plugin**, select the ZIP as downloaded. It includes all twelve skills. | Ask to use an included skill by name. |
 | Claude Code | `/plugin install academic-skill --marketplace vestbytuva-ops/Academic-Skill` | `/academic-skill:research-integrity` as a plugin, or `/research-integrity` as a standalone skill |
 | Claude.ai | **Customize → Skills → + Create skill → Upload a skill**. Enable the [umbrella ZIP](dist/academic-skill.zip), or upload [individual ZIPs](dist/individual) to obtain separate entries. | Ask naturally or name an enabled skill. |
 | Cursor | Use the install command with `-a cursor`. | `/research-integrity` or task matching |
