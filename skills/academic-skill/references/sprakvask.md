@@ -12,7 +12,7 @@ Les først hva originalen faktisk hevder. Behold aktør, tid, omfang, negasjoner
 | Det er i denne sammenhengen relevant å påpeke at materialet kan tyde på en forskjell. | Materialet kan tyde på en forskjell. |
 | It is important to note that the workshop may have helped some participants. | The workshop may have helped some participants. |
 
-Behold «kan tyde på» og «may» fordi de avgrenser hvor sikker påstanden er.
+Behold «kan tyde på» og «may» fordi de avgrenser hvor sikker påstanden er. I «kan tyde på en effekt» har «kan» faglig betydning. Ved språk om KI-detektorer, avgrens arbeidet til lesbarhet og bevaring av mening.
 
 Ved en sammenligning som «ga bedre resultater», se etter hva som ble målt, hvilken gruppe eller metode resultatet ble sammenlignet med, og hvor dette står i materialet. Skriv inn detaljene når kilden faktisk oppgir dem og brukeren har bedt om faglig revisjon. Ved ren språkvask, pek separat på det som mangler. Et forsiktig verb kan fortsatt gi inntrykk av at en udokumentert sammenligning er gjort.
 

@@ -1,4 +1,4 @@
-"""Verify that a real Codex app-server discovers every installed project or user skill."""
+"""Check that Codex discovers the integrated skill at the requested scope."""
 import argparse
 import json
 from pathlib import Path
@@ -7,25 +7,30 @@ import subprocess
 import threading
 
 ROOT = Path(__file__).resolve().parents[1]
+FORMER_LABELS = {
+    "academic-core": "Academic Core", "personal-voice": "Academic Personal Voice",
+    "academic-writing": "Academic Writing", "humanizer": "Academic Copyediting",
+    "academic-critic": "Academic Critic", "research-integrity": "Academic Research Integrity",
+    "learning-coach": "Academic Learning Coach", "exam-preparation": "Academic Exam Preparation",
+    "presentation-engine": "Academic Presentations", "office-integration": "Academic Office Files",
+    "quality-assurance": "Academic Quality Assurance",
+}
 
 
 def verify_labels(rows, catalog, scope):
-    enabled = {}
-    for row in rows:
-        if row["scope"] == scope and row["enabled"] and row["name"] in catalog:
-            label = (row.get("interface") or {}).get("displayName") or "(no display name)"
-            enabled.setdefault(row["name"], set()).add(label)
-
-    issues = []
-    for name, entry in catalog.items():
-        expected = entry["display_name"]
-        labels = enabled.get(name, set())
-        if not labels:
-            issues.append(f"{name}: missing or disabled")
-        elif expected not in labels:
-            issues.append(f"{name}: expected {expected!r}, found {sorted(labels)}")
-    if issues:
-        raise RuntimeError(f"Incomplete Codex skill registration in {scope}: " + "; ".join(issues))
+    active = [row for row in rows if row["scope"] == scope and row["enabled"]]
+    legacy = set()
+    for row in active:
+        previous = FORMER_LABELS.get(row["name"])
+        label = (row.get("interface") or {}).get("displayName")
+        if previous and label in (previous, previous.removeprefix("Academic ")):
+            legacy.add(row["name"])
+    if legacy:
+        raise RuntimeError(f"Former specialist registrations in {scope}: {', '.join(sorted(legacy))}")
+    expected = catalog["academic-skill"]["display_name"]
+    labels = [(r.get("interface") or {}).get("displayName") for r in active if r["name"] == "academic-skill"]
+    if labels != [expected]:
+        raise RuntimeError(f"Expected one enabled academic-skill named {expected!r} in {scope}, found {labels}")
 
 
 def check(project, scope):
@@ -63,7 +68,7 @@ def check(project, scope):
             response = request("skills/list", {"cwds": [str(project)], "forceReload": True}, 2)
             rows = response["data"][0]["skills"]
             verify_labels(rows, catalog, scope)
-            print(f"Codex discovered {len(catalog)} enabled academic skills with matching display names in {scope}.")
+            print(f"Codex discovered one enabled Academic Skill in {scope}.")
         finally:
             server.terminate()
 

@@ -26,7 +26,7 @@ python3 scripts/sjekk_uttrykk.py \
 | 1 | `FEIL indeks=0 antall_original=2 antall_revisjon=1` viser et eksempel på avvik. Indeksen teller fra null i JSON-listen. |
 | 2 | `FEIL` betyr ugyldig grunnlag. Ved enkelte feil følger indeks, for eksempel `FEIL indeks=0 antall_original=0` når uttrykket mangler i originalen. |
 
-Like antall sier bare noe om de valgte uttrykkene. Les sitatet sammen med påstanden og kilden for å oppdage flytting, kontekstbytte eller endret mening.
+Like antall sier bare noe om de valgte uttrykkene. Les sitatet sammen med påstanden og kilden for å oppdage flytting, kontekstbytte eller endret mening. Kontroller plasseringen av en henvisning selv om sitatet har uendret antall forekomster.
 
 ## Sammenlign manuelt ved manglende kodekjøring
 

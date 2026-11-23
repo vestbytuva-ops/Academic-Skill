@@ -5,6 +5,8 @@
 3. Avgrens problemstillingen etter materialet, tiden og formatet. Bruk det brukeren allerede har gjort, og gi et første steg som passer arbeidsformen. Lever en disposisjon når den er bestilt.
 4. Gjør antakelser synlige. Spør bare om det som kan endre retningen, for eksempel hvis «bruk to tekster» kan bety sammenligning eller to separate analyser.
 
+Gjør oppgaveverbene om til handlinger brukeren kan se i leveransen. Vis gjerne kravet, hvor i teksten det skal besvares og første handling.
+
 | Oppgaveverb | Hva leseren bør kunne se |
 | --- | --- |
 | Beskriv | Gjengi relevante trekk med riktig omfang. |
@@ -13,3 +15,5 @@
 | Vurder | Bruk et kriterium og begrunn hvor langt materialet rekker. |
 
 **Eksempel.** Gjør «drøft om ordningen bør fortsette» om til tre synlige grep. Presenter det sterkeste belegget for ordningen, prøv det mot én vesentlig innvending, og avgrens konklusjonen etter det du faktisk vet.
+
+Ved en VG3-drøfting kan eleven sette én innvending opp mot tekstbelegget.

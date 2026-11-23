@@ -1,6 +1,5 @@
-"""Exercise the real skills CLI in disposable projects without modifying user installations."""
+"""Try project and user installs with the real skills CLI in disposable directories."""
 import argparse
-import json
 import os
 from pathlib import Path
 import shutil
@@ -8,26 +7,38 @@ import subprocess
 from tempfile import TemporaryDirectory
 
 ROOT = Path(__file__).resolve().parents[1]
+NAME = "academic-skill"
 
 
 def smoke(cli, source):
-    names = set(json.loads((ROOT / "tools/catalog.json").read_text(encoding="utf-8")))
+    skill = ROOT / "skills" / NAME
+    resources = [p.relative_to(skill) for p in (skill / "references").glob("*.md")]
+    resources.extend(map(Path, ("SKILL.md", "agents/openai.yaml", "scripts/sjekk_uttrykk.py")))
     with TemporaryDirectory() as scratch:
-        for case, select, expected in (("all", "*", names), ("only", "research-integrity", {"research-integrity"}),
-                                       ("umbrella", "academic-skill", {"academic-skill"})):
-            project = Path(scratch) / case
+        tmp = Path(scratch)
+        home = tmp / "user"
+        home.mkdir()
+        env = {
+            **os.environ, "CI": "1", "HOME": str(home), "USERPROFILE": str(home),
+            "CODEX_HOME": str(home / ".codex"), "XDG_CONFIG_HOME": str(home / ".config"),
+            "XDG_DATA_HOME": str(home / ".local/share"), "APPDATA": str(home / "AppData/Roaming"),
+            "LOCALAPPDATA": str(home / "AppData/Local"),
+        }
+        for scope in ("project", "user"):
+            project = tmp / f"{scope}-install"
             project.mkdir()
-            subprocess.run(["git", "init", "-q"], cwd=project, check=True)
-            subprocess.run([*cli, "add", source, "--skill", select, "-a", "codex", "--copy", "-y"],
-                           cwd=project, check=True, env={**os.environ, "CI": "1"})
-            base = project / ".agents/skills"
-            actual = {p.parent.name for p in base.glob("*/SKILL.md")}
-            if actual != expected:
-                raise ValueError(f"{case}: expected {sorted(expected)}, installed {sorted(actual)}")
-            for name in expected:
-                if not (base / name / "references/arbeidsgrunnlag.md").is_file():
-                    raise ValueError(f"Installed {name} is missing its shared guidance")
-            print(f"{case}: installed and verified {len(actual)}")
+            subprocess.run(["git", "init", "-q"], cwd=project, env=env, check=True)
+            flags = ["--skill", NAME, "-g"] if scope == "user" else []
+            subprocess.run([*cli, "add", source, *flags, "-a", "codex", "--copy", "-y"],
+                           cwd=project, check=True, env=env)
+            destination = (home if scope == "user" else project) / ".agents/skills"
+            actual = {p.parent.name for p in destination.glob("*/SKILL.md")}
+            if actual != {NAME}:
+                raise ValueError(f"{scope}: expected {NAME}, found {sorted(actual)}")
+            for path in resources:
+                if not (destination / NAME / path).is_file():
+                    raise ValueError(f"{scope}: missing {path} from {NAME}")
+            print(f"{scope}: installed one {NAME} with its guidance and text checker")
 
 
 if __name__ == "__main__":

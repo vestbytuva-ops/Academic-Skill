@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "academic-skill",
-  "version": "3.1.0",
-  "description": "Norwegian and English academic skills for assignments, research, writing, learning, presentations and final checks.",
+  "version": "4.0.0",
+  "description": "One academic skill for Norwegian and English assignments, writing, source checks, exam practice, presentations and Office files.",
   "author": {
     "name": "vestbytuva-ops",
     "url": "https://github.com/vestbytuva-ops"
@@ -21,7 +21,7 @@
       "interface": {
         "displayName": "Academic Skill",
         "shortDescription": "Study, write and check sources",
-        "longDescription": "One general academic assistant and eleven independently selectable workflows for students. Interpret a rubric, revise a paragraph, check a source you provide, practise an oral exam or plan a timed presentation in Norwegian or English. File editing and external searches depend on the tools available in your session.",
+        "longDescription": "Work from a brief and a rubric, draft and revise in your own voice, check sources, practise for an exam, or prepare and review academic presentations and Office files. Academic Skill selects guidance for each task in Norwegian or English. File editing and external searches depend on the tools available in your session.",
         "developerName": "vestbytuva-ops",
         "category": "Productivity",
         "capabilities": [],

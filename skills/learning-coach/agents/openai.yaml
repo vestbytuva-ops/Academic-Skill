@@ -1,6 +1,0 @@
-interface:
-  display_name: "Academic Learning Coach"
-  short_description: "Learn a concept through a worked example and practice"
-  default_prompt: "Use $learning-coach. Teach me the difference between a claim and evidence, then let me try."
-policy:
-  allow_implicit_invocation: true

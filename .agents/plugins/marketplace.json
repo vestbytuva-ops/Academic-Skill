@@ -1,7 +1,7 @@
 {
   "name": "academic-tools",
   "interface": {
-    "displayName": "Academic Skills"
+    "displayName": "Academic Skill"
   },
   "plugins": [
     {

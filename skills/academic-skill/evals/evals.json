@@ -10,6 +10,9 @@
         "Svar på bokmål og gjør alle tre kriteriene om til konkrete handlinger.",
         "Bruk de to kildene som mulige typer belegg uten å påstå hva de fant.",
         "Avslutt med ett avgrenset første steg og la studenten skrive besvarelsen."
+      ],
+      "references": [
+        "references/oppgaveforstaelse.md"
       ]
     },
     {
@@ -21,6 +24,11 @@
         "Lever revidert avsnitt og forklaring på nynorsk.",
         "Behold første person, 12 av 18, «litt lettare» og (vedlegg A, s. 2).",
         "Avsnittet uttrykker fortsatt en mulig forskjell og en årsak som ikke ble undersøkt."
+      ],
+      "references": [
+        "references/sprakvask.md",
+        "references/personlig-stemme.md",
+        "references/norsk-skole.md"
       ]
     },
     {
@@ -32,6 +40,9 @@
         "A er bekreftet, B er motsagt og C er uavklart, med en kort begrunnelse per påstand.",
         "Vis til Ødegård (2024), side 4 og avgrens det du kontrollerte til utdraget.",
         "Forklar hvorfor sidehenvisningen i C ikke gir belegg for økning eller årsak."
+      ],
+      "references": [
+        "references/kildekontroll.md"
       ]
     },
     {
@@ -43,6 +54,9 @@
         "Svar på bokmål med nøyaktig ett faglig spørsmål.",
         "Spørsmålet krever anvendelse av et begrep fra notatene.",
         "Vent med fasit, forklaring, hint og flere spørsmål."
+      ],
+      "references": [
+        "references/laering-og-eksamen.md"
       ]
     },
     {
@@ -54,6 +68,9 @@
         "Gi tre lysbilder, med synlig skille mellom tekst på lysbildet og talepunkter.",
         "Tidene summerer til 4 minutter med innledning og avslutning.",
         "Bruk 7 av 11 respondenter og 11 av 20 inviterte uten å generalisere til alle."
+      ],
+      "references": [
+        "references/presentasjoner.md"
       ]
     },
     {
@@ -65,6 +82,10 @@
         "Gi en brukbar disposisjon for 800 ord og et startpunkt, på bokmål.",
         "Knytt metodevalget til to intervjuer, én uke, en styrke og en begrensning.",
         "Respekter at KI-hjelpen er avgrenset til disposisjon og refleksjonsspørsmål."
+      ],
+      "references": [
+        "references/oppgaveforstaelse.md",
+        "references/skriving.md"
       ]
     },
     {
@@ -76,6 +97,9 @@
         "Respond in English and show the row-level changes +2 and −1 with the correct cell references.",
         "Exclude the incomplete pair in row 3 and report a mean change of +0.5 points across two pairs.",
         "Provide a one-sentence results statement without implying that the workbook or a causal effect was verified."
+      ],
+      "references": [
+        "references/office-filer.md"
       ]
     },
     {
@@ -87,6 +111,10 @@
         "Respond in English and correct actual, eventually, a research and discuss about according to the stated meanings.",
         "Preserve the conditional discussion, fourteen volunteers, association and limits on causal inference.",
         "Explain at least one change without invoking a Norwegian school convention."
+      ],
+      "references": [
+        "references/sprakvask.md",
+        "references/english.md"
       ]
     },
     {
@@ -98,6 +126,11 @@
         "Use English throughout the response and preserve «eg fekk meir tid» verbatim inside the quote.",
         "Keep nine of fourteen and use Sørlie, 2024, p. 6 for the direct quote.",
         "Identify missing bibliographic fields without inventing the source title, publisher or type."
+      ],
+      "references": [
+        "references/skriving.md",
+        "references/kildekontroll.md",
+        "references/english.md"
       ]
     },
     {
@@ -108,7 +141,9 @@
       "expectations": [
         "Svar på bokmål med to korte salgstekstsetninger som bevarer opplysningene.",
         "Ingen akademisk mal, kildekrav eller påfunn om pris eller varighet."
-      ]
+      ],
+      "references": [],
+      "expect_skill": null
     },
     {
       "id": 11,
@@ -119,6 +154,9 @@
         "Tell forhåndsmanus og sluttartikkel som én studie. Knytt 9 av 14 til forhåndsmanuset s. 3 og det korrigerte 8 av 14 til sluttartikkelen s. 5.",
         "Skill ønske om ny økt fra tilfredshet og læring. Læring ble ikke målt i den første studien. Sammendraget fra den andre gir ikke svar på læring eller ønske om ny økt.",
         "La manglende belegg være synlig i tabellen og konklusjonen. Ikke tolk fravær av måling som null effekt eller påstå at årsak er bekreftet."
+      ],
+      "references": [
+        "references/kildekontroll.md"
       ]
     },
     {
@@ -130,6 +168,10 @@
         "Deliver two edited sentences without adding commentary.",
         "Keep the plan to invite 40 students. Preserve the 20% reduction in missed assignments as a target.",
         "Do not imply that recruitment succeeded, that any result was measured, or that the workshops caused a change."
+      ],
+      "references": [
+        "references/sprakvask.md",
+        "references/english.md"
       ]
     }
   ]
