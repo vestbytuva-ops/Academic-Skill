@@ -1,0 +1,6 @@
+interface:
+  display_name: "Academic Quality Assurance"
+  short_description: "Check the final text against the brief and sources"
+  default_prompt: "Use $quality-assurance. Check my final draft for changes in quotations, numbers and scope."
+policy:
+  allow_implicit_invocation: true

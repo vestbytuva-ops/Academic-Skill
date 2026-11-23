@@ -1,0 +1,41 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "academic-skill",
+  "version": "3.0.0",
+  "description": "Norwegian and English academic skills for assignments, research, writing, learning, presentations and final checks.",
+  "author": {
+    "name": "vestbytuva-ops",
+    "url": "https://github.com/vestbytuva-ops"
+  },
+  "homepage": "https://academic-skill.netlify.app",
+  "repository": "https://github.com/vestbytuva-ops/Academic-Skill",
+  "keywords": [
+    "education",
+    "academic-writing",
+    "research",
+    "Norwegian",
+    "English"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Academic Skill",
+        "shortDescription": "Study, write and check sources",
+        "longDescription": "One general academic assistant and eleven independently selectable workflows for students. Interpret a rubric, revise a paragraph, check a source you provide, practise an oral exam or plan a timed presentation in Norwegian or English. File editing and external searches depend on the tools available in your session.",
+        "developerName": "vestbytuva-ops",
+        "category": "Productivity",
+        "capabilities": [],
+        "websiteURL": "https://academic-skill.netlify.app",
+        "supportURL": "https://github.com/vestbytuva-ops/Academic-Skill/issues",
+        "brandColor": "#384710",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png",
+        "defaultPrompt": [
+          "Turn my assignment and rubric into a plan.",
+          "Check my claims against the excerpt I provide.",
+          "Quiz me on my notes, one question at a time."
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "explicit": [
+    {
+      "skill": "academic-skill",
+      "language": "nb",
+      "prompt": "12 av 18 oppga mindre stress. Vi har ingen kontrollgruppe. Lag en konklusjon og en muntlig åpning.",
+      "check": "Kombiner kildekontroll og presentasjon. Avgrens til utvalget og la årsaken stå åpen."
+    },
+    {
+      "skill": "academic-core",
+      "language": "nb",
+      "prompt": "VG3: Sammenlign to kilder og drøft en mulig årsak til uenighet. Hva må jeg gjøre for å møte kriteriet?",
+      "check": "Del kriteriet i handlinger, foreslå plass til belegg fra begge og gi ett første steg."
+    },
+    {
+      "skill": "personal-voice",
+      "language": "nb",
+      "prompt": "Min tekst: «Jeg telte svarene. Så leste jeg dem om igjen.» Lærer: «Avslutningsvis kan det konkluderes ...» Skriv to setninger i min stil. Trekk så tilbake stilpreferansen.",
+      "check": "Skill lærerens formulering fra elevens. Behold bare observerbare stiltrekk. Legg bort preferansen på forespørsel."
+    },
+    {
+      "skill": "academic-writing",
+      "language": "en",
+      "prompt": "Six of ten preferred the new glossary, but it omitted specialist terms. Write one body paragraph for my essay using both points.",
+      "check": "Produce an argument and counterargument grounded in six of ten. Do not generalize the result."
+    },
+    {
+      "skill": "humanizer",
+      "language": "nn",
+      "prompt": "Språkvask på nynorsk: «Det er i denne samanhengen relevant å peike på at 12 av 18 skreiv «litt lettare». Dette kan tyde på ein skilnad.»",
+      "check": "Gjer uttrykket meir direkte. Behald målform, tal, sitat og at funnet er usikkert."
+    },
+    {
+      "skill": "academic-critic",
+      "language": "nb",
+      "prompt": "Kriterium: forklar virkningen av et språklig valg. Utkast: «Fortelleren sier ‘jeg ventet’. Det er et verb.» Hvor oppfyller jeg kriteriet, og hva bør jeg endre?",
+      "check": "Pek på formuleringen og foreslå hvordan virkningen kan forklares."
+    },
+    {
+      "skill": "research-integrity",
+      "language": "en",
+      "prompt": "Page 3: “Six of ten participants preferred A.” My claims: six of ten preferred A, every participant preferred A, and A caused higher scores. Check each claim.",
+      "check": "Confirm the first with page 3, contradict the second and leave the causal claim unresolved."
+    },
+    {
+      "skill": "learning-coach",
+      "language": "nb",
+      "prompt": "Jeg blander påstand og belegg. Forklar med et eksempel og la meg øve selv.",
+      "check": "Forklar begge begrepene, skill eksempel fra øvingsoppgave og vent på elevens svar."
+    },
+    {
+      "skill": "exam-preparation",
+      "language": "nb",
+      "prompt": "Muntlig øving. Notat: Et utvalg er deltakerne vi faktisk undersøker. Quiz meg med ett spørsmål om gangen.",
+      "check": "Still ett relevant spørsmål uten å avsløre svaret."
+    },
+    {
+      "skill": "presentation-engine",
+      "language": "nb",
+      "prompt": "Jeg har fire minutter. 9 av 14 ble tryggere etter øvelsen, men vi har ingen kontrollgruppe. Gi en disposisjon med talepunkter.",
+      "check": "Tidsdelene blir fire minutter. Avgrens funnet til de 14 og unngå årsakspåstand."
+    },
+    {
+      "skill": "office-integration",
+      "language": "en",
+      "prompt": "Excel excerpt: C2=2, C3 is empty, C4=3. My report says the average of three responses was 1.67. Check the calculation.",
+      "check": "Distinguish a blank from zero. The two observed responses average 2.5. Do not claim to have edited a workbook."
+    },
+    {
+      "skill": "quality-assurance",
+      "language": "nb",
+      "prompt": "Original: «2,9 mg kan redusere plagene (tabell A)». Revisjon: «29 mg reduserer plagene (tabell A)». Tabell A følger ikke med. Gjør sluttkontroll.",
+      "check": "Flagge desimalendring og styrket sikkerhet. Henvisningen står i teksten og tabellens innhold er uavklart."
+    }
+  ],
+  "selection": [
+    {
+      "prompt": "Kriteriet er å drøfte. Hvor i utkastet mitt mangler en innvending?",
+      "expect": "academic-critic"
+    },
+    {
+      "prompt": "Sammenhold hver påstand med side 3 i utdraget mitt.",
+      "expect": "research-integrity"
+    },
+    {
+      "prompt": "Quiz meg fra disse notatene. Vent på hvert svar.",
+      "expect": "exam-preparation"
+    },
+    {
+      "prompt": "How do I format a float with printf in C?",
+      "expect": null
+    },
+    {
+      "prompt": "Skriv en salgse-post til leverandøren min.",
+      "expect": null
+    },
+    {
+      "prompt": "Hei, hvordan går det?",
+      "expect": null
+    }
+  ],
+  "missing": {
+    "prompt": "Check this citation against the article. The article is missing.",
+    "expect": "Ask for the text or a page. Mark the claim unresolved. No invented verification."
+  }
+}
