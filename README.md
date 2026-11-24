@@ -1,4 +1,6 @@
 # Academic Skill
+>[!IMPORTANT]
+>**THIS SKILL IS STILL BETA**
 We are proud to announce this skill and have the opportunity to publish **Academic-Skill** publicly. Multiple tests have shown consistent results; for instance, both our humanizer and copywriting-style skills delivered great outcomes. We also tested the outputs of this skill using the AI detector GPTZero.
 
 
