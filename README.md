@@ -39,6 +39,10 @@ Add `-g` for a user installation across projects. Open a new Codex chat and sele
 
 > Six of ten students preferred the glossary. Check whether my conclusion about all students follows, then plan a four-minute talk.
 
+## Visual skill prototypes
+
+Try standalone workflows for pixel art, editable draw.io diagrams and UML. Each has its own README and local examples. [Visual skills lab](labs/README.md)
+
 ## Build and validate
 
 From the repository root, with Python 3.10 or newer:

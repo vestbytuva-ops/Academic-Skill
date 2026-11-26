@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic UML"
+  short_description: "Model systems with PlantUML and Mermaid"
+  default_prompt: "Use $academic-uml to turn my project brief into a sequence diagram."

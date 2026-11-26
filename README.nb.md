@@ -32,6 +32,10 @@ Legg til `-g` hvis du vil bruke den i alle prosjektene dine. Åpne en ny Codex-c
 
 > Vi har fire minutter. Hjelp meg å sjekke hva undersøkelsen viser og lage en disposisjon med talepunkter.
 
+## Prototyper for visuelt arbeid
+
+Prøv egne ferdigheter for pikselkunst, redigerbare draw.io-diagrammer og UML. Hver har en README med eksempler du kan prøve lokalt. [Visuelle ferdigheter](labs/README.md)
+
 ## Bygg filer til Claude
 
 Kjør `python tools/build.py` fra prosjektmappen. Velg `dist/academic-skill.zip` i **Upload a skill** eller `dist/academic-skill-claude-plugin.zip` i **Upload a plugin**. Begge inneholder én ferdighet med alle arbeidsmåtene. Flytt de ferdige filene til en mappe ved siden av repoet før du pakker prosjektmappen i Windows. [Bygging og testing](README.md#build-and-validate) · [Utgivelse](docs/Release.md)

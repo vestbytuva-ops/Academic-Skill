@@ -1,0 +1,16 @@
+{
+  "title": "Sjekk en kilde",
+  "nodes": [
+    {"id": "finn", "label": "Finn en aktuell kilde", "kind": "terminal", "x": 60, "y": 30},
+    {"id": "opphav", "label": "Sjekk avsender og dato", "x": 60, "y": 140},
+    {"id": "belegg", "label": "Støtter kilden påstanden?", "kind": "decision", "x": 40, "y": 250, "width": 220, "height": 110},
+    {"id": "henvis", "label": "Henvis til kilden", "kind": "terminal", "x": 60, "y": 420},
+    {"id": "ny", "label": "Finn mer belegg", "kind": "terminal", "x": 370, "y": 273}
+  ],
+  "edges": [
+    {"from": "finn", "to": "opphav"},
+    {"from": "opphav", "to": "belegg"},
+    {"from": "belegg", "to": "henvis", "label": "Ja"},
+    {"from": "belegg", "to": "ny", "label": "Uavklart"}
+  ]
+}
