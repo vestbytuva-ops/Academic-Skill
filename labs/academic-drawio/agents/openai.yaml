@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Draw.io"
+  short_description: "Build and edit diagrams in draw.io"
+  default_prompt: "Use $academic-drawio to make an editable flowchart from my method notes."
