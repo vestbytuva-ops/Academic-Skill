@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Pixel Art"
+  short_description: "Build pixel art, sprite sheets and GIFs"
+  default_prompt: "Use $academic-pixel-art to make a 32×32 sprite from my reference."
