@@ -1,0 +1,15 @@
+@startuml
+actor Elev
+participant "Innleveringsside" as Side
+participant "Innleveringstjeneste" as Tjeneste
+
+Elev -> Side : Last opp besvarelse
+Side -> Tjeneste : Valider og lagre fil
+alt Godkjent fil
+    Tjeneste --> Side : Kvitteringsnummer
+    Side --> Elev : Vis kvittering
+else Ugyldig fil
+    Tjeneste --> Side : Feilmelding
+    Side --> Elev : Be om ny fil
+end
+@enduml

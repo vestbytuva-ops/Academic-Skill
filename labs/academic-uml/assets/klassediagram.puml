@@ -1,0 +1,16 @@
+@startuml
+class Rapport {
+    tittel : String
+}
+
+class Henvisning {
+    sidetall : String
+}
+
+class Kilde {
+    tittel : String
+}
+
+Rapport "1" *-- "0..*" Henvisning : inneholder
+Henvisning "0..*" --> "1" Kilde : viser til
+@enduml
