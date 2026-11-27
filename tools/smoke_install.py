@@ -12,8 +12,13 @@ NAME = "academic-skill"
 
 def smoke(cli, source):
     skill = ROOT / "skills" / NAME
-    resources = [p.relative_to(skill) for p in (skill / "references").glob("*.md")]
-    resources.extend(map(Path, ("SKILL.md", "agents/openai.yaml", "scripts/sjekk_uttrykk.py")))
+    resources = [
+        path.relative_to(skill)
+        for folder in ("references", "scripts", "assets", "evals")
+        for path in (skill / folder).glob("*")
+        if path.is_file()
+    ]
+    resources.extend(map(Path, ("SKILL.md", "agents/openai.yaml")))
     with TemporaryDirectory() as scratch:
         tmp = Path(scratch)
         home = tmp / "user"
@@ -38,7 +43,7 @@ def smoke(cli, source):
             for path in resources:
                 if not (destination / NAME / path).is_file():
                     raise ValueError(f"{scope}: missing {path} from {NAME}")
-            print(f"{scope}: installed one {NAME} with its guidance and text checker")
+            print(f"{scope}: installed one {NAME} with its guidance and resources")
 
 
 if __name__ == "__main__":

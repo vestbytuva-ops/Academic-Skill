@@ -2,7 +2,7 @@
 
 [English overview](../README.md) · [Norsk hurtigstart](../README.nb.md) · [Validation results](Validation.md)
 
-Version 4.0 registers one skill called `academic-skill`. Describe the workflow in your request, for example “Quiz me from these notes” or “Check this paragraph against page 4”. The skill reads the relevant files from its own directory.
+The standard installation registers one skill called `academic-skill`. Describe the workflow in your request, for example “Quiz me from these notes” or “Draw a sequence diagram for the submission process”. The skill reads the relevant files from its own directory. Pixel art, draw.io and UML are available through the same command in Codex and Claude Code. [Visual workflow guide](../skills/academic-skill/references/visuelle-arbeidsmater.md)
 
 | Client | Install or enable | Select it |
 | --- | --- | --- |
@@ -10,7 +10,7 @@ Version 4.0 registers one skill called `academic-skill`. Describe the workflow i
 | ChatGPT Work | In a workspace offering GitHub plugin import, an administrator imports this repository through **Admin → Plugins**, then grants workspace access. Use the directory containing the root `plugin.json` as the plugin source. | Choose Academic Skill from the workspace's enabled plugins or skills. |
 | Claude Code | Install the standalone skill with `-a claude-code`, or add the Claude marketplace below. | Use `/academic-skill` for the standalone install or `/academic-skill:academic-skill` for the namespaced plugin command. |
 | Claude workspace | Build the release files and choose `academic-skill-claude-plugin.zip` in **Plugins → Upload a plugin**. | Enable the plugin for the intended workspace, then request Academic Skill. |
-| Claude individual skill | Choose `academic-skill.zip` in **Customize → Skills → Upload a skill**. | Enable Academic Skill and ask for the workflow. |
+| Claude individual skill | Open the **Skills** area and choose **Upload a skill** with `academic-skill.zip`. | Enable Academic Skill and ask for the workflow. |
 | Cursor | Use the same installer with `-a cursor`. | Choose the skill where offered or name it in an Agent request. |
 | Gemini CLI | Use `-a gemini-cli` in a trusted project. | Check `/skills list` and ask to use `academic-skill`. |
 | VS Code / GitHub Copilot | Use `-a github-copilot` in a client supporting Agent Skills. | In VS Code chat, choose the skill where offered or describe the task. |

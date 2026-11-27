@@ -111,6 +111,35 @@
         "references/sluttkontroll.md",
         "references/kildekontroll.md"
       ]
+    },
+    {
+      "skill": "academic-skill",
+      "language": "en",
+      "prompt": "Make a transparent 32-by-32 pixel-art microscope icon with a six-color palette.",
+      "check": "Create the requested PNG when image tools are available and check its size and transparency.",
+      "references": [
+        "references/visuelle-arbeidsmater.md",
+        "references/pikselkunst.md"
+      ]
+    },
+    {
+      "skill": "academic-skill",
+      "language": "nb",
+      "prompt": "Lag en redigerbar .drawio-fil for metoden min. Sjekk kilden og gå til ny kontroll hvis den ikke kan verifiseres.",
+      "check": "Lag en redigerbar fil med prosess, beslutning og vilkår på pilene.",
+      "references": [
+        "references/visuelle-arbeidsmater.md"
+      ]
+    },
+    {
+      "skill": "academic-skill",
+      "language": "nb",
+      "prompt": "Lag et UML-sekvensdiagram i PlantUML for innlevering. Vis hva eleven får tilbake når filen blir godkjent eller avvist.",
+      "check": "Lever en .puml-fil som viser aktører, meldingsrekkefølge og begge utfall.",
+      "references": [
+        "references/visuelle-arbeidsmater.md",
+        "references/uml-notasjon.md"
+      ]
     }
   ],
   "selection": [

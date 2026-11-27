@@ -32,9 +32,13 @@ Legg til `-g` hvis du vil bruke den i alle prosjektene dine. Åpne en ny Codex-c
 
 > Vi har fire minutter. Hjelp meg å sjekke hva undersøkelsen viser og lage en disposisjon med talepunkter.
 
-## Prototyper for visuelt arbeid
+## Visuelle arbeidsmåter
 
-Prøv egne ferdigheter for pikselkunst, redigerbare draw.io-diagrammer og UML. Hver har en README med eksempler du kan prøve lokalt. [Visuelle ferdigheter](labs/README.md)
+Velg `$academic-skill` i Codex eller `/academic-skill` ved egen skillinstallasjon i Claude Code. Be om et pikselikon, et redigerbart draw.io-diagram eller UML i PlantUML eller Mermaid. Standardinstallasjonen og begge Claude-pakkene inneholder skript og eksempler. [Visuell arbeidsflyt](skills/academic-skill/references/visuelle-arbeidsmater.md)
+
+> Gjør metodenotatene mine om til et redigerbart flytskjema i draw.io. Vis hva som skjer når en kilde må sjekkes nærmere.
+
+Du kan også installere hver prototype for seg. [Visuelle ferdigheter](labs/README.md)
 
 ## Bygg filer til Claude
 
