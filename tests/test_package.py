@@ -91,10 +91,9 @@ class AcademicPackages(unittest.TestCase):
                 verify_codex.verify_labels([{**row, **changed}], catalog, "user")
 
     def test_markdown_links_and_routing(self):
-        refs = {(p.relative_to(MAIN)).as_posix() for p in (MAIN / "references").glob("*.md")}
-        routes = set(LINK.findall((MAIN / "SKILL.md").read_text(encoding="utf-8")))
-        self.assertTrue(refs.issubset(routes), refs - routes)
+        links = {}
         for doc in [*MAIN.rglob("*.md"), *ROOT.glob("*.md"), *(ROOT / "docs").glob("*.md")]:
+            targets = set()
             for link in LINK.findall(doc.read_text(encoding="utf-8")):
                 url = urlsplit(link.strip("<>"))
                 if url.scheme or not url.path:
@@ -105,6 +104,17 @@ class AcademicPackages(unittest.TestCase):
                         self.assertTrue(target.is_relative_to(MAIN) and target.is_file(), target)
                     else:
                         self.assertTrue(target.is_relative_to(ROOT) and target.exists(), target)
+                    targets.add(target)
+            links[doc] = targets
+
+        reached = {MAIN / "SKILL.md"}
+        pending = list(reached)
+        while pending:
+            unseen = links.get(pending.pop(), set()) - reached
+            reached.update(unseen)
+            pending.extend(unseen)
+        references = set((MAIN / "references").rglob("*.md"))
+        self.assertTrue(references.issubset(reached), references - reached)
 
     def test_source_tree_and_git_index_are_archive_free(self):
         stray = []
@@ -210,14 +220,22 @@ class AcademicPackages(unittest.TestCase):
             self.assertNotEqual(run_build(checkout, "--check", check=False).returncode, 0)
             self.assertTrue(extra.exists())
             extra.unlink()
-            (checkout / "skills" / NAME / "references/oppgaveforstaelse.md").unlink()
-            self.assertNotEqual(run_build(checkout, check=False).returncode, 0)
+            references = checkout / "skills" / NAME / "references"
+            for path in (references / "oppgaveforstaelse.md", references / "spillutvikling/godot.md",
+                         references / "spillutvikling/LICENSE.txt"):
+                with self.subTest(missing=path.name):
+                    content = path.read_bytes()
+                    path.unlink()
+                    result = run_build(checkout, check=False)
+                    self.assertNotEqual(result.returncode, 0)
+                    self.assertIn(path.name, result.stderr)
+                    path.write_bytes(content)
 
     def test_behavior_cases_route_to_existing_references(self):
-        available = {p.relative_to(MAIN).as_posix() for p in (MAIN / "references").glob("*.md")}
+        available = {p.relative_to(MAIN).as_posix() for p in (MAIN / "references").rglob("*.md")}
         suite = document(MAIN / "evals/evals.json")
         self.assertEqual(suite["skill_name"], NAME)
-        self.assertEqual({case["id"] for case in suite["evals"]}, set(range(1, 13)))
+        self.assertEqual({case["id"] for case in suite["evals"]}, set(range(1, 15)))
         for case in suite["evals"]:
             self.assertTrue(case["prompt"] and case["expected_output"] and case["expectations"])
             self.assertEqual(bool(case["references"]), case.get("expect_skill", NAME) == NAME)
@@ -225,8 +243,8 @@ class AcademicPackages(unittest.TestCase):
             for path in case["files"]:
                 self.assertTrue((MAIN / path).is_file(), path)
         trials = document(ROOT / "tests/workflows.json")
-        self.assertEqual(len(trials["explicit"]), 15)
-        self.assertEqual(len(trials["selection"]), 8)
+        self.assertEqual(len(trials["explicit"]), 20)
+        self.assertEqual(len(trials["selection"]), 10)
         self.assertEqual(sum(row["expect"] is None for row in trials["selection"]), 3)
         self.assertEqual({row["language"] for row in trials["explicit"]}, {"nb", "nn", "en"})
         covered = set()

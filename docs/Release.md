@@ -19,7 +19,7 @@ The package tests use the dependencies in `requirements-dev.txt`. Both archives 
 | `academic-skill.zip` | Claude **Upload a skill** or a compatible single-skill importer | `academic-skill/SKILL.md`, then the skill's `agents/`, `references/`, `scripts/` and `evals/` files |
 | `academic-skill-claude-plugin.zip` | Claude **Upload a plugin** | `.claude-plugin/plugin.json` at the archive root and the skill under `skills/academic-skill/` |
 
-Choose the ZIP for the upload screen you are using. Both contain the academic and visual workflows. For Codex, install the skill or the source marketplace. For ChatGPT Work, use GitHub import in an eligible workspace. Public directory approval and workspace enablement are handled by the host. [Platform instructions](Compatibility.md) · [Claude's upload requirements](https://platform.claude.com/docs/en/manage-claude/plugins-api#upload-requirements)
+Choose the ZIP for the upload screen you are using. Both contain the academic, visual and game development workflows. For Codex, install the skill or the source marketplace. For ChatGPT Work, use GitHub import in an eligible workspace. Public directory approval and workspace enablement are handled by the host. [Platform instructions](Compatibility.md) · [Claude's upload requirements](https://platform.claude.com/docs/en/manage-claude/plugins-api#upload-requirements)
 
 ## Share the files separately from the source
 

@@ -1,6 +1,6 @@
 interface:
   display_name: "Academic Skill"
-  short_description: "Plan, write, check sources, study and present"
+  short_description: "Study, write, check sources, present and develop games"
   default_prompt: "Use $academic-skill. Help me interpret my brief, check my evidence and plan a presentation."
 policy:
   allow_implicit_invocation: true

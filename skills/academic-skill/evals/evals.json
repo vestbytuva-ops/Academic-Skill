@@ -173,6 +173,40 @@
         "references/sprakvask.md",
         "references/english.md"
       ]
+    },
+    {
+      "id": 13,
+      "prompt": "Bruk Academic Skill til å planlegge hoppet i mitt eget plattformspill. Prosjektet har project.godot med feature-taggen 4.3 og en CharacterBody2D med handlingen jump. Jeg vil huske et trykk 100 ms før landing og tillate hopp 80 ms etter kanten. Gi bare en plan og noen korte tester.",
+      "expected_output": "Bokmål. Plan for Godot 4.3 med de to tidsvinduene og konkrete testtilfeller.",
+      "files": [],
+      "expectations": [
+        "Bruk den eksisterende handlingen og Godot sitt fysikksteg.",
+        "Bruk 100 ms før landing og 80 ms etter kanten, og tøm bufferen når hoppet utføres.",
+        "Test på begge sider av grensene og at ett trykk gir ett hopp. Presenter svaret som en plan."
+      ],
+      "references": [
+        "references/spillutvikling/arbeidsflyt.md",
+        "references/spillutvikling/motorer.md",
+        "references/spillutvikling/godot.md",
+        "references/spillutvikling/mekanikk.md",
+        "references/spillutvikling/sjangre.md"
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "Use Academic Skill to design a branching scene for an original visual novel. A caretaker offers the player a greenhouse key. Propose two choices, flags and how to test that a saved scene resumes correctly. Keep it engine-neutral.",
+      "expected_output": "English. One original encounter with two choices and a short engine-neutral resume test.",
+      "files": [],
+      "expectations": [
+        "Describe the two distinct choices, the condition or state each uses and its consequence.",
+        "Preserve the active node and relevant flag when saving or resuming.",
+        "Check that loading continues the chosen branch and applies a choice's effect once."
+      ],
+      "references": [
+        "references/spillutvikling/arbeidsflyt.md",
+        "references/spillutvikling/sjangre.md",
+        "references/spillutvikling/systemer.md"
+      ]
     }
   ]
 }

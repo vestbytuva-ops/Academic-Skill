@@ -140,6 +140,68 @@
         "references/visuelle-arbeidsmater.md",
         "references/uml-notasjon.md"
       ]
+    },
+    {
+      "skill": "academic-skill",
+      "language": "nb",
+      "prompt": "Prosjektet har project.godot og en spiller med CharacterBody2D. Planlegg hopp med et kort trykk før landing og litt margin etter kanten i det originale plattformspillet mitt.",
+      "check": "Finn motorversjonen, bruk eksisterende inndata og fysikksteg, og foreslå grenseprøver for hoppetrykk og kantmargin.",
+      "references": [
+        "references/spillutvikling/arbeidsflyt.md",
+        "references/spillutvikling/motorer.md",
+        "references/spillutvikling/godot.md",
+        "references/spillutvikling/mekanikk.md",
+        "references/spillutvikling/sjangre.md"
+      ]
+    },
+    {
+      "skill": "academic-skill",
+      "language": "en",
+      "prompt": "Plan versioned save slots for my existing Unity game. The project has ScriptableObject item definitions and players already have saves from the first build.",
+      "check": "Keep a separate runtime state keyed by stable item IDs. Specify migration, interrupted writes and a save-and-relaunch check.",
+      "references": [
+        "references/spillutvikling/arbeidsflyt.md",
+        "references/spillutvikling/motorer.md",
+        "references/spillutvikling/unity-og-unreal.md",
+        "references/spillutvikling/systemer.md"
+      ]
+    },
+    {
+      "skill": "academic-skill",
+      "language": "en",
+      "prompt": "My app lists Phaser and three.js, but the target level is a Phaser Scene. Help me prepare original pixel-art frames for a door opening and import them into that level.",
+      "check": "Follow the Phaser entry point, use the pixel-art workflow to plan equal-sized frames and test alignment and scene restart.",
+      "references": [
+        "references/spillutvikling/arbeidsflyt.md",
+        "references/spillutvikling/motorer.md",
+        "references/spillutvikling/nettspill.md",
+        "references/spillutvikling/visuelt-og-lyd.md",
+        "references/pikselkunst.md"
+      ]
+    },
+    {
+      "skill": "academic-skill",
+      "language": "nb",
+      "prompt": "Rojo-prosjektet mitt har en serverhendelse for å overlevere en pakke. Planlegg hvordan jeg kan sjekke i Roblox Studio at to spillere ser samme resultat, også etter gjeninnkobling.",
+      "check": "Bruk serverens spilltilstand og to testklienter. Vis hva som må observeres i Studio og hva som kan sjekkes fra filene.",
+      "references": [
+        "references/spillutvikling/arbeidsflyt.md",
+        "references/spillutvikling/motorer.md",
+        "references/spillutvikling/roblox.md",
+        "references/spillutvikling/systemer.md"
+      ]
+    },
+    {
+      "skill": "academic-skill",
+      "language": "en",
+      "prompt": "I have a Bevy project for a weekend jam. Plan the smallest complete gameplay loop and a local build for itch.io that I can test before uploading.",
+      "check": "Use the pinned Bevy version and target a reproducible build. Include a restart and a clean startup check for the package.",
+      "references": [
+        "references/spillutvikling/arbeidsflyt.md",
+        "references/spillutvikling/motorer.md",
+        "references/spillutvikling/andre-motorer.md",
+        "references/spillutvikling/produksjon.md"
+      ]
     }
   ],
   "selection": [
@@ -177,6 +239,25 @@
       "expect": "academic-skill",
       "references": [
         "references/laering-og-eksamen.md"
+      ]
+    },
+    {
+      "prompt": "Hvordan kan jeg teste at Godot-spillet mitt starter på nytt med riktig spillerposisjon etter et fall?",
+      "expect": "academic-skill",
+      "references": [
+        "references/spillutvikling/arbeidsflyt.md",
+        "references/spillutvikling/motorer.md",
+        "references/spillutvikling/godot.md",
+        "references/spillutvikling/mekanikk.md"
+      ]
+    },
+    {
+      "prompt": "Design a short branching encounter for my original visual novel. I only want the choices, flags and consequences.",
+      "expect": "academic-skill",
+      "references": [
+        "references/spillutvikling/arbeidsflyt.md",
+        "references/spillutvikling/sjangre.md",
+        "references/spillutvikling/systemer.md"
       ]
     },
     {

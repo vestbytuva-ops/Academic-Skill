@@ -40,6 +40,12 @@ Velg `$academic-skill` i Codex eller `/academic-skill` ved egen skillinstallasjo
 
 Du kan også installere hver prototype for seg. [Visuelle ferdigheter](labs/README.md)
 
+## Spillutvikling
+
+Bruk samme Academic Skill-kommando til å planlegge, bygge eller teste et eget spill. Skillen velger veiledning etter motor og oppgave, fra styring, nivåer, grafikk og lyd til lagring, flerspiller og utgivelse. Den dekker tolv motorer og rammeverk, blant annet Godot, Unity, Unreal Engine, Roblox og Phaser. [Spillveiledning](skills/academic-skill/references/spillutvikling/arbeidsflyt.md) · [Spillmotorer](skills/academic-skill/references/spillutvikling/motorer.md)
+
+> Bruk `$academic-skill` til å bygge én spillbar bane i Godot-prosjektet mitt. Bruk de eksisterende kontrollene og sjekk at jeg kan starte på nytt etter et fall.
+
 ## Bygg filer til Claude
 
 Kjør `python tools/build.py` fra prosjektmappen. Velg `dist/academic-skill.zip` i **Upload a skill** eller `dist/academic-skill-claude-plugin.zip` i **Upload a plugin**. Begge inneholder én ferdighet med alle arbeidsmåtene. Flytt de ferdige filene til en mappe ved siden av repoet før du pakker prosjektmappen i Windows. [Bygging og testing](README.md#build-and-validate) · [Utgivelse](docs/Release.md)
