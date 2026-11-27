@@ -15,8 +15,8 @@ def smoke(cli, source):
     resources = [
         path.relative_to(skill)
         for folder in ("references", "scripts", "assets", "evals")
-        for path in (skill / folder).glob("*")
-        if path.is_file()
+        for path in (skill / folder).rglob("*")
+        if path.is_file() and "__pycache__" not in path.parts and path.suffix != ".pyc"
     ]
     resources.extend(map(Path, ("SKILL.md", "agents/openai.yaml")))
     with TemporaryDirectory() as scratch:

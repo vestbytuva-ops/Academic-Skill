@@ -1,7 +1,7 @@
 ---
 name: academic-skill
 description: >-
-  Skole- og studiearbeid på norsk og engelsk. Oppgaver, fagtekst, stil, kilder, læring, eksamen, Office, presentasjoner, pikselkunst/pixel art, draw.io og UML. Unnta generell koding, småprat og salg.
+  Skole og studier på norsk og engelsk. Fagtekst, stil, kilder, læring, eksamen, Office, presentasjoner, pikselkunst/pixel art, draw.io, UML, spillutvikling/game development. Unnta generell koding.
 ---
 
 # Akademisk veiledning
@@ -26,10 +26,13 @@ Les [felles arbeidsgrunnlag](references/arbeidsgrunnlag.md) for språkvalg, arbe
 | Pikselkunst | Ikon, sprite, spriteark eller GIF-løkke | [Visuell arbeidsflyt](references/visuelle-arbeidsmater.md) og [pikselveiledning](references/pikselkunst.md) |
 | Draw.io | Redigerbar `.drawio`-fil, flytskjema eller metodekart | [Visuell arbeidsflyt](references/visuelle-arbeidsmater.md) |
 | UML | Klasse-, sekvens-, tilstands- eller aktivitetsdiagram i PlantUML eller Mermaid | [Visuell arbeidsflyt](references/visuelle-arbeidsmater.md) og [UML-notasjon](references/uml-notasjon.md) |
+| Spillutvikling | Planlegge, bygge, feilsøke eller teste et spill. Spillmotor, mekanikk, nivå, spillgrafikk, lyd, flerspiller eller spillutgivelse. | [Spillutvikling](references/spillutvikling/arbeidsflyt.md) |
 | Office-filer | Arbeid med Word, Excel eller PowerPoint | [Office-filer](references/office-filer.md) |
 | Sluttkontroll | Kontroll av ferdig leveranse eller sammenligning av original og revisjon | [Sluttkontroll](references/sluttkontroll.md), også [kildekontroll](references/kildekontroll.md) ved motstridende belegg |
 
 Hvis brukeren nevner `academic-pixel-art`, `academic-drawio` eller `academic-uml` i bestillingen, følg den tilhørende visuelle arbeidsflyten med verktøyene og eksemplene i denne skillmappen.
+
+Bruk spillutviklingsruten for spillfaglige spørsmål og konkrete spillprosjekter. Velg pikselkunst direkte når bestillingen gjelder en enkeltstående sprite eller et ikon. Kombiner med oppgaveforståelse, kildekontroll eller UML når en spilloppgave også krever det. Småprat og salg faller utenfor fagområdet.
 
 Kombiner arbeidsmåtene oppgaven trenger. Skal brukeren holde et foredrag basert på et utdrag, bruk først kildekontroll til å avgjøre hva utdraget støtter. Bygg deretter disposisjonen på de støttede påstandene. Bruk Office-veiledningen hvis brukeren også bestiller en presentasjonsfil.
 

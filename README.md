@@ -47,6 +47,12 @@ Select `$academic-skill` in Codex or `/academic-skill` in a standalone Claude Co
 
 You can also install each prototype separately. [Visual skills lab](labs/README.md)
 
+## Game development
+
+Use the same Academic Skill command to plan, build or test an original game. The skill reads guidance for the engine and task, from player movement, levels, graphics and sound to save systems, multiplayer and release builds. It covers 12 engines and frameworks, including Godot, Unity, Unreal Engine, Roblox and Phaser. [Game development guide](skills/academic-skill/references/spillutvikling/arbeidsflyt.md) · [Supported engines](skills/academic-skill/references/spillutvikling/motorer.md)
+
+> Use Academic Skill to build one small platforming level in my Godot project. Use the project's existing input actions and check that I can restart after a fall.
+
 ## Build and validate
 
 From the repository root, with Python 3.10 or newer:

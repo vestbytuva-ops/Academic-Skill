@@ -1,0 +1,8 @@
+Academic Skill – spillutvikling
+
+Veiledningene er nyskrevet og omorganisert for Academic Skill med utgangspunkt i temaer og arbeidsmåter fra awesome-gamedev-agent-skills.
+
+Upstream: https://github.com/gamedev-skills/awesome-gamedev-agent-skills/tree/c6ca6c41c839b68319ffc08430b99ab768debc32
+Copyright 2026 Abhishek Barali and the awesome-gamedev-agent-skills contributors
+
+The upstream work is licensed under the Apache License, Version 2.0. A copy is included as LICENSE.txt in this directory. Engine, framework and platform names are used to identify their respective products.

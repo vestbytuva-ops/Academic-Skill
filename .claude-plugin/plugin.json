@@ -1,7 +1,7 @@
 {
   "name": "academic-skill",
-  "version": "4.5.1",
-  "description": "One academic skill for Norwegian and English assignments, writing, source checks, exam practice, Office files and visual work.",
+  "version": "4.6.0",
+  "description": "One skill for academic work, visuals and game development in Norwegian and English.",
   "author": {
     "name": "vestbytuva-ops",
     "url": "https://github.com/vestbytuva-ops"
@@ -13,6 +13,7 @@
     "academic-writing",
     "research",
     "Norwegian",
-    "English"
+    "English",
+    "game-development"
   ]
 }

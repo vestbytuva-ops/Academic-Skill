@@ -2,7 +2,7 @@
 
 [English overview](../README.md) · [Norsk hurtigstart](../README.nb.md) · [Validation results](Validation.md)
 
-The standard installation registers one skill called `academic-skill`. Describe the workflow in your request, for example “Quiz me from these notes” or “Draw a sequence diagram for the submission process”. The skill reads the relevant files from its own directory. Pixel art, draw.io and UML are available through the same command in Codex and Claude Code. [Visual workflow guide](../skills/academic-skill/references/visuelle-arbeidsmater.md)
+The standard installation registers one skill called `academic-skill`. Describe the workflow in your request, for example “Quiz me from these notes” or “Help me test movement in this Godot game”. The skill reads the relevant files from its own directory. Pixel art, draw.io, UML and game development are available through the same command in Codex and Claude Code. [Visual workflow guide](../skills/academic-skill/references/visuelle-arbeidsmater.md) · [Game development guide](../skills/academic-skill/references/spillutvikling/arbeidsflyt.md)
 
 | Client | Install or enable | Select it |
 | --- | --- | --- |

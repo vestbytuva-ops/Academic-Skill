@@ -1,7 +1,7 @@
 {
   "name": "academic-skill",
-  "version": "4.5.1",
-  "description": "One academic skill for Norwegian and English assignments, writing, source checks, exam practice, Office files and visual work.",
+  "version": "4.6.0",
+  "description": "One skill for academic work, visuals and game development in Norwegian and English.",
   "author": {
     "name": "vestbytuva-ops",
     "url": "https://github.com/vestbytuva-ops"
@@ -13,13 +13,14 @@
     "academic-writing",
     "research",
     "Norwegian",
-    "English"
+    "English",
+    "game-development"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Academic Skill",
     "shortDescription": "Study, write and check sources",
-    "longDescription": "Work from a brief and a rubric, revise in your own voice, check sources, practise for an exam, or prepare academic presentations and Office files. Use the same skill for pixel art, editable draw.io diagrams and UML. Academic Skill selects guidance in Norwegian or English. File creation depends on the tools available in your session.",
+    "longDescription": "Work from a brief and a rubric, revise in your own voice, check sources, practise for an exam, or prepare presentations and Office files. Use the same skill for pixel art, editable draw.io diagrams, UML and game development. Get help with an original prototype, a mechanic, an engine-specific implementation or a game build. Academic Skill responds in Norwegian or English. File creation depends on the tools available in your session.",
     "developerName": "vestbytuva-ops",
     "category": "Productivity",
     "capabilities": [],

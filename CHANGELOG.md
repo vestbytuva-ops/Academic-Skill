@@ -1,5 +1,10 @@
 # Endringslogg
 
+## 27. november 2026 · 4.6.0
+
+- La til spillutvikling i `academic-skill`. Egen veiledning dekker motorvalg, mekanikk, sjangre, grafikk, lyd, spillsystemer, prototyping og utgivelse. [Spillutvikling](skills/academic-skill/references/spillutvikling/arbeidsflyt.md)
+- Installer og bygg referanser fra undermapper. Spillveiledningen og opphavsmerknaden følger med både i enkelt-skill-pakken og Claude-pluginpakken. [Pakkene](docs/Release.md)
+
 ## 27. november 2026 · 4.5.1
 
 - La til pikselkunst, redigerbare draw.io-diagrammer og UML som arbeidsmåter i `academic-skill`. Samme kommando gir tilgang til verktøy og eksempler i standardinstallasjonen og begge Claude-pakkene. [Visuelle arbeidsmåter](skills/academic-skill/references/visuelle-arbeidsmater.md)

@@ -1,7 +1,7 @@
 {
   "academic-skill": {
     "display_name": "Academic Skill",
-    "short_description": "Plan, write, check sources, study and present",
+    "short_description": "Study, write, check sources, present and develop games",
     "prompt_nb": "Hjelp meg å forstå oppgaven, sjekke belegget og planlegge en presentasjon.",
     "prompt_en": "Help me interpret my brief, check my evidence and plan a presentation."
   }

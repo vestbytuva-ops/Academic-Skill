@@ -33,7 +33,7 @@ def json_bytes(document):
 
 def read_bytes(path):
     data = path.read_bytes()
-    if path.suffix in {".md", ".yaml", ".json", ".py", ".mmd", ".puml"}:
+    if path.suffix in {".md", ".txt", ".yaml", ".json", ".py", ".mmd", ".puml"}:
         return data.replace(b"\r\n", b"\n")
     return data
 
@@ -84,7 +84,8 @@ def generated_files():
 
 def distributions(generated):
     paths = {MAIN / rel for rel in ("SKILL.md", "scripts/sjekk_uttrykk.py", "evals/evals.json")}
-    paths.update((MAIN / "references").glob("*.md"))
+    paths.update(path for path in (MAIN / "references").rglob("*")
+                 if path.is_file() and path.suffix in {".md", ".txt"})
     paths.update(path for path in generated if path.is_relative_to(MAIN))
     content = {p: generated[p] if p in generated else read_bytes(p) for p in sorted(paths)}
     for document in (p for p in paths if p.suffix == ".md"):
