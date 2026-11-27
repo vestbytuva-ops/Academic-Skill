@@ -39,9 +39,13 @@ Add `-g` for a user installation across projects. Open a new Codex chat and sele
 
 > Six of ten students preferred the glossary. Check whether my conclusion about all students follows, then plan a four-minute talk.
 
-## Visual skill prototypes
+## Visual workflows
 
-Try standalone workflows for pixel art, editable draw.io diagrams and UML. Each has its own README and local examples. [Visual skills lab](labs/README.md)
+Select `$academic-skill` in Codex or `/academic-skill` in a standalone Claude Code install. Ask for a pixel icon, an editable draw.io diagram or UML in PlantUML or Mermaid. The standard installation and both Claude packages include the scripts and examples. [Visual workflow guide](skills/academic-skill/references/visuelle-arbeidsmater.md)
+
+> Turn my methods notes into an editable draw.io flowchart with a branch for sources that need checking.
+
+You can also install each prototype separately. [Visual skills lab](labs/README.md)
 
 ## Build and validate
 

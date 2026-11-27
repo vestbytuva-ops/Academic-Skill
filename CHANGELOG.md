@@ -1,5 +1,10 @@
 # Endringslogg
 
+## 27. november 2026 · 4.5.1
+
+- La til pikselkunst, redigerbare draw.io-diagrammer og UML som arbeidsmåter i `academic-skill`. Samme kommando gir tilgang til verktøy og eksempler i standardinstallasjonen og begge Claude-pakkene. [Visuelle arbeidsmåter](skills/academic-skill/references/visuelle-arbeidsmater.md)
+- Bygget synkroniserer verktøyene fra de tre prototypene, som fortsatt kan installeres hver for seg. [Visuelle ferdigheter](labs/README.md)
+
 ## 23. november 2026 · 4.0.0
 
 - Én installasjon av `academic-skill` gir tilgang til elleve integrerte arbeidsmåter. Tidligere spesialistkommandoer er innlemmet i [rutingtabellen](skills/academic-skill/SKILL.md). Unike eksempler og arbeidsregler fra deres inngangsfiler er flyttet til fagreferansene. Fjerningen av de elleve separate oppføringene er en brytende endring fra 3.1.0.

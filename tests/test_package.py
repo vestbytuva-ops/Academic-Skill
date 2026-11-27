@@ -11,6 +11,7 @@ import tempfile
 import unittest
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+from xml.etree import ElementTree
 from zipfile import ZipFile, is_zipfile
 
 import jsonschema
@@ -49,7 +50,7 @@ class AcademicPackages(unittest.TestCase):
         cls.addClassCleanup(area.cleanup)
         cls.built = Path(area.name) / "package"
         cls.built.mkdir()
-        for directory in ("skills", "tools", "assets"):
+        for directory in ("skills", "tools", "assets", "labs"):
             shutil.copytree(ROOT / directory, cls.built / directory,
                             ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
         shutil.copy2(ROOT / "plugin.json", cls.built / "plugin.json")
@@ -170,6 +171,26 @@ class AcademicPackages(unittest.TestCase):
                     self.assertFalse(is_zipfile(io.BytesIO(content)), path)
                     self.assertEqual(content, original.read_bytes(), path)
 
+    def test_visual_tools_work_from_both_upload_archives(self):
+        for archive, prefix in ((SKILL_ZIP, NAME), (CLAUDE_ZIP, "skills/" + NAME)):
+            with self.subTest(archive=archive), tempfile.TemporaryDirectory() as directory:
+                location = Path(directory)
+                with ZipFile(self.built / "dist" / archive) as package:
+                    package.extractall(location)
+                skill = location / prefix
+                output = location / "result.drawio"
+                subprocess.run(
+                    [sys.executable, "-B", str(skill / "scripts/make_drawio.py"),
+                     str(skill / "assets/kildearbeid.json"), str(output)],
+                    check=True, capture_output=True,
+                )
+                graph = ElementTree.parse(output)
+                self.assertTrue(graph.findall(".//mxCell[@vertex='1']"))
+                self.assertTrue(graph.findall(".//mxCell[@edge='1']"))
+                for resource in ("scripts/pixel_art.py", "scripts/render_plantuml.py",
+                                 "assets/utkast-tilstand.mmd"):
+                    self.assertTrue((skill / resource).is_file(), resource)
+
     def test_reproducible_build_and_rejection_of_stale_or_missing_resources(self):
         with tempfile.TemporaryDirectory() as directory:
             checkout = Path(directory) / "checkout"
@@ -177,6 +198,7 @@ class AcademicPackages(unittest.TestCase):
             dist = checkout / "dist"
             expected = {name: p.read_bytes() for name, p in inventory(dist).items()}
             shutil.rmtree(dist)
+            (checkout / "skills" / NAME / "scripts/pixel_art.py").unlink()
             run_build(checkout)
             self.assertEqual({name: p.read_bytes() for name, p in inventory(dist).items()}, expected)
             run_build(checkout, "--check")
@@ -203,7 +225,7 @@ class AcademicPackages(unittest.TestCase):
             for path in case["files"]:
                 self.assertTrue((MAIN / path).is_file(), path)
         trials = document(ROOT / "tests/workflows.json")
-        self.assertEqual(len(trials["explicit"]), 12)
+        self.assertEqual(len(trials["explicit"]), 15)
         self.assertEqual(len(trials["selection"]), 8)
         self.assertEqual(sum(row["expect"] is None for row in trials["selection"]), 3)
         self.assertEqual({row["language"] for row in trials["explicit"]}, {"nb", "nn", "en"})

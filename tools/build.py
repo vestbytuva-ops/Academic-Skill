@@ -14,6 +14,17 @@ SKILLS = ROOT / "skills"
 MAIN = SKILLS / "academic-skill"
 DIST = ROOT / "dist"
 CATALOG = json.loads((ROOT / "tools/catalog.json").read_text(encoding="utf-8"))
+LAB_RESOURCES = {
+    "academic-pixel-art": ("references/pikselkunst.md", "scripts/pixel_art.py"),
+    "academic-drawio": ("assets/kildearbeid.json", "scripts/make_drawio.py"),
+    "academic-uml": (
+        "assets/innlevering-sekvens.puml",
+        "assets/klassediagram.puml",
+        "assets/utkast-tilstand.mmd",
+        "references/uml-notasjon.md",
+        "scripts/render_plantuml.py",
+    ),
+}
 
 
 def json_bytes(document):
@@ -22,7 +33,7 @@ def json_bytes(document):
 
 def read_bytes(path):
     data = path.read_bytes()
-    if path.suffix in {".md", ".yaml", ".json", ".py"}:
+    if path.suffix in {".md", ".yaml", ".json", ".py", ".mmd", ".puml"}:
         return data.replace(b"\r\n", b"\n")
     return data
 
@@ -65,12 +76,17 @@ def generated_files():
         "  " + key + ": " + json.dumps(value, ensure_ascii=False) + "\n" for key, value in fields.items()
     )
     yield MAIN / "agents/openai.yaml", (metadata + "policy:\n  allow_implicit_invocation: true\n").encode()
+    # The standalone lab folders are the source for assets used by both installs.
+    for lab, resources in LAB_RESOURCES.items():
+        for resource in resources:
+            yield MAIN / resource, read_bytes(ROOT / "labs" / lab / resource)
 
 
 def distributions(generated):
-    paths = [MAIN / rel for rel in ("SKILL.md", "agents/openai.yaml", "scripts/sjekk_uttrykk.py", "evals/evals.json")]
-    paths.extend(sorted((MAIN / "references").glob("*.md")))
-    content = {p: generated[p] if p in generated else read_bytes(p) for p in paths}
+    paths = {MAIN / rel for rel in ("SKILL.md", "scripts/sjekk_uttrykk.py", "evals/evals.json")}
+    paths.update((MAIN / "references").glob("*.md"))
+    paths.update(path for path in generated if path.is_relative_to(MAIN))
+    content = {p: generated[p] if p in generated else read_bytes(p) for p in sorted(paths)}
     for document in (p for p in paths if p.suffix == ".md"):
         for link in re.findall(r"\]\(([^ )]+)\)", content[document].decode("utf-8")):
             if link.startswith(("#", "https://", "http://")):

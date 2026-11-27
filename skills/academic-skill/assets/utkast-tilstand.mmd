@@ -1,0 +1,10 @@
+stateDiagram-v2
+    state "Utkast" as Utkast
+    state "Til vurdering" as Vurdering
+    state "Ferdig" as Ferdig
+
+    [*] --> Utkast
+    Utkast --> Vurdering: Lever
+    Vurdering --> Utkast: Be om endringer
+    Vurdering --> Ferdig: Godkjenn
+    Ferdig --> [*]

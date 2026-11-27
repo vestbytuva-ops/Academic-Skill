@@ -1,6 +1,6 @@
 {
   "name": "academic-tools",
-  "description": "One academic skill for Norwegian and English assignments, writing, source checks, exam practice, presentations and Office files.",
+  "description": "One academic skill for Norwegian and English assignments, writing, source checks, exam practice, Office files and visual work.",
   "owner": {
     "name": "vestbytuva-ops"
   },
@@ -8,7 +8,7 @@
     {
       "name": "academic-skill",
       "source": "./",
-      "description": "One academic skill for Norwegian and English assignments, writing, source checks, exam practice, presentations and Office files."
+      "description": "One academic skill for Norwegian and English assignments, writing, source checks, exam practice, Office files and visual work."
     }
   ]
 }

@@ -1,7 +1,7 @@
 ---
 name: academic-skill
 description: >-
-  Oppgave/rubrikk, skriving i egen stil, språkvask, tilbakemelding, kildekontroll, læring og eksamen, presentasjoner, Office-filer og sluttkontroll. Unnta koding, småprat og forretningstekst.
+  Skole- og studiearbeid på norsk og engelsk. Oppgaver, fagtekst, stil, kilder, læring, eksamen, Office, presentasjoner, pikselkunst/pixel art, draw.io og UML. Unnta generell koding, småprat og salg.
 ---
 
 # Akademisk veiledning
@@ -23,8 +23,13 @@ Les [felles arbeidsgrunnlag](references/arbeidsgrunnlag.md) for språkvalg, arbe
 | Læringsveiledning | Forstå et begrep, prøve et grep selv eller få et hint | [Læringsveiledning](references/laering-og-eksamen.md) |
 | Eksamensøving | Eksamensøving, øvingskort eller quiz. Still ett spørsmål om gangen i en muntlig prøve. | [Eksamensøving](references/laering-og-eksamen.md) |
 | Presentasjon | Disposisjon, lysbilder eller talepunkter | [Presentasjoner](references/presentasjoner.md), også [Office-filer](references/office-filer.md) ved filleveranse |
+| Pikselkunst | Ikon, sprite, spriteark eller GIF-løkke | [Visuell arbeidsflyt](references/visuelle-arbeidsmater.md) og [pikselveiledning](references/pikselkunst.md) |
+| Draw.io | Redigerbar `.drawio`-fil, flytskjema eller metodekart | [Visuell arbeidsflyt](references/visuelle-arbeidsmater.md) |
+| UML | Klasse-, sekvens-, tilstands- eller aktivitetsdiagram i PlantUML eller Mermaid | [Visuell arbeidsflyt](references/visuelle-arbeidsmater.md) og [UML-notasjon](references/uml-notasjon.md) |
 | Office-filer | Arbeid med Word, Excel eller PowerPoint | [Office-filer](references/office-filer.md) |
 | Sluttkontroll | Kontroll av ferdig leveranse eller sammenligning av original og revisjon | [Sluttkontroll](references/sluttkontroll.md), også [kildekontroll](references/kildekontroll.md) ved motstridende belegg |
+
+Hvis brukeren nevner `academic-pixel-art`, `academic-drawio` eller `academic-uml` i bestillingen, følg den tilhørende visuelle arbeidsflyten med verktøyene og eksemplene i denne skillmappen.
 
 Kombiner arbeidsmåtene oppgaven trenger. Skal brukeren holde et foredrag basert på et utdrag, bruk først kildekontroll til å avgjøre hva utdraget støtter. Bygg deretter disposisjonen på de støttede påstandene. Bruk Office-veiledningen hvis brukeren også bestiller en presentasjonsfil.
 
